@@ -103,7 +103,7 @@
     "autoSyncDescription": "加载项目时自动获取议题",
     "cli": {
       "required": "需要 GitLab CLI",
-      "notInstalled": "OAuth 身份验证需要 GitLab CLI (glab)。安装它以使用"使用 OAuth"选项。",
+      "notInstalled": "OAuth 身份验证需要 GitLab CLI (glab)。安装它以使用\"使用 OAuth\"选项。",
       "installButton": "安装 glab",
       "installing": "安装中...",
       "installSuccess": "在您的终端中开始安装。完成后点击刷新。",

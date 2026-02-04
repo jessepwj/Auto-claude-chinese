@@ -484,7 +484,7 @@
   "oauth": {
     "enterCode": "手动输入代码（备用）",
     "enterCodeDescription": "只有在浏览器未自动重定向时才需要此对话框。如果认证已在浏览器中完成，您可以关闭此对话框。",
-    "fallbackNote": "仅当您在浏览器中看到"粘贴到 Claude Code"页面时使用。",
+    "fallbackNote": "仅当您在浏览器中看到\"粘贴到 Claude Code\"页面时使用。",
     "step1": "在浏览器中完成授权",
     "step2": "如果看到代码页面，复制显示的代码",
     "step3": "在下方粘贴代码并点击提交",
@@ -578,7 +578,7 @@
     "instructions": "要认证此配置:",
     "step1": "前往 设置 > 集成",
     "step2": "在 Claude 账户部分找到配置",
-    "step3": "点击"认证"以完成登录",
+    "step3": "点击\"认证\"以完成登录",
     "footer": "完成认证后，该账户将可用。"
   },
   "roadmapGeneration": {

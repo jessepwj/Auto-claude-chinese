@@ -620,7 +620,7 @@
     "recentErrors": "最近的错误",
     "noRecentErrors": "最近无错误",
     "helpTitle": "报告问题",
-    "helpText": "报告错误时，点击"复制调试信息"以获取帮助我们诊断问题的系统信息和最近的错误。"
+    "helpText": "报告错误时，点击\"复制调试信息\"以获取帮助我们诊断问题的系统信息和最近的错误。"
   },
   "projectSettings": {
     "noProjectSelected": {
