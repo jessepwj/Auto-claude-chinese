@@ -40,7 +40,7 @@ export function IdeationHeader({
   hasActiveIdeas,
   canAddMore
 }: IdeationHeaderProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['ideation', 'common']);
   const hasSelection = selectedCount > 0;
   return (
     <div className="shrink-0 border-b border-border p-4 bg-card/50">
@@ -48,11 +48,11 @@ export function IdeationHeader({
         <div>
           <div className="flex items-center gap-2 mb-1">
             <Lightbulb className="h-5 w-5 text-primary" />
-            <h2 className="text-lg font-semibold">Ideation</h2>
-            <Badge variant="outline">{totalIdeas} ideas</Badge>
+            <h2 className="text-lg font-semibold">{t('ideation:header.title')}</h2>
+            <Badge variant="outline">{t('ideation:header.ideasCount', { count: totalIdeas })}</Badge>
           </div>
           <p className="text-sm text-muted-foreground">
-            AI-generated feature ideas for your project
+            {t('ideation:header.description')}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export function IdeationHeader({
           {hasSelection ? (
             <>
               <Badge variant="secondary" className="mr-1">
-                {selectedCount} selected
+                {t('ideation:header.selectedCount', { count: selectedCount })}
               </Badge>
               <Button
                 variant="outline"
@@ -69,7 +69,7 @@ export function IdeationHeader({
                 onClick={onDeleteSelected}
               >
                 <Trash2 className="h-4 w-4 mr-1" />
-                Delete
+                {t('ideation:header.delete')}
               </Button>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -111,13 +111,13 @@ export function IdeationHeader({
                 variant={showDismissed ? 'secondary' : 'outline'}
                 size="icon"
                 onClick={onToggleShowDismissed}
-                aria-label={showDismissed ? t('accessibility.hideDismissedAriaLabel') : t('accessibility.showDismissedAriaLabel')}
+                aria-label={showDismissed ? t('ideation:header.hide') : t('ideation:header.show')}
               >
                 {showDismissed ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              {showDismissed ? t('accessibility.hideDismissedAriaLabel') : t('accessibility.showDismissedAriaLabel')}
+              {showDismissed ? t('ideation:header.hide') : t('ideation:header.show')}
             </TooltipContent>
           </Tooltip>
           <Tooltip>
@@ -139,10 +139,10 @@ export function IdeationHeader({
                 <Button
                   variant="outline"
                   onClick={onOpenAddMore}
-                  aria-label={t('accessibility.addMoreAriaLabel')}
+                  aria-label={t('ideation:header.addMore')}
                 >
                   <Plus className="h-4 w-4 mr-1" />
-                  Add More
+                  {t('ideation:header.addMore')}
                 </Button>
               </TooltipTrigger>
               <TooltipContent>{t('accessibility.addMoreAriaLabel')}</TooltipContent>

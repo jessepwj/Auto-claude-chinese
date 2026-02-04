@@ -46,7 +46,7 @@ interface IdeaCardProps {
 }
 
 export function IdeaCard({ idea, isSelected, onClick, onConvert, onGoToTask, onDismiss, onToggleSelect }: IdeaCardProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['ideation', 'common']);
   const isDismissed = idea.status === 'dismissed';
   const isArchived = idea.status === 'archived';
   const isConverted = idea.status === 'converted';
@@ -85,7 +85,7 @@ export function IdeaCard({ idea, isSelected, onClick, onConvert, onGoToTask, onD
             </Badge>
             {idea.status !== 'draft' && (
               <Badge variant="outline" className={IDEATION_STATUS_COLORS[idea.status]}>
-                {idea.status}
+                {t(`ideation:status.${idea.status}` as const)}
               </Badge>
             )}
             {isCodeImprovementIdea(idea) && (
@@ -110,7 +110,7 @@ export function IdeaCard({ idea, isSelected, onClick, onConvert, onGoToTask, onD
             )}
             {isPerformanceOptimizationIdea(idea) && (
               <Badge variant="outline" className={IDEATION_IMPACT_COLORS[(idea as PerformanceOptimizationIdea).impact]}>
-                {(idea as PerformanceOptimizationIdea).impact} impact
+                {t('ideation:card.impact', { level: (idea as PerformanceOptimizationIdea).impact })}
               </Badge>
             )}
             {isCodeQualityIdea(idea) && (

@@ -3,9 +3,85 @@
     "projectIndex": "Index du Projet",
     "memories": "Souvenirs"
   },
+  "projectIndex": {
+    "heading": "Structure du Projet",
+    "description": "Connaissances découvertes par l'IA sur votre base de code",
+    "buttons": {
+      "refresh": "Actualiser",
+      "analyzeProject": "Analyser le Projet"
+    },
+    "tooltips": {
+      "refresh": "Réanalyser la structure du projet"
+    },
+    "errors": {
+      "loadFailed": "Impossible de charger l'index du projet",
+      "heading": "Impossible de charger l'index du projet"
+    },
+    "emptyState": {
+      "heading": "Aucun Index de Projet Trouvé",
+      "description": "Cliquez sur le bouton Actualiser pour analyser la structure de votre projet et créer un index."
+    },
+    "sections": {
+      "overview": "Aperçu",
+      "services": "Services",
+      "infrastructure": "Infrastructure",
+      "conventions": "Conventions"
+    },
+    "labels": {
+      "service": "service",
+      "services": "services",
+      "dockerCompose": "Docker Compose",
+      "cicd": "CI/CD",
+      "deployment": "Déploiement",
+      "dockerServices": "Services Docker",
+      "pythonLinting": "Linting Python",
+      "jsLinting": "Linting JS",
+      "formatting": "Formatage",
+      "gitHooks": "Crochets Git",
+      "typescript": "TypeScript",
+      "enabled": "Activé"
+    }
+  },
   "memories": {
     "placeholders": {
       "search": "Rechercher des modèles, aperçus, pièges..."
+    },
+    "graphStatus": {
+      "title": "Statut de la Mémoire Graphique",
+      "connected": "Connecté",
+      "notAvailable": "Non Disponible",
+      "database": "Base de Données",
+      "path": "Chemin",
+      "notConfigured": "La mémoire Graphiti n'est pas configurée",
+      "enableInstructions": "Pour activer la mémoire graphique, définissez GRAPHITI_ENABLED=true dans les paramètres du projet."
+    },
+    "stats": {
+      "total": "Total",
+      "prReviews": "Révisions de PR",
+      "sessions": "Sessions",
+      "codebase": "Base de Code",
+      "patterns": "Modèles",
+      "gotchas": "Pièges"
+    },
+    "sections": {
+      "search": "Rechercher des Souvenirs",
+      "browser": "Navigateur de Mémoire"
+    },
+    "search": {
+      "resultsFound": "résultat trouvé",
+      "resultsFoundPlural": "résultats trouvés",
+      "score": "Score"
+    },
+    "browser": {
+      "memoriesCount": "souvenirs",
+      "of": "sur"
+    },
+    "emptyStates": {
+      "noMemories": "Aucun souvenir enregistré pour le moment. Les souvenirs sont créés lors des sessions d'agent IA et des révisions de PR.",
+      "noFilterMatch": "Aucun souvenir ne correspond au filtre sélectionné."
+    },
+    "buttons": {
+      "showAll": "Afficher tous les souvenirs"
     }
   },
   "memory": {
@@ -19,6 +95,58 @@
       "changedFiles": "Fichiers Modifiés",
       "fileInsights": "Aperçus des Fichiers",
       "subtasksCompleted": "Sous-tâches Complétées"
+    },
+    "labels": {
+      "sessionNumber": "Session"
+    },
+    "buttons": {
+      "collapse": "Réduire",
+      "expand": "Développer"
+    }
+  },
+  "service": {
+    "labels": {
+      "unknown": "Inconnu",
+      "testing": "Test",
+      "orm": "ORM",
+      "port": "Port",
+      "styling": "Style",
+      "state": "État"
+    },
+    "sections": {
+      "appleFrameworks": "Frameworks Apple",
+      "spmDependencies": "Dépendances SPM",
+      "keyDirectories": "Répertoires Clés"
+    }
+  },
+  "prReview": {
+    "verdicts": {
+      "approved": "Approuvé",
+      "changesRequested": "Modifications Demandées",
+      "commented": "Commenté"
+    },
+    "severity": {
+      "critical": "critique",
+      "high": "haut",
+      "medium": "moyen",
+      "low": "bas"
+    },
+    "labels": {
+      "prReview": "Révision de PR",
+      "followUp": "Suivi",
+      "finding": "constatation",
+      "findings": "constatations",
+      "moreFindings": "plus de constatations"
+    },
+    "buttons": {
+      "collapse": "Réduire",
+      "details": "Détails",
+      "viewOnGitHub": "Voir la PR sur GitHub"
+    },
+    "sections": {
+      "keyFindings": "Constatations Clés",
+      "gotchasDiscovered": "Pièges Découverts",
+      "patternsIdentified": "Modèles Identifiés"
     }
   }
 }

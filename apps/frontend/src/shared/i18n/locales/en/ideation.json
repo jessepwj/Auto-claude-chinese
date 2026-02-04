@@ -1,8 +1,132 @@
 {
+  "header": {
+    "title": "Ideation",
+    "ideasCount": "{{count}} ideas",
+    "description": "Generate ideas for code improvements, UI/UX enhancements, documentation, performance optimizations, and security fixes",
+    "selectedCount": "{{count}} selected",
+    "delete": "Delete selected",
+    "hide": "Hide ideas",
+    "show": "Show ideas",
+    "logs": "View logs",
+    "addMore": "Generate more ideas"
+  },
+  "filters": {
+    "all": "All ideas",
+    "code": "Code improvements",
+    "uiux": "UI/UX",
+    "docs": "Documentation",
+    "security": "Security",
+    "performance": "Performance"
+  },
+  "emptyState": {
+    "title": "No ideas generated yet",
+    "description": "Generate AI-powered insights for your codebase",
+    "enabledTypes": "Select idea types to generate",
+    "generateButton": "Generate ideas",
+    "tokenWarning": "This action will consume API tokens"
+  },
+  "card": {
+    "impact": "Impact: {{level}}"
+  },
+  "generation": {
+    "title": "Generating ideas...",
+    "completeCount": "{{count}}/{{total}} complete",
+    "hide": "Hide progress",
+    "show": "Show progress",
+    "logs": "View logs",
+    "stopping": "Stopping...",
+    "stop": "Stop generation",
+    "stopTooltip": "Stop the current generation process",
+    "ideasCount": "{{count}} ideas generated",
+    "waitingToStart": "Waiting to start...",
+    "failed": "Generation failed",
+    "noIdeas": "No ideas generated"
+  },
+  "status": {
+    "reviewed": "Reviewed",
+    "pending": "Pending review",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "implemented": "Implemented",
+    "archived": "Archived"
+  },
+  "details": {
+    "common": {
+      "effort": "Effort: {{level}}",
+      "files": "Files: {{count}}",
+      "severity": "Severity: {{level}}",
+      "category": "Category: {{type}}",
+      "currentState": "Current state",
+      "proposedChange": "Proposed change",
+      "codeExample": "Code example",
+      "metrics": "Metrics",
+      "affectedFiles": "Affected files",
+      "priority": "Priority: {{level}}",
+      "impact": "Impact: {{level}}"
+    },
+    "codeImprovement": {
+      "buildsUpon": "Builds upon",
+      "implementationApproach": "Implementation approach",
+      "patternsToFollow": "Patterns to follow"
+    },
+    "codeQuality": {
+      "breakingChange": "Breaking change",
+      "breakingChangeWarning": "This is a breaking change",
+      "lines": "Lines: {{count}}",
+      "complexity": "Complexity: {{level}}",
+      "duplicateLines": "Duplicate lines: {{count}}",
+      "testCoverage": "Test coverage: {{percentage}}%",
+      "bestPractice": "Best practice",
+      "prerequisites": "Prerequisites"
+    },
+    "documentation": {
+      "targetAudience": "Target audience",
+      "currentDocumentation": "Current documentation",
+      "proposedContent": "Proposed content",
+      "affectedAreas": "Affected areas"
+    },
+    "performance": {
+      "expectedImprovement": "Expected improvement: {{percentage}}%",
+      "implementation": "Implementation details",
+      "affectedAreas": "Affected areas",
+      "tradeoffs": "Trade-offs"
+    },
+    "security": {
+      "vulnerability": "Vulnerability",
+      "currentRisk": "Current risk: {{level}}",
+      "remediation": "Remediation",
+      "references": "References",
+      "compliance": "Compliance"
+    },
+    "uiux": {
+      "userBenefit": "User benefit",
+      "affectedComponents": "Affected components"
+    }
+  },
   "dialogs": {
     "authRequired": {
       "title": "Claude Authentication Required",
       "description": "A Claude Code OAuth token is required to generate AI-powered feature ideas."
+    },
+    "config": {
+      "title": "Configure ideation settings",
+      "description": "Select the types of ideas you want to generate",
+      "ideaTypes": "Idea types",
+      "codeImprovements": "Code improvements",
+      "codeQuality": "Code quality issues",
+      "documentation": "Documentation improvements",
+      "performance": "Performance optimizations",
+      "security": "Security vulnerabilities",
+      "uiux": "UI/UX enhancements",
+      "cancel": "Cancel",
+      "generate": "Generate"
+    },
+    "addMore": {
+      "title": "Generate more ideas",
+      "description": "Continue generating more ideas for your codebase",
+      "tokenWarning": "This will consume additional API tokens",
+      "cancel": "Cancel",
+      "generate": "Generate more"
     }
   }
 }

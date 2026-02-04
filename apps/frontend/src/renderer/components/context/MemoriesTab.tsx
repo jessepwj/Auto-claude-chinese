@@ -78,7 +78,7 @@ export function MemoriesTab({
   searchLoading,
   onSearch
 }: MemoriesTabProps) {
-  const { t } = useTranslation(['context']);
+  const { t } = useTranslation(['context', 'common']);
   const [localSearchQuery, setLocalSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
 
@@ -128,17 +128,17 @@ export function MemoriesTab({
             <div className="flex items-center justify-between">
               <CardTitle className="text-base flex items-center gap-2">
                 <Database className="h-4 w-4" />
-                Graph Memory Status
+                {t('context:memories.graphStatus.title')}
               </CardTitle>
               {memoryStatus?.available ? (
                 <Badge variant="outline" className="bg-success/10 text-success border-success/30">
                   <CheckCircle className="h-3 w-3 mr-1" />
-                  Connected
+                  {t('context:memories.graphStatus.connected')}
                 </Badge>
               ) : (
                 <Badge variant="outline" className="bg-muted text-muted-foreground">
                   <XCircle className="h-3 w-3 mr-1" />
-                  Not Available
+                  {t('context:memories.graphStatus.notAvailable')}
                 </Badge>
               )}
             </div>
@@ -147,8 +147,8 @@ export function MemoriesTab({
             {memoryStatus?.available ? (
               <>
                 <div className="grid gap-3 sm:grid-cols-2 text-sm">
-                  <InfoItem label="Database" value={memoryStatus.database || 'auto_claude_memory'} />
-                  <InfoItem label="Path" value={memoryStatus.dbPath || '~/.auto-claude/memories'} />
+                  <InfoItem label={t('context:memories.graphStatus.database')} value={memoryStatus.database || 'auto_claude_memory'} />
+                  <InfoItem label={t('context:memories.graphStatus.path')} value={memoryStatus.dbPath || '~/.auto-claude/memories'} />
                 </div>
 
                 {/* Memory Stats Summary */}
@@ -157,27 +157,27 @@ export function MemoriesTab({
                     <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                       <div className="text-center p-2 rounded-lg bg-muted/30">
                         <div className="text-lg font-semibold text-foreground">{memoryCounts.all}</div>
-                        <div className="text-xs text-muted-foreground">Total</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.total')}</div>
                       </div>
                       <div className="text-center p-2 rounded-lg bg-cyan-500/10">
                         <div className="text-lg font-semibold text-cyan-400">{memoryCounts.pr}</div>
-                        <div className="text-xs text-muted-foreground">PR Reviews</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.prReviews')}</div>
                       </div>
                       <div className="text-center p-2 rounded-lg bg-amber-500/10">
                         <div className="text-lg font-semibold text-amber-400">{memoryCounts.sessions}</div>
-                        <div className="text-xs text-muted-foreground">Sessions</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.sessions')}</div>
                       </div>
                       <div className="text-center p-2 rounded-lg bg-blue-500/10">
                         <div className="text-lg font-semibold text-blue-400">{memoryCounts.codebase}</div>
-                        <div className="text-xs text-muted-foreground">Codebase</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.codebase')}</div>
                       </div>
                       <div className="text-center p-2 rounded-lg bg-purple-500/10">
                         <div className="text-lg font-semibold text-purple-400">{memoryCounts.patterns}</div>
-                        <div className="text-xs text-muted-foreground">Patterns</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.patterns')}</div>
                       </div>
                       <div className="text-center p-2 rounded-lg bg-red-500/10">
                         <div className="text-lg font-semibold text-red-400">{memoryCounts.gotchas}</div>
-                        <div className="text-xs text-muted-foreground">Gotchas</div>
+                        <div className="text-xs text-muted-foreground">{t('context:memories.stats.gotchas')}</div>
                       </div>
                     </div>
                   </div>
@@ -185,9 +185,9 @@ export function MemoriesTab({
               </>
             ) : (
               <div className="text-sm text-muted-foreground">
-                <p>{memoryStatus?.reason || 'Graphiti memory is not configured'}</p>
+                <p>{memoryStatus?.reason || t('context:memories.graphStatus.notConfigured')}</p>
                 <p className="mt-2 text-xs">
-                  To enable graph memory, set <code className="bg-muted px-1 py-0.5 rounded">GRAPHITI_ENABLED=true</code> in project settings.
+                  {t('context:memories.graphStatus.enableInstructions')}
                 </p>
               </div>
             )}
@@ -197,7 +197,7 @@ export function MemoriesTab({
         {/* Search */}
         <div className="space-y-4">
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-            Search Memories
+            {t('context:memories.sections.search')}
           </h3>
           <div className="flex gap-2">
             <Input
@@ -215,7 +215,7 @@ export function MemoriesTab({
           {searchResults.length > 0 && (
             <div className="space-y-3">
               <p className="text-sm text-muted-foreground">
-                {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} found
+                {searchResults.length} {t(searchResults.length === 1 ? 'context:memories.search.resultsFound' : 'context:memories.search.resultsFoundPlural')}
               </p>
               {searchResults.map((result, idx) => (
                 <Card key={idx} className="bg-muted/50">
@@ -225,7 +225,7 @@ export function MemoriesTab({
                         {result.type.replace('_', ' ')}
                       </Badge>
                       <span className="text-xs text-muted-foreground">
-                        Score: {result.score.toFixed(2)}
+                        {t('context:memories.search.score')}: {result.score.toFixed(2)}
                       </span>
                     </div>
                     <pre className="text-xs text-muted-foreground whitespace-pre-wrap font-mono max-h-40 overflow-auto">
@@ -242,10 +242,10 @@ export function MemoriesTab({
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Memory Browser
+              {t('context:memories.sections.browser')}
             </h3>
             <span className="text-xs text-muted-foreground">
-              {filteredMemories.length} of {recentMemories.length} memories
+              {filteredMemories.length} {t('context:memories.browser.of')} {recentMemories.length} {t('context:memories.browser.memoriesCount')}
             </span>
           </div>
 
@@ -299,7 +299,7 @@ export function MemoriesTab({
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Brain className="h-10 w-10 text-muted-foreground mb-3" />
               <p className="text-sm text-muted-foreground">
-                No memories recorded yet. Memories are created during AI agent sessions and PR reviews.
+                {t('context:memories.emptyStates.noMemories')}
               </p>
             </div>
           )}
@@ -308,7 +308,7 @@ export function MemoriesTab({
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Brain className="h-10 w-10 text-muted-foreground mb-3" />
               <p className="text-sm text-muted-foreground">
-                No memories match the selected filter.
+                {t('context:memories.emptyStates.noFilterMatch')}
               </p>
               <Button
                 variant="link"
@@ -316,7 +316,7 @@ export function MemoriesTab({
                 onClick={() => setActiveFilter('all')}
                 className="mt-2"
               >
-                Show all memories
+                {t('context:memories.buttons.showAll')}
               </Button>
             </div>
           )}

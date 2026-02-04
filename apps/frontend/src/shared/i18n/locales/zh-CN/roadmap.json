@@ -12,5 +12,64 @@
     "dragFeaturesHere": "拖放功能到这里",
     "unknownStatus": "未知状态"
   },
-  "unknownStatus": "未知状态"
+  "unknownStatus": "未知状态",
+  "emptyState": {
+    "title": "还没有路线图",
+    "description": "生成一个由人工智能驱动的路线图，它理解您项目的目标受众并创建战略性功能计划。",
+    "generateButton": "生成路线图"
+  },
+  "header": {
+    "competitorAnalysisBadge": "竞争对手分析",
+    "competitorAnalysisTooltipTitle": "点击查看详细分析",
+    "competitorAnalysisTooltipDescription": "分析了{{count}}个竞争对手，识别了{{painPoints}}个痛点",
+    "addFeatureButton": "添加功能",
+    "addFeatureTooltip": "向路线图添加新功能",
+    "regenerateTooltip": "重新生成路线图",
+    "targetLabel": "目标：",
+    "morePersonas": "+{{count}}个更多角色",
+    "secondaryPersonasTitle": "次要角色：",
+    "featuresLabel": "个功能",
+    "phasesLabel": "个阶段"
+  },
+  "tabs": {
+    "kanban": "看板",
+    "phases": "阶段",
+    "allFeatures": "所有功能",
+    "byPriority": "按优先级",
+    "featuresCount": "个功能",
+    "impactLabel": "影响",
+    "insightBadge": "洞察"
+  },
+  "featureCard": {
+    "impactLabel": "影响",
+    "competitorInsightBadge": "竞争对手洞察",
+    "competitorInsightTooltip": "此功能解决竞争对手的痛点",
+    "goToTaskButton": "转到任务",
+    "buildButton": "构建"
+  },
+  "featureDetail": {
+    "descriptionTitle": "描述",
+    "rationaleTitle": "理由",
+    "complexityLabel": "复杂性",
+    "impactLabel": "影响",
+    "dependenciesLabel": "依赖关系",
+    "userStoriesTitle": "用户故事",
+    "acceptanceCriteriaTitle": "验收标准",
+    "dependenciesTitle": "依赖关系",
+    "competitorInsightsTitle": "解决竞争对手痛点",
+    "severityLabel": "严重程度",
+    "goToTaskButton": "转到任务",
+    "convertToSpecButton": "转换为自动构建任务",
+    "deleteConfirmTitle": "删除功能？",
+    "deleteConfirmMessage": "这将永久删除\"{{title}}\"从您的路线图中。"
+  },
+  "phaseCard": {
+    "progressLabel": "进度",
+    "featuresProgress": "{{completed}}/{{total}}个功能",
+    "milestonesTitle": "里程碑",
+    "featuresTitle": "功能({{count}})",
+    "viewTaskButton": "查看任务",
+    "buildButton": "构建",
+    "moreFeaturesLabel": "+{{count}}个更多功能"
+  }
 }

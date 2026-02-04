@@ -108,7 +108,7 @@ function isPRReviewMemory(memory: MemoryEpisode): boolean {
 }
 
 export function MemoryCard({ memory }: MemoryCardProps) {
-  const { t } = useTranslation(['context']);
+  const { t } = useTranslation(['context', 'common']);
   const [expanded, setExpanded] = useState(false);
   const parsed = useMemo(() => parseMemoryContent(memory.content), [memory.content]);
 
@@ -188,12 +188,12 @@ export function MemoryCard({ memory }: MemoryCardProps) {
               {expanded ? (
                 <>
                   <ChevronUp className="h-4 w-4" />
-                  Collapse
+                  {t('context:memory.buttons.collapse')}
                 </>
               ) : (
                 <>
                   <ChevronDown className="h-4 w-4" />
-                  Expand
+                  {t('context:memory.buttons.expand')}
                 </>
               )}
             </Button>
