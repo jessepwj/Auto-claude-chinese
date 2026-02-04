@@ -1,45 +1,45 @@
 {
   "expand": {
-    "expand": "Expand terminal",
-    "collapse": "Collapse terminal"
+    "expand": "展开终端",
+    "collapse": "折叠终端"
   },
   "resume": {
-    "pending": "Resume Available",
-    "pendingTooltip": "Click to resume previous Claude session"
+    "pending": "可恢复",
+    "pendingTooltip": "点击恢复之前的 Claude 会话"
   },
   "auth": {
-    "terminalTitle": "Auth: {{profileName}}",
-    "maxTerminalsReached": "Cannot open auth terminal: maximum terminals reached. Close a terminal first."
+    "terminalTitle": "认证: {{profileName}}",
+    "maxTerminalsReached": "无法打开认证终端:已达到终端上限。请先关闭一个终端。"
   },
   "worktree": {
-    "create": "Worktree",
-    "createNew": "New Worktree",
-    "existing": "Terminal Worktrees",
-    "taskWorktrees": "Task Worktrees",
-    "otherWorktrees": "Others",
-    "createTitle": "Create Terminal Worktree",
-    "createDescription": "Create an isolated workspace for this terminal. All work will happen in the worktree directory.",
-    "name": "Worktree Name",
+    "create": "工作树",
+    "createNew": "新建工作树",
+    "existing": "终端工作树",
+    "taskWorktrees": "任务工作树",
+    "otherWorktrees": "其他",
+    "createTitle": "创建终端工作树",
+    "createDescription": "为此终端创建隔离的工作空间。所有工作都将在工作树目录中进行。",
+    "name": "工作树名称",
     "namePlaceholder": "my-feature",
-    "nameRequired": "Worktree name is required",
-    "nameInvalid": "Name must start and end with a letter or number",
-    "nameHelp": "Lowercase letters, numbers, dashes, and underscores (spaces become hyphens)",
-    "associateTask": "Link to Task",
-    "selectTask": "Select a task...",
-    "noTask": "No task (standalone worktree)",
-    "createBranch": "Create Git Branch",
-    "branchHelp": "Creates branch: {{branch}}",
-    "baseBranch": "Base Branch",
-    "selectBaseBranch": "Select base branch...",
-    "searchBranch": "Search branches...",
-    "noBranchFound": "No branch found",
-    "useProjectDefault": "Use project default ({{branch}})",
-    "baseBranchHelp": "The branch to create the worktree from",
-    "openInIDE": "Open in IDE",
-    "maxReached": "Maximum of 12 terminal worktrees reached",
-    "alreadyExists": "A worktree with this name already exists",
-    "deleteTitle": "Delete Worktree?",
-    "deleteDescription": "This will permanently delete the worktree and its branch. Any uncommitted changes will be lost.",
-    "detached": "(detached)"
+    "nameRequired": "工作树名称是必填的",
+    "nameInvalid": "名称必须以字母或数字开头和结尾",
+    "nameHelp": "小写字母、数字、破折号和下划线(空格变为连字符)",
+    "associateTask": "关联到任务",
+    "selectTask": "选择一个任务...",
+    "noTask": "无任务(独立工作树)",
+    "createBranch": "创建 Git 分支",
+    "branchHelp": "创建分支: {{branch}}",
+    "baseBranch": "基础分支",
+    "selectBaseBranch": "选择基础分支...",
+    "searchBranch": "搜索分支...",
+    "noBranchFound": "未找到分支",
+    "useProjectDefault": "使用项目默认({{branch}})",
+    "baseBranchHelp": "创建工作树的源分支",
+    "openInIDE": "在 IDE 中打开",
+    "maxReached": "已达到 12 个终端工作树的上限",
+    "alreadyExists": "同名工作树已存在",
+    "deleteTitle": "删除工作树?",
+    "deleteDescription": "这将永久删除工作树及其分支。任何未提交的更改将丢失。",
+    "detached": "(已分离)"
   }
 }
