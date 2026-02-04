@@ -294,7 +294,7 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                       {t('memory.mcpServerUrlDescription')}
                     </p>
                     <Input
-                      placeholder="http://localhost:8000/mcp/"
+                      placeholder={t('memory.placeholders.mcpUrl')}
                       value={config.mcpServerUrl}
                       onChange={(e) => setConfig(prev => ({ ...prev, mcpServerUrl: e.target.value }))}
                       className="font-mono text-sm"
@@ -342,7 +342,7 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                     <PasswordInput
                       value={config.openaiApiKey}
                       onChange={(value) => setConfig(prev => ({ ...prev, openaiApiKey: value }))}
-                      placeholder="sk-..."
+                      placeholder={t('memory.placeholders.openaiKey')}
                     />
                     <p className="text-xs text-muted-foreground">
                       {t('memory.openaiGetKey')}{' '}
@@ -363,12 +363,12 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                     <PasswordInput
                       value={config.voyageApiKey}
                       onChange={(value) => setConfig(prev => ({ ...prev, voyageApiKey: value }))}
-                      placeholder="pa-..."
+                      placeholder={t('memory.placeholders.voyageKey')}
                     />
                     <div className="space-y-1 mt-2">
                         <Label className="text-xs text-muted-foreground">{t('memory.embeddingModel')}</Label>
                         <Input
-                          placeholder="voyage-3"
+                          placeholder={t('memory.placeholders.voyageModel')}
                           value={config.voyageEmbeddingModel}
                           onChange={(e) => setConfig(prev => ({ ...prev, voyageEmbeddingModel: e.target.value }))}
                         />
@@ -392,7 +392,7 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                     <PasswordInput
                       value={config.googleApiKey}
                       onChange={(value) => setConfig(prev => ({ ...prev, googleApiKey: value }))}
-                      placeholder="AIza..."
+                      placeholder={t('memory.placeholders.geminiKey')}
                     />
                     <p className="text-xs text-muted-foreground">
                       {t('memory.openaiGetKey')}{' '}
@@ -412,13 +412,13 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                       <PasswordInput
                         value={config.azureOpenaiApiKey}
                         onChange={(value) => setConfig(prev => ({ ...prev, azureOpenaiApiKey: value }))}
-                        placeholder="Azure API Key"
+                        placeholder={t('memory.placeholders.azureApiKey')}
                       />
                     </div>
                     <div className="space-y-1">
                       <Label className="text-xs text-muted-foreground">{t('memory.azureBaseUrl')}</Label>
                       <Input
-                        placeholder="https://your-resource.openai.azure.com"
+                        placeholder={t('memory.placeholders.azureBaseUrl')}
                         value={config.azureOpenaiBaseUrl}
                         onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiBaseUrl: e.target.value }))}
                         className="font-mono text-sm"
@@ -428,7 +428,7 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                     <div className="space-y-1">
                       <Label className="text-xs text-muted-foreground">{t('memory.azureEmbeddingDeployment')}</Label>
                       <Input
-                        placeholder="text-embedding-ada-002"
+                        placeholder={t('memory.placeholders.azureDeployment')}
                         value={config.azureOpenaiEmbeddingDeployment}
                         onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiEmbeddingDeployment: e.target.value }))}
                         className="font-mono text-sm"
@@ -449,7 +449,7 @@ export function MemoryStep({ onNext, onBack }: MemoryStepProps) {
                     <div className="space-y-2">
                       <Label className="text-xs text-muted-foreground">{t('memory.baseUrl')}</Label>
                       <Input
-                        placeholder="http://localhost:11434"
+                        placeholder={t('memory.placeholders.ollamaBaseUrl')}
                         value={config.ollamaBaseUrl}
                         onChange={(e) => setConfig(prev => ({ ...prev, ollamaBaseUrl: e.target.value }))}
                       />

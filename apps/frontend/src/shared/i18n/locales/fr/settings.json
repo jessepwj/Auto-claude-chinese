@@ -927,6 +927,9 @@
     }
   },
   "titles": {
-    "claudeAuth": "Authentification Claude"
+    "claudeAuth": "Authentification Claude",
+    "testConnection": "Tester la connexion",
+    "edit": "Modifier",
+    "delete": "Supprimer"
   }
 }

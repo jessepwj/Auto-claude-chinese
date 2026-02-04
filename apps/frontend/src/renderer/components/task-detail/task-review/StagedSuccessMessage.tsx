@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { GitMerge, Copy, Check, Sparkles } from 'lucide-react';
 import { Button } from '../../ui/button';
 import { Textarea } from '../../ui/textarea';
@@ -15,6 +16,7 @@ export function StagedSuccessMessage({
   stagedSuccess,
   suggestedCommitMessage
 }: StagedSuccessMessageProps) {
+  const { t } = useTranslation(['taskReview']);
   const [commitMessage, setCommitMessage] = useState(suggestedCommitMessage || '');
   const [copied, setCopied] = useState(false);
 
@@ -71,7 +73,7 @@ export function StagedSuccessMessage({
             value={commitMessage}
             onChange={(e) => setCommitMessage(e.target.value)}
             className="font-mono text-xs min-h-[100px] bg-background/80 resize-y"
-            placeholder="Commit message..."
+            placeholder={t('taskReview:placeholders.commitMessage')}
           />
           <p className="text-[10px] text-muted-foreground mt-1.5">
             Edit as needed, then copy and use with <code className="bg-background px-1 rounded">git commit -m "..."</code>

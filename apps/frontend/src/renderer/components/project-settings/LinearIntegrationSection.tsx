@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Zap, Import, Radio } from 'lucide-react';
 import { CollapsibleSection } from './CollapsibleSection';
 import { StatusBadge } from './StatusBadge';
@@ -29,6 +30,7 @@ export function LinearIntegrationSection({
   isCheckingLinear,
   onOpenImportModal,
 }: LinearIntegrationSectionProps) {
+  const { t } = useTranslation('settings');
   const badge = envConfig.linearEnabled ? (
     <StatusBadge status="success" label="Enabled" />
   ) : null;
@@ -72,7 +74,7 @@ export function LinearIntegrationSection({
             <PasswordInput
               value={envConfig.linearApiKey || ''}
               onChange={(value) => onUpdateConfig({ linearApiKey: value })}
-              placeholder="lin_api_xxxxxxxx"
+              placeholder={t('linear.placeholders.apiKey')}
             />
           </div>
 

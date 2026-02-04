@@ -142,6 +142,7 @@ function groupEntriesByAgent(entries: PRLogEntry[]): {
 }
 
 export function PRLogs({ prNumber, logs, isLoading, isStreaming = false }: PRLogsProps) {
+  const { t } = useTranslation(['github', 'common']);
   const [expandedPhases, setExpandedPhases] = useState<Set<PRLogPhase>>(new Set(['analysis']));
   const [expandedAgents, setExpandedAgents] = useState<Set<string>>(new Set());
 
@@ -213,14 +214,14 @@ export function PRLogs({ prNumber, logs, isLoading, isStreaming = false }: PRLog
         ) : isStreaming ? (
           <div className="text-center text-sm text-muted-foreground py-8">
             <Loader2 className="mx-auto mb-2 h-8 w-8 animate-spin text-blue-500" />
-            <p>Waiting for logs...</p>
-            <p className="text-xs mt-1">Review is starting</p>
+            <p>{t('github:prs.messages.waitingForLogs')}</p>
+            <p className="text-xs mt-1">{t('github:prs.messages.reviewStarting')}</p>
           </div>
         ) : (
           <div className="text-center text-sm text-muted-foreground py-8">
             <Terminal className="mx-auto mb-2 h-8 w-8 opacity-50" />
-            <p>No logs available</p>
-            <p className="text-xs mt-1">Run a review to generate logs</p>
+            <p>{t('github:prs.messages.noLogs')}</p>
+            <p className="text-xs mt-1">{t('github:prs.messages.noLogsDetails')}</p>
           </div>
         )}
       </div>
@@ -394,7 +395,7 @@ interface OrchestratorActivitySectionProps {
 }
 
 function OrchestratorActivitySection({ entries, isExpanded, onToggle }: OrchestratorActivitySectionProps) {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['github', 'common']);
 
   // Count different types of operations for summary
   const readCount = entries.filter(e => e.content.startsWith('Reading ')).length;
@@ -425,7 +426,7 @@ function OrchestratorActivitySection({ entries, isExpanded, onToggle }: Orchestr
             <ChevronRight className="h-3 w-3 text-muted-foreground" />
           )}
           <Activity className="h-3 w-3 text-orange-400" />
-          <span className="text-xs text-muted-foreground">{t('common:prReview.logs.agentActivity')}</span>
+          <span className="text-xs text-muted-foreground">{t('github:prs.logs.agentActivity')}</span>
         </div>
         <Badge variant="outline" className="text-[9px] px-1.5 py-0 bg-orange-500/10 text-orange-400 border-orange-500/30">
           {summary}
@@ -507,7 +508,7 @@ function findSummaryEntry(entries: PRLogEntry[]): { summaryEntry: PRLogEntry | u
 }
 
 function AgentLogGroup({ group, isExpanded, onToggle }: AgentLogGroupProps) {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['github', 'common']);
   const { agentName, entries } = group;
 
   // Find a meaningful summary entry instead of just using the first one
@@ -545,12 +546,12 @@ function AgentLogGroup({ group, isExpanded, onToggle }: AgentLogGroupProps) {
               {isExpanded ? (
                 <>
                   <ChevronDown className="h-3 w-3" />
-                  <span>{t('common:prReview.logs.hideMore', { count: otherEntries.length })}</span>
+                  <span>{t('github:prs.logs.hideMore', { count: otherEntries.length })}</span>
                 </>
               ) : (
                 <>
                   <ChevronRight className="h-3 w-3" />
-                  <span>{t('common:prReview.logs.showMore', { count: otherEntries.length })}</span>
+                  <span>{t('github:prs.logs.showMore', { count: otherEntries.length })}</span>
                 </>
               )}
             </button>

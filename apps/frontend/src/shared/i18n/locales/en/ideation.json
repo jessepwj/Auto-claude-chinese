@@ -1,0 +1,8 @@
+{
+  "dialogs": {
+    "authRequired": {
+      "title": "Claude Authentication Required",
+      "description": "A Claude Code OAuth token is required to generate AI-powered feature ideas."
+    }
+  }
+}

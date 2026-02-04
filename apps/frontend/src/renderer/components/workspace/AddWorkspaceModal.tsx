@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { X, Layers } from 'lucide-react';
 import {
   Dialog,
@@ -79,6 +80,7 @@ export function AddWorkspaceModal({
   projects,
   onCreated,
 }: AddWorkspaceModalProps) {
+  const { t } = useTranslation('workspace');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [selectedProjects, setSelectedProjects] = useState<SelectedProject[]>([]);
@@ -196,7 +198,7 @@ export function AddWorkspaceModal({
             <Label htmlFor="name">Name</Label>
             <Input
               id="name"
-              placeholder="My App Workspace"
+              placeholder={t('placeholders.name')}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -207,7 +209,7 @@ export function AddWorkspaceModal({
             <Label htmlFor="description">Description (optional)</Label>
             <Textarea
               id="description"
-              placeholder="Backend, frontend, and mobile apps for My App"
+              placeholder={t('placeholders.description')}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={2}
@@ -234,7 +236,7 @@ export function AddWorkspaceModal({
               <p className="text-sm text-muted-foreground">
                 {selectedProjects.length > 0
                   ? 'All projects have been added'
-                  : 'No projects available'}
+                  : t('messages.noProjects')}
               </p>
             )}
           </div>

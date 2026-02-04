@@ -426,7 +426,7 @@ export function SDKRateLimitModal() {
               </p>
               <div className="flex items-center gap-2">
                 <Input
-                  placeholder="Account name (e.g., Work, Personal)"
+                  placeholder={t('settings:accounts.placeholders.accountName')}
                   value={newProfileName}
                   onChange={(e) => setNewProfileName(e.target.value)}
                   className="flex-1 h-8 text-sm"

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Github, RefreshCw, KeyRound, Info, CheckCircle2 } from 'lucide-react';
 import { CollapsibleSection } from './CollapsibleSection';
 import { StatusBadge } from './StatusBadge';
@@ -31,6 +32,8 @@ export function GitHubIntegrationSection({
   isCheckingGitHub,
   projectName,
 }: GitHubIntegrationSectionProps) {
+  const { t } = useTranslation(['settings', 'common']);
+
   // Show OAuth flow if user previously used OAuth, or if there's no token yet
   const [showOAuthFlow, setShowOAuthFlow] = useState(
     envConfig.githubAuthMethod === 'oauth' || (!envConfig.githubToken && !envConfig.githubAuthMethod)
@@ -152,7 +155,7 @@ export function GitHubIntegrationSection({
               <PasswordInput
                 value={envConfig.githubToken || ''}
                 onChange={handleManualTokenChange}
-                placeholder="ghp_xxxxxxxx or github_pat_xxxxxxxx"
+                placeholder={t('settings:github.placeholders.token')}
               />
             </div>
           )}
@@ -163,7 +166,7 @@ export function GitHubIntegrationSection({
               Format: <code className="px-1 bg-muted rounded">owner/repo</code> (e.g., facebook/react)
             </p>
             <Input
-              placeholder="owner/repository"
+              placeholder={t('settings:github.placeholders.repository')}
               value={envConfig.githubRepo || ''}
               onChange={(e) => onUpdateConfig({ githubRepo: e.target.value })}
             />

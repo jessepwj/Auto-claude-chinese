@@ -16,6 +16,7 @@ import {
   CheckSquare,
   Square,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../../ui/button';
 import { cn } from '../../../lib/utils';
 import type { GitLabMRReviewFinding } from '../hooks/useGitLabMRs';
@@ -39,6 +40,8 @@ export function ReviewFindings({
   postedIds = new Set(),
   onSelectionChange,
 }: ReviewFindingsProps) {
+  const { t } = useTranslation('gitlab');
+
   // Track which sections are expanded
   const [expandedSections, setExpandedSections] = useState<Set<SeverityGroup>>(
     new Set<SeverityGroup>(['critical', 'high']) // Critical and High expanded by default
@@ -195,7 +198,7 @@ export function ReviewFindings({
       {findings.length === 0 && (
         <div className="text-center py-8 text-muted-foreground">
           <CheckCircle className="h-8 w-8 mx-auto mb-2 text-success" />
-          <p className="text-sm">No issues found! The code looks good.</p>
+          <p className="text-sm">{t('mr.messages.noIssuesFound')}</p>
         </div>
       )}
     </div>

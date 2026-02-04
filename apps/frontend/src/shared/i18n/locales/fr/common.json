@@ -518,6 +518,7 @@
     "skipForNow": "Passer pour l'instant",
     "manualTokenEntry": "Saisie manuelle du jeton",
     "tokenCommandHint": "Exécutez <code>claude setup-token</code> pour obtenir votre jeton",
+    "tokenPlaceholder": "sk-ant-oat01-...",
     "emailOptionalPlaceholder": "Email (optionnel, pour affichage)",
     "saveToken": "Enregistrer le jeton",
     "accountNamePlaceholder": "Nom du compte (ex. Travail, Personnel)",

@@ -17,7 +17,7 @@ export function IssueList({
   onInvestigate,
   onLoadMore
 }: IssueListProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['github', 'common']);
   const loadMoreTriggerRef = useRef<HTMLDivElement>(null);
   const [viewportElement, setViewportElement] = useState<HTMLDivElement | null>(null);
 
@@ -68,7 +68,7 @@ export function IssueList({
   }
 
   if (issues.length === 0) {
-    return <EmptyState message="No issues found" />;
+    return <EmptyState message={t('github:issues.messages.noIssues')} />;
   }
 
   return (

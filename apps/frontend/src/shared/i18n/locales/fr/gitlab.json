@@ -196,8 +196,28 @@
     "placeholders": {
       "title": "Titre de la merge request",
       "description": "Description de la merge request",
-      "sourceBranch": "Branche source",
-      "targetBranch": "Branche cible"
+      "sourceBranch": "feature/ma-fonctionnalite",
+      "targetBranch": "main",
+      "descriptionOptional": "Décrivez les changements de cette merge request..."
+    },
+    "dialog": {
+      "title": "Créer une Merge Request",
+      "description": "Créer une nouvelle merge request dans GitLab",
+      "labels": {
+        "title": "Titre",
+        "sourceBranch": "Branche source",
+        "targetBranch": "Branche cible",
+        "description": "Description (optionnelle)"
+      },
+      "errors": {
+        "required": "Le titre, la branche source et la branche cible sont requis",
+        "createFailed": "Échec de la création de la merge request"
+      },
+      "buttons": {
+        "cancel": "Annuler",
+        "creating": "Création...",
+        "create": "Créer la Merge Request"
+      }
     }
   },
   "findings": {

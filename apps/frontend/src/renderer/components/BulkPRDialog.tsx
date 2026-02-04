@@ -255,7 +255,7 @@ export function BulkPRDialog({
                   id="bulkTargetBranch"
                   value={targetBranch}
                   onChange={(e) => setTargetBranch(e.target.value)}
-                  placeholder="main"
+                  placeholder={t('taskReview:pr.placeholders.targetBranch')}
                 />
                 <p className="text-xs text-muted-foreground">
                   {t('taskReview:bulkPR.targetBranchHint')}

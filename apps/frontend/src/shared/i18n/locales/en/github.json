@@ -32,11 +32,30 @@
   "prs": {
     "title": "GitHub Pull Requests",
     "messages": {
-      "noLogs": "No logs available"
+      "noLogs": "No logs available",
+      "noLogsDetails": "Run a review to generate logs",
+      "waitingForLogs": "Waiting for logs...",
+      "reviewStarting": "Review is starting"
+    },
+    "logs": {
+      "agentActivity": "Agent Activity",
+      "showMore": "Show {count} more",
+      "hideMore": "Hide {count} more"
     }
   },
   "setup": {
     "title": "GitHub Setup",
+    "connectTitle": "Connect GitHub",
+    "connectDescription": "Connect your GitHub account to enable repository operations and issue tracking.",
+    "claudeTitle": "Authenticate Claude",
+    "claudeDescription": "Authenticate with Claude to enable AI-powered features.",
+    "repoDescription": "Tasks will be created as git branches based on this repository.",
+    "createRepoAriaLabel": "Create new repository",
+    "linkRepoAriaLabel": "Link existing repository",
+    "goBackAriaLabel": "Go back to repository selection",
+    "selectOwnerAriaLabel": "Select repository owner {owner}",
+    "selectOrgAriaLabel": "Select organization {org}",
+    "selectVisibilityAriaLabel": "Select repository visibility: {visibility}",
     "placeholders": {
       "projectName": "my-project",
       "repository": "username/repository",

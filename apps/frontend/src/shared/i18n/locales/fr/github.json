@@ -32,11 +32,30 @@
   "prs": {
     "title": "Pull Requests GitHub",
     "messages": {
-      "noLogs": "Aucun journal disponible"
+      "noLogs": "Aucun journal disponible",
+      "noLogsDetails": "Exécutez une révision pour générer des journaux",
+      "waitingForLogs": "En attente des journaux...",
+      "reviewStarting": "La révision démarre"
+    },
+    "logs": {
+      "agentActivity": "Activité de l'agent",
+      "showMore": "Afficher {count} de plus",
+      "hideMore": "Masquer {count} de plus"
     }
   },
   "setup": {
     "title": "Configuration GitHub",
+    "connectTitle": "Connecter GitHub",
+    "connectDescription": "Connectez votre compte GitHub pour activer les opérations de dépôt et le suivi des issues.",
+    "claudeTitle": "Authentifier Claude",
+    "claudeDescription": "Authentifiez-vous avec Claude pour activer les fonctionnalités basées sur l'IA.",
+    "repoDescription": "Les tâches seront créées sous forme de branches git basées sur ce dépôt.",
+    "createRepoAriaLabel": "Créer un nouveau dépôt",
+    "linkRepoAriaLabel": "Lier un dépôt existant",
+    "goBackAriaLabel": "Retour à la sélection du dépôt",
+    "selectOwnerAriaLabel": "Sélectionner le propriétaire du dépôt {owner}",
+    "selectOrgAriaLabel": "Sélectionner l'organisation {org}",
+    "selectVisibilityAriaLabel": "Sélectionner la visibilité du dépôt : {visibility}",
     "placeholders": {
       "projectName": "mon-projet",
       "repository": "utilisateur/dépôt",

@@ -1,0 +1,8 @@
+{
+  "dialogs": {
+    "authRequired": {
+      "title": "Authentification Claude requise",
+      "description": "Un jeton OAuth Claude Code est nécessaire pour générer des idées de fonctionnalités assistées par l'IA."
+    }
+  }
+}

@@ -321,7 +321,7 @@ export function CustomMcpDialog({
                     setFormData(prev => ({ ...prev, command: e.target.value }));
                     setError(null);
                   }}
-                  placeholder="npx"
+                  placeholder={t('mcp.placeholders.command')}
                 />
               </div>
               <div className="space-y-2">
@@ -330,7 +330,7 @@ export function CustomMcpDialog({
                   id="args"
                   value={argsInput}
                   onChange={(e) => setArgsInput(e.target.value)}
-                  placeholder="-y @myorg/my-mcp-server"
+                  placeholder={t('mcp.placeholders.args')}
                 />
                 <p className="text-xs text-muted-foreground">{t('mcp.argsHint')}</p>
               </div>
@@ -349,7 +349,7 @@ export function CustomMcpDialog({
                     setFormData(prev => ({ ...prev, url: e.target.value }));
                     setError(null);
                   }}
-                  placeholder="https://mcp.example.com/mcp"
+                  placeholder={t('mcp.placeholders.url')}
                 />
               </div>
 

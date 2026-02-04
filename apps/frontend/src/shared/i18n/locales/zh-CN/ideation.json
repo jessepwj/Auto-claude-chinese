@@ -1,0 +1,8 @@
+{
+  "dialogs": {
+    "authRequired": {
+      "title": "需要 Claude 身份验证",
+      "description": "需要 Claude Code OAuth 令牌才能生成 AI 驱动的功能想法。"
+    }
+  }
+}

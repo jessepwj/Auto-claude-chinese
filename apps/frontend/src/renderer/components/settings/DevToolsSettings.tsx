@@ -282,7 +282,7 @@ export function DevToolsSettings({ settings, onSettingsChange }: DevToolsSetting
                   id="custom-ide-path"
                   value={settings.customIDEPath || ''}
                   onChange={(e) => handleCustomIDEPathChange(e.target.value)}
-                  placeholder="/path/to/your/ide"
+                  placeholder={t('devTools.placeholders.idePath')}
                   className="flex-1"
                 />
                 <Button
@@ -344,7 +344,7 @@ export function DevToolsSettings({ settings, onSettingsChange }: DevToolsSetting
                   id="custom-terminal-path"
                   value={settings.customTerminalPath || ''}
                   onChange={(e) => handleCustomTerminalPathChange(e.target.value)}
-                  placeholder="/path/to/your/terminal"
+                  placeholder={t('devTools.placeholders.terminalPath')}
                   className="flex-1"
                 />
                 <Button

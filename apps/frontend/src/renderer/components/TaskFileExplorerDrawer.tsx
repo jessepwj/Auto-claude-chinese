@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, FolderTree, RefreshCw } from 'lucide-react';
 import { Button } from './ui/button';
@@ -35,6 +36,7 @@ const contentVariants = {
 };
 
 export function TaskFileExplorerDrawer({ isOpen, onClose, projectPath }: TaskFileExplorerDrawerProps) {
+  const { t } = useTranslation(['common']);
   const { clearCache, loadDirectory } = useFileExplorerStore();
 
   const handleRefresh = () => {
@@ -81,7 +83,7 @@ export function TaskFileExplorerDrawer({ isOpen, onClose, projectPath }: TaskFil
                   size="icon"
                   className="h-6 w-6"
                   onClick={handleRefresh}
-                  title="Refresh"
+                  title={t('common:titles.refresh')}
                 >
                   <RefreshCw className="h-3.5 w-3.5" />
                 </Button>
@@ -90,7 +92,7 @@ export function TaskFileExplorerDrawer({ isOpen, onClose, projectPath }: TaskFil
                   size="icon"
                   className="h-6 w-6"
                   onClick={onClose}
-                  title="Close"
+                  title={t('common:titles.close')}
                 >
                   <X className="h-3.5 w-3.5" />
                 </Button>

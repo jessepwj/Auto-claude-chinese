@@ -88,7 +88,7 @@ interface InsightsProps {
 }
 
 export function Insights({ projectId }: InsightsProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['insights', 'common']);
   const session = useInsightsStore((state) => state.session);
   const sessions = useInsightsStore((state) => state.sessions);
   const status = useInsightsStore((state) => state.status);
@@ -98,7 +98,7 @@ export function Insights({ projectId }: InsightsProps) {
 
   // Create markdown components with translated accessibility text
   const markdownComponents = useMemo(() => ({
-    a: createSafeLink(t('accessibility.opensInNewWindow')),
+    a: createSafeLink(t('common:accessibility.opensInNewWindow')),
   }), [t]);
 
   const [inputValue, setInputValue] = useState('');
@@ -400,7 +400,7 @@ export function Insights({ projectId }: InsightsProps) {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask about your codebase..."
+            placeholder={t('insights:placeholders.ask')}
             className="min-h-[80px] resize-none"
             disabled={isLoading}
           />

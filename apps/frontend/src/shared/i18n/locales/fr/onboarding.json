@@ -142,7 +142,11 @@
       "openaiKey": "sk-...",
       "voyageKey": "pa-...",
       "voyageModel": "voyage-3",
-      "geminiKey": "AIza..."
+      "geminiKey": "AIza...",
+      "azureApiKey": "Clé API Azure",
+      "azureBaseUrl": "https://votre-ressource.openai.azure.com",
+      "azureDeployment": "text-embedding-ada-002",
+      "ollamaBaseUrl": "http://localhost:11434"
     }
   },
   "graphiti": {
@@ -151,7 +155,12 @@
       "apiUrl": "URL API",
       "neo4jUri": "neo4j://localhost:7687",
       "neo4jUser": "neo4j",
-      "neo4jPassword": "mot de passe"
+      "neo4jPassword": "mot de passe",
+      "azureDeployment": "Nom du déploiement",
+      "ollamaBaseUrl": "http://localhost:11434",
+      "ollamaModel": "Nom du modèle",
+      "embeddingDim": "Dimension (ex: 768)",
+      "databaseName": "Nom de la base de données"
     }
   },
   "completion": {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Github, RefreshCw, KeyRound, Loader2, CheckCircle2, AlertCircle, User, Lock, Globe, ChevronDown, GitBranch } from 'lucide-react';
 import { Input } from '../../ui/input';
 import { Label } from '../../ui/label';
@@ -55,6 +56,7 @@ export function GitHubIntegration({
   settings,
   setSettings
 }: GitHubIntegrationProps) {
+  const { t } = useTranslation('settings');
   const [authMode, setAuthMode] = useState<'manual' | 'oauth' | 'oauth-success'>('manual');
   const [oauthUsername, setOauthUsername] = useState<string | null>(null);
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
@@ -377,6 +379,7 @@ function RepositoryDropdown({
   onRefresh,
   onManualEntry
 }: RepositoryDropdownProps) {
+  const { t } = useTranslation('settings');
   const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState('');
 
@@ -463,7 +466,7 @@ function RepositoryDropdown({
             <div className="max-h-48 overflow-y-auto">
               {filteredRepos.length === 0 ? (
                 <div className="px-3 py-4 text-sm text-muted-foreground text-center">
-                  {filter ? 'No matching repositories' : 'No repositories found'}
+                  {filter ? t('github.messages.noMatchingRepositories') : t('github.messages.noRepositories')}
                 </div>
               ) : (
                 filteredRepos.map((repo) => (
@@ -618,6 +621,7 @@ function BranchSelector({
   onSelect,
   onRefresh
 }: BranchSelectorProps) {
+  const { t } = useTranslation('settings');
   const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState('');
 
@@ -710,7 +714,7 @@ function BranchSelector({
             <div className="max-h-40 overflow-y-auto border-t border-border">
               {filteredBranches.length === 0 ? (
                 <div className="px-3 py-4 text-sm text-muted-foreground text-center">
-                  {filter ? 'No matching branches' : 'No branches found'}
+                  {filter ? t('github.messages.noMatchingBranches') : t('github.messages.noBranches')}
                 </div>
               ) : (
                 filteredBranches.map((branch) => (
