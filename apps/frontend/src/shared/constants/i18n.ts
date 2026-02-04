@@ -11,4 +11,4 @@ export const AVAILABLE_LANGUAGES = [
   { value: 'zh-CN' as const, label: 'Chinese (Simplified)', nativeLabel: '简体中文' }
 ] as const;
 
-export const DEFAULT_LANGUAGE: SupportedLanguage = 'en';
+export const DEFAULT_LANGUAGE: SupportedLanguage = 'zh-CN';

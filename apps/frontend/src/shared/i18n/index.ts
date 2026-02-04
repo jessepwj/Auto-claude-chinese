@@ -88,8 +88,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // Default language (will be overridden by settings)
-    fallbackLng: 'en',
+    lng: 'zh-CN', // Default language: Simplified Chinese (will be overridden by settings)
+    fallbackLng: 'en', // Fallback to English if translation missing
     defaultNS,
     ns: ['common', 'navigation', 'settings', 'tasks', 'welcome', 'onboarding', 'dialogs', 'gitlab', 'taskReview', 'terminal', 'errors'],
     interpolation: {
