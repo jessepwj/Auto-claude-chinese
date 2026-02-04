@@ -1,0 +1,413 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+Auto Claude is an autonomous multi-agent coding framework that plans, builds, and validates software for you. It's a monorepo with a Python backend (CLI + agent logic) and an Electron/React frontend (desktop UI).
+
+> **Deep-dive reference:** [ARCHITECTURE.md](shared_docs/ARCHITECTURE.md) | **Frontend contributing:** [apps/frontend/CONTRIBUTING.md](apps/frontend/CONTRIBUTING.md)
+
+## Product Overview
+
+Auto Claude is a desktop application (+ CLI) where users describe a goal and AI agents autonomously handle planning, implementation, and QA validation. All work happens in isolated git worktrees so the main branch stays safe.
+
+**Core workflow:** User creates a task → Spec creation pipeline assesses complexity and writes a specification → Planner agent breaks it into subtasks → Coder agent implements (can spawn parallel subagents) → QA reviewer validates → QA fixer resolves issues → User reviews and merges.
+
+**Main features:**
+
+- **Autonomous Tasks** — Multi-agent pipeline (planner, coder, QA) that builds features end-to-end
+- **Kanban Board** — Visual task management from planning through completion
+- **Agent Terminals** — Up to 12 parallel AI-powered terminals with task context injection
+- **Insights** — AI chat interface for exploring and understanding your codebase
+- **Roadmap** — AI-assisted feature planning with strategic roadmap generation
+- **Ideation** — Discover improvements, performance issues, and security vulnerabilities
+- **GitHub/GitLab Integration** — Import issues, AI-powered investigation, PR/MR review and creation
+- **Changelog** — Generate release notes from completed tasks
+- **Memory System** — Graphiti-based knowledge graph retains insights across sessions
+- **Isolated Workspaces** — Git worktree isolation for every build; AI-powered semantic merge
+- **Flexible Authentication** — Use a Claude Code subscription (OAuth) or API profiles with any Anthropic-compatible endpoint (e.g., Anthropic API, z.ai for GLM models)
+- **Multi-Account Swapping** — Register multiple Claude accounts; when one hits a rate limit, Auto Claude automatically switches to an available account
+- **Cross-Platform** — Native desktop app for Windows, macOS, and Linux with auto-updates
+
+## Critical Rules
+
+**Claude Agent SDK only** — All AI interactions use `claude-agent-sdk`. NEVER use `anthropic.Anthropic()` directly. Always use `create_client()` from `core.client`.
+
+**i18n required** — All frontend user-facing text MUST use `react-i18next` translation keys. Never hardcode strings in JSX/TSX. Add keys to both `en/*.json` and `fr/*.json`.
+
+**Platform abstraction** — Never use `process.platform` directly. Import from `apps/frontend/src/main/platform/` or `apps/backend/core/platform/`. CI tests all three platforms.
+
+**File encoding (Windows compatibility)** — Always specify `encoding="utf-8"` for text file operations in Python to prevent Windows cp1252 encoding errors with emoji, international characters, and special symbols.
+
+**No time estimates** — Never provide duration predictions. Use priority-based ordering instead.
+
+**PR target** — Always target the `develop` branch for PRs to AndyMik90/Auto-Claude, NOT `main`.
+
+## Project Structure
+
+```
+autonomous-coding/
+├── apps/
+│   ├── backend/                 # Python backend/CLI — ALL agent logic
+│   │   ├── core/                # client.py, auth.py, worktree.py, platform/
+│   │   ├── security/            # Command allowlisting, validators, hooks
+│   │   ├── agents/              # planner, coder, session management
+│   │   ├── qa/                  # reviewer, fixer, loop, criteria
+│   │   ├── spec/                # Spec creation pipeline
+│   │   ├── cli/                 # CLI commands (spec, build, workspace, QA)
+│   │   ├── context/             # Task context building, semantic search
+│   │   ├── runners/             # Standalone runners (spec, roadmap, insights, github)
+│   │   ├── services/            # Background services, recovery orchestration
+│   │   ├── integrations/        # graphiti/, linear, github
+│   │   ├── project/             # Project analysis, security profiles
+│   │   ├── merge/               # Intent-aware semantic merge for parallel agents
+│   │   └── prompts/             # Agent system prompts (.md)
+│   └── frontend/                # Electron desktop UI
+│       └── src/
+│           ├── main/            # Electron main process
+│           │   ├── agent/       # Agent queue, process, state, events
+│           │   ├── claude-profile/ # Multi-profile credentials, token refresh, usage
+│           │   ├── terminal/    # PTY daemon, lifecycle, Claude integration
+│           │   ├── platform/    # Cross-platform abstraction
+│           │   ├── ipc-handlers/# 40+ handler modules by domain
+│           │   ├── services/    # SDK session recovery, profile service
+│           │   └── changelog/   # Changelog generation and formatting
+│           ├── preload/         # Electron preload scripts (electronAPI bridge)
+│           ├── renderer/        # React UI
+│           │   ├── components/  # UI components (onboarding, settings, task, terminal, github, etc.)
+│           │   ├── stores/      # 24+ Zustand state stores
+│           │   ├── contexts/    # React contexts (ViewStateContext)
+│           │   ├── hooks/       # Custom hooks (useIpc, useTerminal, etc.)
+│           │   ├── styles/      # CSS / Tailwind styles
+│           │   └── App.tsx      # Root component
+│           ├── shared/          # Shared types, i18n, constants, utils
+│           │   ├── i18n/locales/# en/*.json, fr/*.json
+│           │   ├── constants/   # themes.ts, etc.
+│           │   ├── types/       # 19+ type definition files
+│           │   └── utils/       # ANSI sanitizer, shell escape, provider detection
+│           └── types/           # TypeScript type definitions
+├── guides/                      # Documentation
+├── tests/                       # Backend test suite
+└── scripts/                     # Build and utility scripts
+```
+
+## Commands Quick Reference
+
+### Setup
+```bash
+npm run install:all              # Install all dependencies from root
+# Or separately:
+cd apps/backend && uv venv && uv pip install -r requirements.txt
+cd apps/frontend && npm install
+```
+
+### Backend
+```bash
+cd apps/backend
+python spec_runner.py --interactive            # Create spec interactively
+python spec_runner.py --task "description"      # Create from task
+python run.py --spec 001                        # Run autonomous build
+python run.py --spec 001 --qa                   # Run QA validation
+python run.py --spec 001 --merge                # Merge completed build
+python run.py --list                            # List all specs
+```
+
+### Frontend
+```bash
+cd apps/frontend
+npm run dev              # Dev mode (Electron + Vite HMR)
+npm run dev:debug        # Debug mode (enables DEBUG=true env var)
+npm run dev:mcp          # MCP mode (Chrome DevTools on port 9222)
+npm run build            # Production build
+npm run test             # Vitest unit tests
+npm run test:watch       # Vitest watch mode
+npm run lint             # Biome check
+npm run lint:fix         # Biome auto-fix
+npm run typecheck        # TypeScript strict check
+npm run package          # Package for distribution
+```
+
+### Testing
+
+| Stack | Command | Tool |
+|-------|---------|------|
+| Backend | `apps/backend/.venv/bin/pytest tests/ -v` | pytest |
+| Backend (skip slow) | `pytest tests/ -m "not slow"` | pytest |
+| Backend (integration only) | `pytest tests/ -m integration` | pytest |
+| Frontend unit | `cd apps/frontend && npm test` | Vitest |
+| Frontend E2E | `cd apps/frontend && npm run test:e2e` | Playwright |
+| All backend | `npm run test:backend` (from root) | pytest |
+
+**Pytest markers:**
+- `slow` — Long-running tests (skip with `-m "not slow"`)
+- `integration` — Integration tests (run with `-m integration`)
+- `asyncio` — Async tests (auto-detected)
+
+### Releases
+```bash
+node scripts/bump-version.js patch|minor|major  # Bump version
+git push && gh pr create --base main             # PR to main triggers release
+```
+
+See [RELEASE.md](RELEASE.md) for full release process.
+
+## Backend Development
+
+### Requirements
+
+- **Python 3.12+** (recommended) — Full feature support including Graphiti memory system
+- **Python 3.11+** (supported) — Memory features require 3.12+
+- **Claude Agent SDK 0.1.25+** — Required for improved tool use concurrency handling
+
+### Claude Agent SDK Usage
+
+Client: `apps/backend/core/client.py` — `create_client()` returns a configured `ClaudeSDKClient` with security hooks, tool permissions, and MCP server integration.
+
+Model and thinking level are user-configurable (via the Electron UI settings or CLI override). Use `phase_config.py` helpers to resolve the correct values:
+
+```python
+from core.client import create_client
+from phase_config import get_phase_model, get_phase_thinking_budget
+
+# Resolve model/thinking from user settings (Electron UI or CLI override)
+phase_model = get_phase_model(spec_dir, "coding", cli_model=None)
+phase_thinking = get_phase_thinking_budget(spec_dir, "coding", cli_thinking=None)
+
+client = create_client(
+    project_dir=project_dir,
+    spec_dir=spec_dir,
+    model=phase_model,
+    agent_type="coder",          # planner | coder | qa_reviewer | qa_fixer
+    max_thinking_tokens=phase_thinking,
+)
+
+# Run agent session (uses context manager + run_agent_session helper)
+async with client:
+    status, response = await run_agent_session(client, prompt, spec_dir)
+```
+
+Working examples: `agents/planner.py`, `agents/coder.py`, `qa/reviewer.py`, `qa/fixer.py`, `spec/`
+
+### Import Convention
+
+Backend uses facade modules for cleaner imports:
+
+```python
+# Use facade modules at root level
+from debug import debug, debug_error
+from progress import count_subtasks
+from workspace import setup_workspace
+
+# Instead of deep imports
+from core.debug.logger import debug  # Avoid
+```
+
+### File Encoding (Critical for Windows)
+
+**Always use `encoding="utf-8"` for text file operations:**
+
+```python
+# Reading
+with open(path, encoding="utf-8") as f:
+    content = f.read()
+
+# Writing
+with open(path, "w", encoding="utf-8") as f:
+    f.write(content)
+
+# Path methods
+from pathlib import Path
+content = Path(file).read_text(encoding="utf-8")
+Path(file).write_text(content, encoding="utf-8")
+
+# JSON files
+import json
+with open(path, encoding="utf-8") as f:
+    data = json.load(f)
+with open(path, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+```
+
+Windows defaults to cp1252, causing errors with emoji, international characters, and special symbols. See [guides/windows-development.md](guides/windows-development.md) for details.
+
+### Agent Prompts (`apps/backend/prompts/`)
+
+| Prompt | Purpose |
+|--------|---------|
+| planner.md | Implementation plan with subtasks |
+| coder.md / coder_recovery.md | Subtask implementation / recovery |
+| qa_reviewer.md / qa_fixer.md | Acceptance validation / issue fixes |
+| spec_gatherer/researcher/writer/critic.md | Spec creation pipeline |
+| complexity_assessor.md | AI-based complexity assessment |
+
+### Spec Directory Structure
+
+Each spec in `.auto-claude/specs/XXX-name/` contains: `spec.md`, `requirements.json`, `context.json`, `implementation_plan.json`, `qa_report.md`, `QA_FIX_REQUEST.md`
+
+### Memory System (Graphiti)
+
+Graph-based semantic memory in `integrations/graphiti/`. Configured through the Electron app's onboarding/settings UI (CLI users can alternatively set `GRAPHITI_ENABLED=true` in `.env`). See [ARCHITECTURE.md](shared_docs/ARCHITECTURE.md#memory-system) for details.
+
+## Frontend Development
+
+### Tech Stack
+
+React 19, TypeScript (strict), Electron 39, Zustand 5, Tailwind CSS v4, Radix UI, xterm.js 6, Vite 7, Vitest 4, Biome 2, Motion (Framer Motion)
+
+### Path Aliases (tsconfig.json)
+
+| Alias | Maps to |
+|-------|---------|
+| `@/*` | `src/renderer/*` |
+| `@shared/*` | `src/shared/*` |
+| `@preload/*` | `src/preload/*` |
+| `@features/*` | `src/renderer/features/*` |
+| `@components/*` | `src/renderer/shared/components/*` |
+| `@hooks/*` | `src/renderer/shared/hooks/*` |
+| `@lib/*` | `src/renderer/shared/lib/*` |
+
+### State Management (Zustand)
+
+All state lives in `src/renderer/stores/`. Key stores:
+
+- `project-store.ts` — Active project, project list
+- `task-store.ts` — Tasks/specs management
+- `terminal-store.ts` — Terminal sessions and state
+- `settings-store.ts` — User preferences
+- `github/issues-store.ts`, `github/pr-review-store.ts` — GitHub integration
+- `insights-store.ts`, `roadmap-store.ts`, `kanban-settings-store.ts`
+
+Main process also has stores: `src/main/project-store.ts`, `src/main/terminal-session-store.ts`
+
+### Styling
+
+- **Tailwind CSS v4** with `@tailwindcss/postcss` plugin
+- **7 color themes** (Default, Dusk, Lime, Ocean, Retro, Neo + more) defined in `src/shared/constants/themes.ts`
+- Each theme has light/dark mode variants via CSS custom properties
+- Utility: `clsx` + `tailwind-merge` via `cn()` helper
+- Component variants: `class-variance-authority` (CVA)
+
+### IPC Communication
+
+Main ↔ Renderer communication via Electron IPC:
+- **Handlers:** `src/main/ipc-handlers/` — organized by domain (github, gitlab, ideation, context, etc.)
+- **Preload:** `src/preload/` — exposes safe APIs to renderer
+- Pattern: renderer calls via `window.electronAPI.*`, main handles in IPC handler modules
+
+### Agent Management (`src/main/agent/`)
+
+The frontend manages agent lifecycle end-to-end:
+- **`agent-queue.ts`** — Queue routing, prioritization, spec number locking
+- **`agent-process.ts`** — Spawns and manages agent subprocess communication
+- **`agent-state.ts`** — Tracks running agent state and status
+- **`agent-events.ts`** — Agent lifecycle events and state transitions
+
+### Claude Profile System (`src/main/claude-profile/`)
+
+Multi-profile credential management for switching between Claude accounts:
+- **`credential-utils.ts`** — OS credential storage (Keychain/Windows Credential Manager)
+- **`token-refresh.ts`** — OAuth token lifecycle and automatic refresh
+- **`usage-monitor.ts`** — API usage tracking and rate limiting per profile
+- **`profile-scorer.ts`** — Scores profiles by usage and availability
+
+### Terminal System (`src/main/terminal/`)
+
+Full PTY-based terminal integration:
+- **`pty-daemon.ts`** / **`pty-manager.ts`** — Background PTY process management
+- **`terminal-lifecycle.ts`** — Session creation, cleanup, event handling
+- **`claude-integration-handler.ts`** — Claude SDK integration within terminals
+- Renderer: xterm.js 6 with WebGL, fit, web-links, serialize addons. Store: `terminal-store.ts`
+
+## Code Quality
+
+### Frontend
+- **Linting:** Biome (`npm run lint` / `npm run lint:fix`)
+- **Type checking:** `npm run typecheck` (strict mode)
+- **Pre-commit:** Husky + lint-staged runs Biome on staged `.ts/.tsx/.js/.jsx/.json`
+- **Testing:** Vitest + React Testing Library + jsdom
+
+### Backend
+- **Linting:** Ruff (auto-fix with `ruff check --fix`)
+- **Formatting:** Ruff format (`ruff format`)
+- **Testing:** pytest (`apps/backend/.venv/bin/pytest tests/ -v`)
+
+### Pre-commit Hooks
+
+Install pre-commit to run checks automatically:
+
+```bash
+pip install pre-commit
+pre-commit install
+
+# Run manually on all files
+pre-commit run --all-files
+
+# Skip hooks temporarily (not recommended)
+git commit --no-verify
+```
+
+Pre-commit runs:
+- **ruff** — Python linter with auto-fix
+- **ruff-format** — Python code formatter
+- **biome** — TypeScript/React linter
+- **typecheck** — TypeScript type checking
+- **trailing-whitespace** — Remove trailing spaces
+- **end-of-file-fixer** — Ensure files end with newline
+- **check-yaml** — Validate YAML syntax
+- **check-added-large-files** — Prevent large file commits
+
+## i18n Guidelines
+
+All frontend UI text uses `react-i18next`. Translation files: `apps/frontend/src/shared/i18n/locales/{en,fr}/*.json`
+
+**Namespaces:** `common`, `navigation`, `settings`, `dialogs`, `tasks`, `errors`, `onboarding`, `welcome`
+
+```tsx
+import { useTranslation } from 'react-i18next';
+const { t } = useTranslation(['navigation', 'common']);
+
+<span>{t('navigation:items.githubPRs')}</span>     // CORRECT
+<span>GitHub PRs</span>                             // WRONG
+
+// With interpolation:
+<span>{t('errors:task.parseError', { error })}</span>
+```
+
+When adding new UI text: add keys to ALL language files, use `namespace:section.key` format.
+
+## Cross-Platform
+
+Supports Windows, macOS, Linux. CI tests all three.
+
+**Platform modules:** `apps/frontend/src/main/platform/` and `apps/backend/core/platform/`
+
+| Function | Purpose |
+|----------|---------|
+| `isWindows()` / `isMacOS()` / `isLinux()` | OS detection |
+| `getPathDelimiter()` | `;` (Win) or `:` (Unix) |
+| `findExecutable(name)` | Cross-platform executable lookup |
+| `requiresShell(command)` | `.cmd/.bat` shell detection (Win) |
+
+Never hardcode paths. Use `findExecutable()` and `joinPaths()`. See [ARCHITECTURE.md](shared_docs/ARCHITECTURE.md#cross-platform-development) for extended guide.
+
+## E2E Testing (Electron MCP)
+
+QA agents can interact with the running Electron app via Chrome DevTools Protocol:
+
+1. Start app: `npm run dev:debug` (debug mode for AI self-validation via Electron MCP)
+2. Set `ELECTRON_MCP_ENABLED=true` in `apps/backend/.env`
+3. Run QA: `python run.py --spec 001 --qa`
+
+Tools: `take_screenshot`, `click_by_text`, `fill_input`, `get_page_structure`, `send_keyboard_shortcut`, `eval`. See [ARCHITECTURE.md](shared_docs/ARCHITECTURE.md#end-to-end-testing) for full capabilities.
+
+## Running the Application
+
+```bash
+# CLI only
+cd apps/backend && python run.py --spec 001
+
+# Desktop app
+npm start          # Production build + run
+npm run dev        # Development mode with HMR
+
+# Project data: .auto-claude/specs/ (gitignored)
+```
