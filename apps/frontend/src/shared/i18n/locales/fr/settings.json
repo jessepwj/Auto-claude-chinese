@@ -652,6 +652,17 @@
     "restore": "Restaurer",
     "noMcpServers": "Aucun serveur MCP",
     "cannotRemove": "Impossible à supprimer (requis)",
+    "placeholders": {
+      "command": "npx",
+      "args": "-y @myorg/my-mcp-server",
+      "url": "https://mcp.example.com/mcp"
+    },
+    "titles": {
+      "testConnection": "Tester la connexion"
+    },
+    "errors": {
+      "noProject": "Aucun projet sélectionné. Veuillez d'abord sélectionner un projet."
+    },
     "servers": {
       "context7": {
         "name": "Context7",
@@ -867,5 +878,55 @@
       "label": "Remplisseur de modèle PR",
       "description": "Remplit intelligemment les modèles de PR GitHub à partir des changements de code"
     }
+  },
+  "env": {
+    "placeholders": {
+      "token": "Entrez votre jeton..."
+    },
+    "errors": {
+      "noProject": "Aucun projet sélectionné. Veuillez d'abord sélectionner un projet."
+    }
+  },
+  "github": {
+    "placeholders": {
+      "token": "ghp_xxxxxxxx ou github_pat_xxxxxxxx",
+      "repository": "propriétaire/dépôt"
+    },
+    "messages": {
+      "noMatchingRepositories": "Aucun dépôt correspondant",
+      "noRepositories": "Aucun dépôt trouvé",
+      "noMatchingBranches": "Aucune branche correspondante",
+      "noBranches": "Aucune branche trouvée"
+    }
+  },
+  "linear": {
+    "placeholders": {
+      "apiKey": "lin_api_xxxxxxxx"
+    }
+  },
+  "devTools": {
+    "placeholders": {
+      "idePath": "/chemin/vers/votre/ide",
+      "terminalPath": "/chemin/vers/votre/terminal"
+    }
+  },
+  "display": {
+    "titles": {
+      "displayScale": "Échelle d'affichage"
+    }
+  },
+  "theme": {
+    "titles": {
+      "color": "Couleur",
+      "appearance": "Apparence"
+    }
+  },
+  "accounts": {
+    "placeholders": {
+      "accountName": "Nom du compte (ex: Travail, Personnel)"
+    }
+  },
+  "titles": {
+    "claudeAuth": "Authentification Claude"
   }
 }

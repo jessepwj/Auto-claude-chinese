@@ -1,0 +1,46 @@
+{
+  "issues": {
+    "title": "Issues GitHub",
+    "placeholders": {
+      "search": "Rechercher des issues..."
+    },
+    "filters": {
+      "open": "Ouvertes",
+      "closed": "Fermées",
+      "all": "Toutes"
+    },
+    "badges": {
+      "open": "{count} ouvertes"
+    },
+    "actions": {
+      "analyzeGroup": "Analyser et regrouper les issues"
+    },
+    "tooltips": {
+      "analyzeGroup": "Analysez jusqu'à 200 issues ouvertes, regroupez les similaires et examinez les lots proposés avant de créer des tâches.",
+      "autoFix": "Corriger automatiquement les nouvelles issues à leur arrivée."
+    },
+    "labels": {
+      "autoFixNew": "Auto-correction des nouvelles"
+    },
+    "status": {
+      "processing": "Traitement de {n} issue(s)..."
+    },
+    "messages": {
+      "noIssues": "Aucune issue trouvée"
+    }
+  },
+  "prs": {
+    "title": "Pull Requests GitHub",
+    "messages": {
+      "noLogs": "Aucun journal disponible"
+    }
+  },
+  "setup": {
+    "title": "Configuration GitHub",
+    "placeholders": {
+      "projectName": "mon-projet",
+      "repository": "utilisateur/dépôt",
+      "selectBranch": "Sélectionner une branche"
+    }
+  }
+}

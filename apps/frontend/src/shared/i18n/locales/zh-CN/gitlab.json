@@ -22,6 +22,9 @@
     "noMatch": "没有匹配的议题",
     "selectIssue": "选择一个议题查看详情"
   },
+  "messages": {
+    "noIssues": "未找到议题"
+  },
   "notConnected": {
     "title": "GitLab 未连接",
     "description": "在项目设置中配置您的 GitLab 令牌和项目以同步议题。",
@@ -174,6 +177,17 @@
       "stillOpen": "仍打开",
       "newIssue": "新问题",
       "newIssues": "新问题"
+    }
+  },
+  "mr": {
+    "messages": {
+      "noIssuesFound": "未发现问题!代码看起来不错。"
+    },
+    "placeholders": {
+      "title": "合并请求标题",
+      "description": "合并请求描述",
+      "sourceBranch": "源分支",
+      "targetBranch": "目标分支"
     }
   },
   "findings": {

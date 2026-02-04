@@ -90,7 +90,16 @@
     "hints": {
       "targetBranch": "留空以使用默认分支",
       "prTitle": "留空以使用任务标题"
+    },
+    "placeholders": {
+      "targetBranch": "main"
     }
+  },
+  "placeholders": {
+    "commitMessage": "提交消息..."
+  },
+  "messages": {
+    "noChanges": "未找到更改"
   },
   "mergeProgress": {
     "stages": {

@@ -79,6 +79,15 @@
       "profileCreatedAuthFailed": "配置已创建,但无法准备认证:{{error}}",
       "authPrepareFailed": "无法准备认证:{{error}}",
       "authStartFailedMessage": "无法启动认证。请重试。"
+    },
+    "errors": {
+      "invalidProfileName": "配置名称必须至少包含一个字母或数字"
+    }
+  },
+  "auth": {
+    "titles": {
+      "signInAnthropic": "使用 Anthropic 登录",
+      "customApiKey": "使用自定义 API 密钥"
     }
   },
   "memory": {
@@ -128,7 +137,23 @@
     "embeddingModel": "嵌入向量模型",
     "embeddingDim": "嵌入向量维度",
     "embeddingDimDescription": "Ollama 嵌入向量所需(例如,nomic-embed-text 为 768)",
-    "modelRecommendation": "推荐:qwen3-embedding:4b(平衡)、:8b(质量)、:0.6b(快速)"
+    "modelRecommendation": "推荐:qwen3-embedding:4b(平衡)、:8b(质量)、:0.6b(快速)",
+    "placeholders": {
+      "mcpUrl": "http://localhost:8000/mcp/",
+      "openaiKey": "sk-...",
+      "voyageKey": "pa-...",
+      "voyageModel": "voyage-3",
+      "geminiKey": "AIza..."
+    }
+  },
+  "graphiti": {
+    "placeholders": {
+      "apiKey": "API 密钥",
+      "apiUrl": "API URL",
+      "neo4jUri": "neo4j://localhost:7687",
+      "neo4jUser": "neo4j",
+      "neo4jPassword": "密码"
+    }
   },
   "completion": {
     "title": "一切就绪!",
@@ -230,7 +255,13 @@
     "detectedSummary": "在您的系统上检测到:",
     "noToolsDetected": "未检测到其他工具(将使用 VS Code 和系统终端)",
     "custom": "自定义...",
-    "saveAndContinue": "保存并继续"
+    "saveAndContinue": "保存并继续",
+    "placeholders": {
+      "selectIde": "选择 IDE...",
+      "idePath": "/path/to/your/ide",
+      "selectTerminal": "选择终端...",
+      "terminalPath": "/path/to/your/terminal"
+    }
   },
   "ollama": {
     "notInstalled": {

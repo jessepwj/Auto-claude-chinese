@@ -1,0 +1,9 @@
+{
+  "placeholders": {
+    "name": "工作区名称",
+    "description": "工作区描述"
+  },
+  "messages": {
+    "noProjects": "没有可用项目"
+  }
+}

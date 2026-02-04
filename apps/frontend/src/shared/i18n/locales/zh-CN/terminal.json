@@ -41,5 +41,11 @@
     "deleteTitle": "删除工作树?",
     "deleteDescription": "这将永久删除工作树及其分支。任何未提交的更改将丢失。",
     "detached": "(已分离)"
+  },
+  "titles": {
+    "claude": "Claude"
+  },
+  "messages": {
+    "noTasks": "无可用任务"
   }
 }

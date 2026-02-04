@@ -1,0 +1,46 @@
+{
+  "issues": {
+    "title": "GitHub Issues",
+    "placeholders": {
+      "search": "Search issues..."
+    },
+    "filters": {
+      "open": "Open",
+      "closed": "Closed",
+      "all": "All"
+    },
+    "badges": {
+      "open": "{count} open"
+    },
+    "actions": {
+      "analyzeGroup": "Analyze & Group Issues"
+    },
+    "tooltips": {
+      "analyzeGroup": "Analyze up to 200 open issues, group similar ones, and review proposed batches before creating tasks.",
+      "autoFix": "Automatically fix new issues as they come in."
+    },
+    "labels": {
+      "autoFixNew": "Auto-Fix New"
+    },
+    "status": {
+      "processing": "Processing {n} issue(s)..."
+    },
+    "messages": {
+      "noIssues": "No issues found"
+    }
+  },
+  "prs": {
+    "title": "GitHub Pull Requests",
+    "messages": {
+      "noLogs": "No logs available"
+    }
+  },
+  "setup": {
+    "title": "GitHub Setup",
+    "placeholders": {
+      "projectName": "my-project",
+      "repository": "username/repository",
+      "selectBranch": "Select a branch"
+    }
+  }
+}

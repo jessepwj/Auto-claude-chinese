@@ -1,0 +1,20 @@
+{
+  "memories": {
+    "placeholders": {
+      "search": "搜索模式、见解、陷阱..."
+    }
+  },
+  "memory": {
+    "titles": {
+      "whatWorked": "成功经验",
+      "whatFailed": "失败经验",
+      "approach": "方法",
+      "recommendations": "建议",
+      "patterns": "模式",
+      "gotchas": "注意事项",
+      "changedFiles": "已更改文件",
+      "fileInsights": "文件见解",
+      "subtasksCompleted": "已完成子任务"
+    }
+  }
+}

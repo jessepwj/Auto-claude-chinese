@@ -90,7 +90,16 @@
     "hints": {
       "targetBranch": "Leave empty to use the default branch",
       "prTitle": "Leave empty to use the task title"
+    },
+    "placeholders": {
+      "targetBranch": "main"
     }
+  },
+  "placeholders": {
+    "commitMessage": "Commit message..."
+  },
+  "messages": {
+    "noChanges": "No changes found"
   },
   "mergeProgress": {
     "stages": {

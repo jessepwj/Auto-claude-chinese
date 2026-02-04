@@ -41,5 +41,11 @@
     "deleteTitle": "Supprimer le Worktree?",
     "deleteDescription": "Ceci supprimera definitivement le worktree et sa branche. Les modifications non committées seront perdues.",
     "detached": "(détaché)"
+  },
+  "titles": {
+    "claude": "Claude"
+  },
+  "messages": {
+    "noTasks": "Aucune tâche disponible"
   }
 }

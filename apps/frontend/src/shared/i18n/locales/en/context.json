@@ -1,0 +1,20 @@
+{
+  "memories": {
+    "placeholders": {
+      "search": "Search for patterns, insights, gotchas..."
+    }
+  },
+  "memory": {
+    "titles": {
+      "whatWorked": "What Worked",
+      "whatFailed": "What Failed",
+      "approach": "Approach",
+      "recommendations": "Recommendations",
+      "patterns": "Patterns",
+      "gotchas": "Gotchas",
+      "changedFiles": "Changed Files",
+      "fileInsights": "File Insights",
+      "subtasksCompleted": "Subtasks Completed"
+    }
+  }
+}

@@ -652,6 +652,17 @@
     "restore": "恢复",
     "noMcpServers": "无 MCP 服务器",
     "cannotRemove": "无法移除（必需）",
+    "placeholders": {
+      "command": "npx",
+      "args": "-y @myorg/my-mcp-server",
+      "url": "https://mcp.example.com/mcp"
+    },
+    "titles": {
+      "testConnection": "测试连接"
+    },
+    "errors": {
+      "noProject": "未选择项目。请先选择一个项目。"
+    },
     "servers": {
       "context7": {
         "name": "Context7",
@@ -867,5 +878,55 @@
       "label": "PR 模板填充器",
       "description": "从代码更改中 AI 填充 GitHub PR 模板"
     }
+  },
+  "env": {
+    "placeholders": {
+      "token": "输入您的令牌..."
+    },
+    "errors": {
+      "noProject": "未选择项目。请先选择一个项目。"
+    }
+  },
+  "github": {
+    "placeholders": {
+      "token": "ghp_xxxxxxxx 或 github_pat_xxxxxxxx",
+      "repository": "所有者/仓库"
+    },
+    "messages": {
+      "noMatchingRepositories": "没有匹配的仓库",
+      "noRepositories": "未找到仓库",
+      "noMatchingBranches": "没有匹配的分支",
+      "noBranches": "未找到分支"
+    }
+  },
+  "linear": {
+    "placeholders": {
+      "apiKey": "lin_api_xxxxxxxx"
+    }
+  },
+  "devTools": {
+    "placeholders": {
+      "idePath": "/path/to/your/ide",
+      "terminalPath": "/path/to/your/terminal"
+    }
+  },
+  "display": {
+    "titles": {
+      "displayScale": "显示缩放"
+    }
+  },
+  "theme": {
+    "titles": {
+      "color": "颜色",
+      "appearance": "外观"
+    }
+  },
+  "accounts": {
+    "placeholders": {
+      "accountName": "账户名称（例如：工作、个人）"
+    }
+  },
+  "titles": {
+    "claudeAuth": "Claude 认证"
   }
 }

@@ -1,0 +1,80 @@
+{
+  "steps": {
+    "select": "选择",
+    "generate": "生成",
+    "release": "发布"
+  },
+  "filters": {
+    "labels": {
+      "source": "变更日志来源",
+      "gitHistoryOptions": "Git 历史选项",
+      "historyType": "历史类型",
+      "commitCount": "提交数量",
+      "sinceDate": "起始日期",
+      "fromTag": "起始标签",
+      "toTag": "结束标签（可选）",
+      "lastVersion": "上一版本",
+      "branchComparison": "分支比较",
+      "baseBranch": "基础分支",
+      "compareBranch": "比较分支",
+      "includeMergeCommits": "包含合并提交"
+    },
+    "options": {
+      "sinceVersion": "自某版本起",
+      "recentCommits": "最近提交",
+      "sinceDate": "自某日期起",
+      "tagRange": "标签范围",
+      "headLatest": "HEAD（最新）"
+    },
+    "placeholders": {
+      "selectTag": "选择标签...",
+      "headLatest": "HEAD（最新）",
+      "selectVersion": "选择版本...",
+      "selectBaseBranch": "选择基础分支...",
+      "selectCompareBranch": "选择比较分支..."
+    },
+    "badges": {
+      "default": "默认",
+      "current": "当前"
+    },
+    "hints": {
+      "sinceVersion": "将包含自此版本以来的所有提交",
+      "baseBranch": "您要合并到的分支",
+      "compareBranch": "包含您更改的分支"
+    },
+    "errors": {
+      "sameBranch": "分支必须不同"
+    },
+    "actions": {
+      "loading": "加载中...",
+      "loadCommits": "加载提交"
+    }
+  },
+  "config": {
+    "actions": {
+      "backToSelection": "返回选择"
+    },
+    "summary": {
+      "including": "包含 {count} 个{label}"
+    },
+    "labels": {
+      "previousVersion": "上一版本：{version}",
+      "audience": "受众",
+      "emojis": "表情符号",
+      "advancedOptions": "高级选项",
+      "customInstructions": "自定义说明"
+    },
+    "placeholders": {
+      "version": "1.0.0",
+      "customInstructions": "为 AI 添加任何特殊说明..."
+    },
+    "hints": {
+      "customInstructions": "可选。指导 AI 使用的语气、要包含的特定细节等。"
+    }
+  },
+  "preview": {
+    "placeholders": {
+      "content": "生成的变更日志将在此处显示..."
+    }
+  }
+}

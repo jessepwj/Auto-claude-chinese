@@ -1,0 +1,9 @@
+{
+  "placeholders": {
+    "name": "Workspace name",
+    "description": "Workspace description"
+  },
+  "messages": {
+    "noProjects": "No projects available"
+  }
+}

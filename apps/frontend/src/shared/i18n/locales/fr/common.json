@@ -670,5 +670,22 @@
     "progress": "Progression",
     "lastActivityPrefix": "dernière activité",
     "lastProgressUpdateTooltip": "Dernière mise à jour de progression reçue"
+  },
+  "titles": {
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "refresh": "Actualiser",
+    "close": "Fermer",
+    "testConnection": "Tester la connexion"
+  },
+  "messages": {
+    "noFilesFound": "Aucun fichier trouvé",
+    "noResults": "Aucun résultat trouvé"
+  },
+  "warnings": {
+    "largeFile": "Fichier volumineux - envisagez de le compresser"
+  },
+  "status": {
+    "loading": "Chargement..."
   }
 }

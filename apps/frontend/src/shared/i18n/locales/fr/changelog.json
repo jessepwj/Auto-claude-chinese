@@ -1,0 +1,80 @@
+{
+  "steps": {
+    "select": "Sélectionner",
+    "generate": "Générer",
+    "release": "Publier"
+  },
+  "filters": {
+    "labels": {
+      "source": "Source du Changelog",
+      "gitHistoryOptions": "Options d'historique Git",
+      "historyType": "Type d'historique",
+      "commitCount": "Nombre de commits",
+      "sinceDate": "Depuis la date",
+      "fromTag": "Du tag",
+      "toTag": "Au tag (optionnel)",
+      "lastVersion": "Dernière version",
+      "branchComparison": "Comparaison de branches",
+      "baseBranch": "Branche de base",
+      "compareBranch": "Branche à comparer",
+      "includeMergeCommits": "Inclure les commits de fusion"
+    },
+    "options": {
+      "sinceVersion": "Depuis la version",
+      "recentCommits": "Commits récents",
+      "sinceDate": "Depuis la date",
+      "tagRange": "Plage de tags",
+      "headLatest": "HEAD (dernier)"
+    },
+    "placeholders": {
+      "selectTag": "Sélectionner un tag...",
+      "headLatest": "HEAD (dernier)",
+      "selectVersion": "Sélectionner une version...",
+      "selectBaseBranch": "Sélectionner la branche de base...",
+      "selectCompareBranch": "Sélectionner la branche à comparer..."
+    },
+    "badges": {
+      "default": "par défaut",
+      "current": "actuel"
+    },
+    "hints": {
+      "sinceVersion": "Tous les commits depuis cette version seront inclus",
+      "baseBranch": "La branche dans laquelle vous fusionnez",
+      "compareBranch": "La branche avec vos modifications"
+    },
+    "errors": {
+      "sameBranch": "Les branches doivent être différentes"
+    },
+    "actions": {
+      "loading": "Chargement...",
+      "loadCommits": "Charger les commits"
+    }
+  },
+  "config": {
+    "actions": {
+      "backToSelection": "Retour à la sélection"
+    },
+    "summary": {
+      "including": "Incluant {count} {label}"
+    },
+    "labels": {
+      "previousVersion": "Précédente : {version}",
+      "audience": "Public",
+      "emojis": "Emojis",
+      "advancedOptions": "Options avancées",
+      "customInstructions": "Instructions personnalisées"
+    },
+    "placeholders": {
+      "version": "1.0.0",
+      "customInstructions": "Ajoutez des instructions spéciales pour l'IA..."
+    },
+    "hints": {
+      "customInstructions": "Optionnel. Guidez l'IA sur le ton, les détails spécifiques à inclure, etc."
+    }
+  },
+  "preview": {
+    "placeholders": {
+      "content": "Le changelog généré apparaîtra ici..."
+    }
+  }
+}

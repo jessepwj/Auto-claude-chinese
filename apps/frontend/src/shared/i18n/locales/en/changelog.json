@@ -1,0 +1,80 @@
+{
+  "steps": {
+    "select": "Select",
+    "generate": "Generate",
+    "release": "Release"
+  },
+  "filters": {
+    "labels": {
+      "source": "Changelog Source",
+      "gitHistoryOptions": "Git History Options",
+      "historyType": "History Type",
+      "commitCount": "Number of Commits",
+      "sinceDate": "Since Date",
+      "fromTag": "From Tag",
+      "toTag": "To Tag (optional)",
+      "lastVersion": "Last Version",
+      "branchComparison": "Branch Comparison",
+      "baseBranch": "Base Branch",
+      "compareBranch": "Compare Branch",
+      "includeMergeCommits": "Include merge commits"
+    },
+    "options": {
+      "sinceVersion": "Since Version",
+      "recentCommits": "Recent Commits",
+      "sinceDate": "Since Date",
+      "tagRange": "Tag Range",
+      "headLatest": "HEAD (latest)"
+    },
+    "placeholders": {
+      "selectTag": "Select tag...",
+      "headLatest": "HEAD (latest)",
+      "selectVersion": "Select version...",
+      "selectBaseBranch": "Select base branch...",
+      "selectCompareBranch": "Select compare branch..."
+    },
+    "badges": {
+      "default": "default",
+      "current": "current"
+    },
+    "hints": {
+      "sinceVersion": "All commits since this version will be included",
+      "baseBranch": "The branch you're merging into",
+      "compareBranch": "The branch with your changes"
+    },
+    "errors": {
+      "sameBranch": "Branches must be different"
+    },
+    "actions": {
+      "loading": "Loading...",
+      "loadCommits": "Load Commits"
+    }
+  },
+  "config": {
+    "actions": {
+      "backToSelection": "Back to Selection"
+    },
+    "summary": {
+      "including": "Including {count} {label}"
+    },
+    "labels": {
+      "previousVersion": "Previous: {version}",
+      "audience": "Audience",
+      "emojis": "Emojis",
+      "advancedOptions": "Advanced Options",
+      "customInstructions": "Custom Instructions"
+    },
+    "placeholders": {
+      "version": "1.0.0",
+      "customInstructions": "Add any special instructions for the AI..."
+    },
+    "hints": {
+      "customInstructions": "Optional. Guide the AI on tone, specific details to include, etc."
+    }
+  },
+  "preview": {
+    "placeholders": {
+      "content": "Generated changelog will appear here..."
+    }
+  }
+}

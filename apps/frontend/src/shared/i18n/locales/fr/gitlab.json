@@ -22,6 +22,9 @@
     "noMatch": "Aucune issue ne correspond à votre recherche",
     "selectIssue": "Sélectionnez une issue pour voir les détails"
   },
+  "messages": {
+    "noIssues": "Aucune issue trouvée"
+  },
   "notConnected": {
     "title": "GitLab non connecté",
     "description": "Configurez votre token GitLab et le projet dans les paramètres du projet pour synchroniser les issues.",
@@ -184,6 +187,17 @@
       "stillOpen": "encore ouvert(s)",
       "newIssue": "nouveau problème",
       "newIssues": "nouveaux problèmes"
+    }
+  },
+  "mr": {
+    "messages": {
+      "noIssuesFound": "Aucun problème trouvé ! Le code est bon."
+    },
+    "placeholders": {
+      "title": "Titre de la merge request",
+      "description": "Description de la merge request",
+      "sourceBranch": "Branche source",
+      "targetBranch": "Branche cible"
     }
   },
   "findings": {

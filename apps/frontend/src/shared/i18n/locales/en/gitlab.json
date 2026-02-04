@@ -22,6 +22,9 @@
     "noMatch": "No issues match your search",
     "selectIssue": "Select an issue to view details"
   },
+  "messages": {
+    "noIssues": "No issues found"
+  },
   "notConnected": {
     "title": "GitLab Not Connected",
     "description": "Configure your GitLab token and project in project settings to sync issues.",
@@ -174,6 +177,17 @@
       "stillOpen": "still open",
       "newIssue": "new issue",
       "newIssues": "new issues"
+    }
+  },
+  "mr": {
+    "messages": {
+      "noIssuesFound": "No issues found! The code looks good."
+    },
+    "placeholders": {
+      "title": "Merge request title",
+      "description": "Merge request description",
+      "sourceBranch": "Source branch",
+      "targetBranch": "Target branch"
     }
   },
   "findings": {

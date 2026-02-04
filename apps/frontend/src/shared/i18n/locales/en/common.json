@@ -670,5 +670,22 @@
     "progress": "Progress",
     "lastActivityPrefix": "last activity",
     "lastProgressUpdateTooltip": "Last progress update received"
+  },
+  "titles": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "refresh": "Refresh",
+    "close": "Close",
+    "testConnection": "Test Connection"
+  },
+  "messages": {
+    "noFilesFound": "No files found",
+    "noResults": "No results found"
+  },
+  "warnings": {
+    "largeFile": "Large file - consider compressing"
+  },
+  "status": {
+    "loading": "Loading..."
   }
 }

@@ -90,7 +90,16 @@
     "hints": {
       "targetBranch": "Laissez vide pour utiliser la branche par défaut",
       "prTitle": "Laissez vide pour utiliser le titre de la tâche"
+    },
+    "placeholders": {
+      "targetBranch": "main"
     }
+  },
+  "placeholders": {
+    "commitMessage": "Message de commit..."
+  },
+  "messages": {
+    "noChanges": "Aucune modification trouvée"
   },
   "mergeProgress": {
     "stages": {

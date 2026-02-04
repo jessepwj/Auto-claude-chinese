@@ -1,0 +1,20 @@
+{
+  "memories": {
+    "placeholders": {
+      "search": "Rechercher des modèles, des aperçus, des pièges..."
+    }
+  },
+  "memory": {
+    "titles": {
+      "whatWorked": "Ce qui a fonctionné",
+      "whatFailed": "Ce qui a échoué",
+      "approach": "Approche",
+      "recommendations": "Recommandations",
+      "patterns": "Modèles",
+      "gotchas": "Pièges",
+      "changedFiles": "Fichiers modifiés",
+      "fileInsights": "Aperçus de fichiers",
+      "subtasksCompleted": "Sous-tâches terminées"
+    }
+  }
+}

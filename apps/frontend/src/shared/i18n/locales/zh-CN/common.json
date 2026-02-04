@@ -670,5 +670,22 @@
     "progress": "进度",
     "lastActivityPrefix": "最后活动",
     "lastProgressUpdateTooltip": "最后收到进度更新"
+  },
+  "titles": {
+    "edit": "编辑",
+    "delete": "删除",
+    "refresh": "刷新",
+    "close": "关闭",
+    "testConnection": "测试连接"
+  },
+  "messages": {
+    "noFilesFound": "未找到文件",
+    "noResults": "未找到结果"
+  },
+  "warnings": {
+    "largeFile": "文件较大 - 建议压缩"
+  },
+  "status": {
+    "loading": "加载中..."
   }
 }

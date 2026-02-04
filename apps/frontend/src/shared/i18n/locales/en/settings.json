@@ -652,6 +652,17 @@
     "restore": "Restore",
     "noMcpServers": "No MCP servers",
     "cannotRemove": "Cannot remove (required)",
+    "placeholders": {
+      "command": "npx",
+      "args": "-y @myorg/my-mcp-server",
+      "url": "https://mcp.example.com/mcp"
+    },
+    "titles": {
+      "testConnection": "Test Connection"
+    },
+    "errors": {
+      "noProject": "No project selected. Please select a project first."
+    },
     "servers": {
       "context7": {
         "name": "Context7",
@@ -867,5 +878,55 @@
       "label": "PR Template Filler",
       "description": "AI-fills GitHub PR templates from code changes"
     }
+  },
+  "env": {
+    "placeholders": {
+      "token": "Enter your token..."
+    },
+    "errors": {
+      "noProject": "No project selected. Please select a project first."
+    }
+  },
+  "github": {
+    "placeholders": {
+      "token": "ghp_xxxxxxxx or github_pat_xxxxxxxx",
+      "repository": "owner/repository"
+    },
+    "messages": {
+      "noMatchingRepositories": "No matching repositories",
+      "noRepositories": "No repositories found",
+      "noMatchingBranches": "No matching branches",
+      "noBranches": "No branches found"
+    }
+  },
+  "linear": {
+    "placeholders": {
+      "apiKey": "lin_api_xxxxxxxx"
+    }
+  },
+  "devTools": {
+    "placeholders": {
+      "idePath": "/path/to/your/ide",
+      "terminalPath": "/path/to/your/terminal"
+    }
+  },
+  "display": {
+    "titles": {
+      "displayScale": "Display Scale"
+    }
+  },
+  "theme": {
+    "titles": {
+      "color": "Color",
+      "appearance": "Appearance"
+    }
+  },
+  "accounts": {
+    "placeholders": {
+      "accountName": "Account name (e.g., Work, Personal)"
+    }
+  },
+  "titles": {
+    "claudeAuth": "Claude Authentication"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "placeholders": {
+    "loading": "Loading...",
+    "selectTeam": "Select a team",
+    "allProjects": "All projects"
+  },
+  "messages": {
+    "noIssues": "No issues found"
+  }
+}

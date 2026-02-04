@@ -159,6 +159,17 @@
       "qa": "质检"
     }
   },
+  "progress": {
+    "phases": {
+      "planning": "计划中 (0-20%)",
+      "coding": "编码中 (20-80%)",
+      "aiReview": "智能体审查 (80-95%)",
+      "complete": "已完成 (95-100%)"
+    },
+    "titles": {
+      "progress": "进度"
+    }
+  },
   "files": {
     "title": "文件",
     "tab": "文件",
