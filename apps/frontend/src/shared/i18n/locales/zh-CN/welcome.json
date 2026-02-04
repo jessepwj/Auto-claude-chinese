@@ -1,17 +1,17 @@
 {
   "hero": {
-    "title": "Welcome to Auto Claude",
-    "subtitle": "Build software autonomously with AI-powered agents"
+    "title": "欢迎使用 Auto Claude",
+    "subtitle": "借助 AI 智能代理自主构建软件"
   },
   "actions": {
-    "newProject": "New Project",
-    "openProject": "Open Project"
+    "newProject": "新建项目",
+    "openProject": "打开项目"
   },
   "recentProjects": {
-    "title": "Recent Projects",
-    "empty": "No projects yet",
-    "emptyDescription": "Create a new project or open an existing one to get started",
-    "openFolder": "Open Folder",
-    "openProjectAriaLabel": "Open project {{name}}"
+    "title": "最近的项目",
+    "empty": "暂无项目",
+    "emptyDescription": "创建新项目或打开现有项目以开始使用",
+    "openFolder": "打开文件夹",
+    "openProjectAriaLabel": "打开项目 {{name}}"
   }
 }
