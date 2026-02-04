@@ -76,5 +76,63 @@
     "placeholders": {
       "content": "Generated changelog will appear here..."
     }
+  },
+  "task": {
+    "hasSpecsBadge": "Has Specs"
+  },
+  "commit": {
+    "file": "file",
+    "files": "files",
+    "filesChanged": "{{count}} {{text}}"
+  },
+  "summary": {
+    "task": "task",
+    "commit": "commit",
+    "item": "item"
+  },
+  "selection": {
+    "of": "of",
+    "tasksSelected": "tasks selected",
+    "selectAll": "Select All",
+    "clear": "Clear",
+    "countStatus": "{{selected}} of {{total}} tasks selected"
+  },
+  "empty": {
+    "noCompletedTasks": "No Completed Tasks",
+    "noTasksDescription": "Complete tasks in the Kanban board and mark them as \"Done\" to include them in your changelog.",
+    "noCommitsFound": "No Commits Found",
+    "noCommitsGitHistory": "Configure the history options and click \"Load Commits\" to preview.",
+    "noCommitsBranchDiff": "Select both branches and click \"Load Commits\" to see the changes.",
+    "noProjectTitle": "No Project Selected",
+    "noProjectDescription": "Select a project from the sidebar to generate changelogs."
+  },
+  "commits": {
+    "found": "{{count}} commit{{plural}} found",
+    "loading": "Loading commits..."
+  },
+  "actions": {
+    "continue": "Continue",
+    "done": "Done"
+  },
+  "github": {
+    "title": "Create GitHub Release",
+    "description": "Create a new release {{tag}} on GitHub with the changelog as release notes.",
+    "createRelease": "Create Release {{tag}}",
+    "creatingRelease": "Creating Release...",
+    "releaseCreated": "Release created successfully!",
+    "viewRelease": "View Release on GitHub",
+    "createReleaseFailed": "Failed to create release"
+  },
+  "success": {
+    "title": "Changelog Saved!",
+    "description": "Version {{tag}} has been added to CHANGELOG.md"
+  },
+  "archive": {
+    "title": "Archive Completed Tasks",
+    "description": "Archive {{count}} task{{plural}} to clean up your Kanban board. Archived tasks can be viewed using the \"Show Archived\" toggle.",
+    "archiveTasks": "Archive {{count}} Task{{plural}}",
+    "archiving": "Archiving...",
+    "archived": "{{count}} task{{plural}} archived!",
+    "archiveFailed": "Failed to archive tasks"
   }
 }

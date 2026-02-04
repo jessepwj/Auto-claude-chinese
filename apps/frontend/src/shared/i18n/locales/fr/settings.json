@@ -666,31 +666,52 @@
     "servers": {
       "context7": {
         "name": "Context7",
-        "description": "Recherche de documentation pour les bibliothèques"
+        "description": "Recherche de documentation pour les bibliothèques",
+        "fullDescription": "Fournit une recherche sémantique et une recherche de documentation pour les bibliothèques et frameworks populaires pour améliorer le contexte des agents"
       },
       "graphiti": {
         "name": "Graphiti Memory",
         "description": "Graphe de connaissances pour le contexte inter-sessions",
+        "fullDescription": "Système de mémoire sémantique utilisant des graphes de connaissances pour conserver les insights et le contexte entre plusieurs sessions",
         "notConfigured": "Nécessite la configuration mémoire (voir paramètres Mémoire)"
       },
       "linear": {
         "name": "Linear",
         "description": "Intégration gestion de projet",
+        "fullDescription": "S'intègre avec Linear pour le suivi des problèmes, la gestion des sprints et la synchronisation des tâches",
         "notConfigured": "Nécessite l'intégration Linear (voir paramètres Linear)"
       },
       "electron": {
         "name": "Electron",
-        "description": "Automatisation d'applications desktop via Chrome DevTools"
+        "description": "Automatisation d'applications desktop via Chrome DevTools",
+        "fullDescription": "Permet aux agents QA d'automatiser et de tester les applications de bureau à l'aide du Chrome DevTools Protocol"
       },
       "puppeteer": {
         "name": "Puppeteer",
-        "description": "Automatisation du navigateur web pour les tests"
+        "description": "Automatisation du navigateur web pour les tests",
+        "fullDescription": "Fournit des capacités d'automatisation du navigateur pour tester les applications web et valider les flux utilisateur"
       },
       "autoClaude": {
         "name": "Outils Auto-Claude",
-        "description": "Suivi de la progression du build"
+        "description": "Suivi de la progression du build",
+        "fullDescription": "Suit la progression du build, gère les worktrees et fournit des informations d'état du build"
       }
     },
+    "categories": {
+      "spec": "Spécification",
+      "build": "Build",
+      "qa": "Assurance Qualité",
+      "utility": "Utilitaire",
+      "ideation": "Découverte & Idéation"
+    },
+    "mcpLabel": "MCP",
+    "mcpServersLabel": "Serveurs MCP",
+    "availableTools": "Outils Disponibles",
+    "textOnly": "Texte uniquement (pas d'outils)",
+    "agentsCount": "{{count}} agents",
+    "test": "Test",
+    "forProject": "pour {{project}}",
+    "idLabel": "ID du Serveur",
     "customServers": "Serveurs personnalisés",
     "addCustomServer": "Ajouter un serveur personnalisé",
     "editCustomServer": "Modifier le serveur personnalisé",
@@ -874,10 +895,93 @@
     }
   },
   "agents": {
+    "spec_gatherer": {
+      "label": "Collecteur de spéc",
+      "description": "Collecte les exigences initiales de l'utilisateur"
+    },
+    "spec_researcher": {
+      "label": "Chercheur de spéc",
+      "description": "Valide les intégrations externes et les APIs"
+    },
+    "spec_writer": {
+      "label": "Rédacteur de spéc",
+      "description": "Crée le document spec.md"
+    },
+    "spec_critic": {
+      "label": "Critique de spéc",
+      "description": "Auto-critique utilisant une analyse approfondie"
+    },
+    "spec_discovery": {
+      "label": "Découverte de spéc",
+      "description": "Découverte et analyse initiales du projet"
+    },
+    "spec_context": {
+      "label": "Contexte de spéc",
+      "description": "Construit le contexte à partir du code existant"
+    },
+    "spec_validation": {
+      "label": "Validation de spéc",
+      "description": "Valide la complétude et la qualité de la spéc"
+    },
+    "planner": {
+      "label": "Planificateur",
+      "description": "Crée un plan d'implémentation avec sous-tâches"
+    },
+    "coder": {
+      "label": "Codeur",
+      "description": "Implémente des sous-tâches individuelles"
+    },
+    "qa_reviewer": {
+      "label": "Réviseur QA",
+      "description": "Valide les critères d'acceptation. Utilise Electron ou Puppeteer selon le type de projet."
+    },
+    "qa_fixer": {
+      "label": "Correcteur QA",
+      "description": "Corrige les problèmes signalés par QA. Utilise Electron ou Puppeteer selon le type de projet."
+    },
+    "pr_reviewer": {
+      "label": "Réviseur de PR",
+      "description": "Révise les pull requests GitHub"
+    },
+    "commit_message": {
+      "label": "Message de commit",
+      "description": "Génère des messages de commit"
+    },
+    "merge_resolver": {
+      "label": "Résolveur de fusion",
+      "description": "Résout les conflits de fusion"
+    },
+    "insights": {
+      "label": "Insights",
+      "description": "Extrait des insights du code"
+    },
+    "analysis": {
+      "label": "Analyse",
+      "description": "Analyse du code avec recherche de contexte"
+    },
+    "batch_analysis": {
+      "label": "Analyse par lot",
+      "description": "Traitement par lot d'issues ou d'éléments"
+    },
+    "ideation": {
+      "label": "Idéation",
+      "description": "Génère des idées de fonctionnalités"
+    },
+    "roadmap_discovery": {
+      "label": "Découverte de roadmap",
+      "description": "Découvre des éléments de roadmap"
+    },
     "pr_template_filler": {
       "label": "Remplisseur de modèle PR",
-      "description": "Remplit intelligemment les modèles de PR GitHub à partir des changements de code"
+      "description": "Génère des descriptions de PR basées sur l'IA à partir de modèles"
     }
+  },
+  "categories": {
+    "spec": "Création de spéc",
+    "build": "Build",
+    "qa": "QA",
+    "utility": "Utilitaire",
+    "ideation": "Idéation"
   },
   "env": {
     "placeholders": {
@@ -931,5 +1035,13 @@
     "testConnection": "Tester la connexion",
     "edit": "Modifier",
     "delete": "Supprimer"
+  },
+  "common": {
+    "emptyProjectState": {
+      "title": "Sélectionnez un projet pour afficher et modifier ses paramètres"
+    },
+    "initializationGuard": {
+      "message": "Initialisez d'abord Auto-Build pour configurer {{title}}"
+    }
   }
 }

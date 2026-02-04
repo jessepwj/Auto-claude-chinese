@@ -666,31 +666,52 @@
     "servers": {
       "context7": {
         "name": "Context7",
-        "description": "库文档查找"
+        "description": "库文档查找",
+        "fullDescription": "为流行的库和框架提供语义搜索和文档查找以增强代理上下文"
       },
       "graphiti": {
         "name": "Graphiti 记忆系统",
         "description": "用于跨会话上下文的知识图谱",
+        "fullDescription": "使用知识图谱的语义记忆系统，用于在多个会话中保留洞察和上下文",
         "notConfigured": "需要记忆配置（请参阅记忆设置）"
       },
       "linear": {
         "name": "Linear",
         "description": "项目管理集成",
+        "fullDescription": "与 Linear 集成以进行问题跟踪、冲刺管理和任务同步",
         "notConfigured": "需要 Linear 集成（请参阅 Linear 设置）"
       },
       "electron": {
         "name": "Electron",
-        "description": "通过 Chrome DevTools 进行桌面应用自动化"
+        "description": "通过 Chrome DevTools 进行桌面应用自动化",
+        "fullDescription": "使质量保证代理能够使用 Chrome DevTools 协议自动化和测试桌面应用程序"
       },
       "puppeteer": {
         "name": "Puppeteer",
-        "description": "用于测试的 Web 浏览器自动化"
+        "description": "用于测试的 Web 浏览器自动化",
+        "fullDescription": "为测试 Web 应用程序和验证用户流提供浏览器自动化功能"
       },
       "autoClaude": {
         "name": "Auto-Claude 工具",
-        "description": "构建进度跟踪"
+        "description": "构建进度跟踪",
+        "fullDescription": "跟踪构建进度、管理工作树并提供构建状态信息"
       }
     },
+    "categories": {
+      "spec": "规格",
+      "build": "构建",
+      "qa": "质量保证",
+      "utility": "工具",
+      "ideation": "发现与构思"
+    },
+    "mcpLabel": "MCP",
+    "mcpServersLabel": "MCP 服务器",
+    "availableTools": "可用工具",
+    "textOnly": "仅文本（无工具）",
+    "agentsCount": "{{count}} 个代理",
+    "test": "测试",
+    "forProject": "用于 {{project}}",
+    "idLabel": "服务器 ID",
     "customServers": "自定义服务器",
     "addCustomServer": "添加自定义服务器",
     "editCustomServer": "编辑自定义服务器",
@@ -874,6 +895,82 @@
     }
   },
   "agents": {
+    "spec_gatherer": {
+      "label": "规格收集器",
+      "description": "从用户描述中收集初始需求和上下文"
+    },
+    "spec_researcher": {
+      "label": "规格研究员",
+      "description": "研究代码库模式和规格的技术背景"
+    },
+    "spec_writer": {
+      "label": "规格编写者",
+      "description": "编写全面的规格文档"
+    },
+    "spec_critic": {
+      "label": "规格评论员",
+      "description": "验证和评论规格的完整性"
+    },
+    "spec_discovery": {
+      "label": "规格发现",
+      "description": "发现隐藏的需求和边界情况"
+    },
+    "spec_context": {
+      "label": "规格上下文",
+      "description": "为规格编写构建语义上下文"
+    },
+    "spec_validation": {
+      "label": "规格验证",
+      "description": "验证规格是否满足需求"
+    },
+    "planner": {
+      "label": "规划者",
+      "description": "根据规格创建详细的实现计划"
+    },
+    "coder": {
+      "label": "编码员",
+      "description": "根据计划和规格实现代码"
+    },
+    "qa_reviewer": {
+      "label": "质量保证审查员",
+      "description": "审查实现的质量和合规性"
+    },
+    "qa_fixer": {
+      "label": "质量保证修复员",
+      "description": "修复质量保证审查识别的问题"
+    },
+    "pr_reviewer": {
+      "label": "拉取请求审查员",
+      "description": "审查拉取请求的质量和最佳实践"
+    },
+    "commit_message": {
+      "label": "提交消息",
+      "description": "从代码更改生成语义化的提交消息"
+    },
+    "merge_resolver": {
+      "label": "合并解决器",
+      "description": "使用语义分析解决合并冲突"
+    },
+    "insights": {
+      "label": "洞察",
+      "description": "分析代码库的模式和改进"
+    },
+    "analysis": {
+      "label": "分析",
+      "description": "执行代码分析以查找问题和优化"
+    },
+    "batch_analysis": {
+      "label": "批量分析",
+      "description": "批量处理多个文件的分析"
+    },
+    "ideation": {
+      "label": "构思",
+      "description": "生成功能想法和改进建议"
+    },
+    "roadmap_discovery": {
+      "label": "路线图发现",
+      "description": "从项目结构发现战略性路线图"
+    },
     "pr_template_filler": {
       "label": "PR 模板填充器",
       "description": "从代码更改中 AI 填充 GitHub PR 模板"
@@ -927,6 +1024,17 @@
     }
   },
   "titles": {
-    "claudeAuth": "Claude 认证"
+    "claudeAuth": "Claude 认证",
+    "testConnection": "测试连接",
+    "edit": "编辑",
+    "delete": "删除"
+  },
+  "common": {
+    "emptyProjectState": {
+      "title": "无活跃项目"
+    },
+    "initializationGuard": {
+      "message": "此功能需要项目初始化"
+    }
   }
 }

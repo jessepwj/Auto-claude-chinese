@@ -76,5 +76,63 @@
     "placeholders": {
       "content": "生成的变更日志将在此处显示..."
     }
+  },
+  "task": {
+    "hasSpecsBadge": "有规范"
+  },
+  "commit": {
+    "file": "个文件",
+    "files": "个文件",
+    "filesChanged": "{{count}} {{text}}"
+  },
+  "summary": {
+    "task": "任务",
+    "commit": "提交",
+    "item": "项目"
+  },
+  "selection": {
+    "of": "个",
+    "tasksSelected": "个任务已选中",
+    "selectAll": "全选",
+    "clear": "清除",
+    "countStatus": "已选中 {{selected}} 个，共 {{total}} 个任务"
+  },
+  "empty": {
+    "noCompletedTasks": "没有已完成的任务",
+    "noTasksDescription": "在看板中完成任务并将其标记为\"已完成\"以包含在您的变更日志中。",
+    "noCommitsFound": "未找到提交",
+    "noCommitsGitHistory": "配置历史选项并点击\"加载提交\"进行预览。",
+    "noCommitsBranchDiff": "选择两个分支并点击\"加载提交\"以查看更改。",
+    "noProjectTitle": "未选择项目",
+    "noProjectDescription": "从侧边栏选择一个项目以生成变更日志。"
+  },
+  "commits": {
+    "found": "找到 {{count}} 个提交{{plural}}",
+    "loading": "正在加载提交..."
+  },
+  "actions": {
+    "continue": "继续",
+    "done": "完成"
+  },
+  "github": {
+    "title": "创建 GitHub 发布",
+    "description": "在 GitHub 上创建新的 {{tag}} 发布，使用变更日志作为发布说明。",
+    "createRelease": "创建发布 {{tag}}",
+    "creatingRelease": "正在创建发布...",
+    "releaseCreated": "发布创建成功！",
+    "viewRelease": "在 GitHub 上查看发布",
+    "createReleaseFailed": "创建发布失败"
+  },
+  "success": {
+    "title": "变更日志已保存！",
+    "description": "版本 {{tag}} 已添加到 CHANGELOG.md"
+  },
+  "archive": {
+    "title": "归档已完成的任务",
+    "description": "归档 {{count}} 个任务{{plural}}以清理您的看板。已归档的任务可以使用\"显示归档\"切换按钮查看。",
+    "archiveTasks": "归档 {{count}} 个任务{{plural}}",
+    "archiving": "正在归档...",
+    "archived": "{{count}} 个任务{{plural}}已归档！",
+    "archiveFailed": "任务归档失败"
   }
 }

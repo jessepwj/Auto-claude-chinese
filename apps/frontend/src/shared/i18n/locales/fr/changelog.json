@@ -76,5 +76,63 @@
     "placeholders": {
       "content": "Le changelog généré apparaîtra ici..."
     }
+  },
+  "task": {
+    "hasSpecsBadge": "A des spécifications"
+  },
+  "commit": {
+    "file": "fichier",
+    "files": "fichiers",
+    "filesChanged": "{{count}} {{text}}"
+  },
+  "summary": {
+    "task": "tâche",
+    "commit": "commit",
+    "item": "élément"
+  },
+  "selection": {
+    "of": "sur",
+    "tasksSelected": "tâches sélectionnées",
+    "selectAll": "Sélectionner tout",
+    "clear": "Effacer",
+    "countStatus": "{{selected}} sur {{total}} tâches sélectionnées"
+  },
+  "empty": {
+    "noCompletedTasks": "Aucune tâche complétée",
+    "noTasksDescription": "Complétez les tâches du tableau Kanban et marquez-les comme \"Terminées\" pour les inclure dans votre changelog.",
+    "noCommitsFound": "Aucun commit trouvé",
+    "noCommitsGitHistory": "Configurez les options d'historique et cliquez sur \"Charger les commits\" pour prévisualiser.",
+    "noCommitsBranchDiff": "Sélectionnez les deux branches et cliquez sur \"Charger les commits\" pour voir les modifications.",
+    "noProjectTitle": "Aucun projet sélectionné",
+    "noProjectDescription": "Sélectionnez un projet dans la barre latérale pour générer des changelogs."
+  },
+  "commits": {
+    "found": "{{count}} commit{{plural}} trouvé(s)",
+    "loading": "Chargement des commits..."
+  },
+  "actions": {
+    "continue": "Continuer",
+    "done": "Terminé"
+  },
+  "github": {
+    "title": "Créer une publication GitHub",
+    "description": "Créer une nouvelle publication {{tag}} sur GitHub avec le changelog comme notes de version.",
+    "createRelease": "Créer la publication {{tag}}",
+    "creatingRelease": "Création de la publication...",
+    "releaseCreated": "Publication créée avec succès !",
+    "viewRelease": "Voir la publication sur GitHub",
+    "createReleaseFailed": "Échec de la création de la publication"
+  },
+  "success": {
+    "title": "Changelog sauvegardé !",
+    "description": "La version {{tag}} a été ajoutée à CHANGELOG.md"
+  },
+  "archive": {
+    "title": "Archiver les tâches complétées",
+    "description": "Archiver {{count}} tâche{{plural}} pour nettoyer votre tableau Kanban. Les tâches archivées peuvent être visualisées à l'aide du bouton bascule \"Afficher l'archive\".",
+    "archiveTasks": "Archiver {{count}} tâche{{plural}}",
+    "archiving": "Archivage...",
+    "archived": "{{count}} tâche{{plural}} archivée(s) !",
+    "archiveFailed": "Échec de l'archivage des tâches"
   }
 }
