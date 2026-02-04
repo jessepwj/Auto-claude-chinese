@@ -1,0 +1,16 @@
+{
+  "time": {
+    "justNow": "just now",
+    "secondsAgo": "{{count}}s ago",
+    "minutesAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "daysAgo": "{{count}}d ago"
+  },
+  "kanban": {
+    "dropHere": "Drop here",
+    "noFeatures": "No features",
+    "dragFeaturesHere": "Drag features here",
+    "unknownStatus": "Unknown Status"
+  },
+  "unknownStatus": "Unknown Status"
+}

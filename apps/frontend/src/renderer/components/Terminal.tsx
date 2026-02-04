@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback, useState, useMemo, forwardRef, useImperativeHandle } from 'react';
 import { useDroppable, useDndContext } from '@dnd-kit/core';
+import { useTranslation } from 'react-i18next';
 import '@xterm/xterm/css/xterm.css';
 import { FileDown } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -45,6 +46,7 @@ export const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Termi
   isExpanded,
   onToggleExpand,
 }, ref) {
+  const { t } = useTranslation(['terminal', 'common']);
   const isMountedRef = useRef(true);
   const isCreatedRef = useRef(false);
   // Track deliberate terminal recreation (e.g., worktree switching)
@@ -213,7 +215,7 @@ export const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Termi
       // Clear pending config on error to prevent stale config from being applied
       // if PTY is recreated later (fixes potential race condition on failed recreation)
       pendingWorktreeConfigRef.current = null;
-      writeln(`\r\n\x1b[31mError: ${error}\x1b[0m`);
+      writeln(`\r\n\x1b[31m${t('terminal:messages.error', { error })}\x1b[0m`);
     },
   });
 
@@ -224,7 +226,7 @@ export const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Termi
     isRecreatingRef,
     onExit: (exitCode) => {
       isCreatedRef.current = false;
-      writeln(`\r\n\x1b[90mProcess exited with code ${exitCode}\x1b[0m`);
+      writeln(`\r\n\x1b[90m${t('terminal:messages.processExited', { exitCode })}\x1b[0m`);
     },
   });
 
@@ -424,22 +426,20 @@ export const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Termi
     // Sync to main process so title persists across hot reloads
     window.electronAPI.setTerminalTitle(id, selectedTask.title);
 
-    const contextMessage = `I'm working on: ${selectedTask.title}
-
-Description:
-${selectedTask.description}
-
-Please confirm you're ready by saying: I'm ready to work on ${selectedTask.title} - Context is loaded.`;
+    const contextMessage = t('terminal:messages.taskContext', {
+      title: selectedTask.title,
+      description: selectedTask.description
+    });
 
     window.electronAPI.sendTerminalInput(id, contextMessage + '\r');
-  }, [id, tasks, setAssociatedTask, updateTerminal]);
+  }, [id, tasks, setAssociatedTask, updateTerminal, t]);
 
   const handleClearTask = useCallback(() => {
     setAssociatedTask(id, undefined);
-    updateTerminal(id, { title: 'Claude' });
+    updateTerminal(id, { title: t('terminal:titles.claude') });
     // Sync to main process so title persists across hot reloads
-    window.electronAPI.setTerminalTitle(id, 'Claude');
-  }, [id, setAssociatedTask, updateTerminal]);
+    window.electronAPI.setTerminalTitle(id, t('terminal:titles.claude'));
+  }, [id, setAssociatedTask, updateTerminal, t]);
 
   // Worktree handlers
   const handleCreateWorktree = useCallback(() => {
@@ -506,8 +506,8 @@ Please confirm you're ready by saying: I'm ready to work on ${selectedTask.title
     } catch (err) {
       console.error('Failed to open in IDE:', err);
       toast({
-        title: 'Failed to open IDE',
-        description: err instanceof Error ? err.message : 'Could not launch IDE',
+        title: t('terminal:errors.failedToOpenIDE'),
+        description: err instanceof Error ? err.message : t('terminal:errors.couldNotLaunchIDE'),
         variant: 'destructive',
       });
     }
@@ -544,14 +544,14 @@ Please confirm you're ready by saying: I'm ready to work on ${selectedTask.title
         <div className="absolute inset-0 bg-info/10 z-10 flex items-center justify-center pointer-events-none">
           <div className="flex items-center gap-2 bg-info/90 text-info-foreground px-3 py-2 rounded-md">
             <FileDown className="h-4 w-4" />
-            <span className="text-sm font-medium">Drop to insert path</span>
+            <span className="text-sm font-medium">{t('terminal:fileDrop.dropToInsertPath')}</span>
           </div>
         </div>
       )}
 
       <TerminalHeader
         terminalId={id}
-        title={terminal?.title || 'Terminal'}
+        title={terminal?.title || t('terminal:titles.terminal')}
         status={terminal?.status || 'idle'}
         isClaudeMode={terminal?.isClaudeMode || false}
         tasks={tasks}

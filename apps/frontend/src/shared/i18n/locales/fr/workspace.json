@@ -4,6 +4,62 @@
     "description": "Description de l'espace de travail"
   },
   "messages": {
-    "noProjects": "Aucun projet disponible"
+    "noProjects": "Aucun projet disponible",
+    "selectProject": "Sélectionnez un projet pour afficher les arborescences de travail"
+  },
+  "worktrees": {
+    "title": "Arborescences de travail",
+    "subtitle": "Gérer les espaces de travail isolés pour vos tâches Auto Claude",
+    "emptyState": {
+      "title": "Aucune Arborescence de travail",
+      "description": "Les arborescences de travail sont créées automatiquement lorsqu'Auto Claude construit des fonctionnalités. Vous pouvez également créer des arborescences de travail de terminal à partir de l'onglet Terminaux des Agents."
+    },
+    "sections": {
+      "taskWorktrees": "Arborescences de travail des Tâches",
+      "terminalWorktrees": "Arborescences de travail du Terminal"
+    },
+    "stats": {
+      "filesChanged": "fichiers modifiés",
+      "commitsAhead": "commits en avance"
+    },
+    "actions": {
+      "mergeToBase": "Fusionner vers {{branch}}",
+      "copyPath": "Copier le Chemin",
+      "delete": "Supprimer",
+      "created": "Créé"
+    },
+    "merge": {
+      "title": "Fusionner l'Arborescence de travail",
+      "description": "Fusionner les modifications de cette arborescence de travail dans la branche de base.",
+      "sourceBranch": "Branche Source",
+      "targetBranch": "Branche Cible",
+      "changes": "Modifications",
+      "commits": "commits, {{filesChanged}} fichiers",
+      "merging": "Fusion en cours...",
+      "merge": "Fusionner",
+      "success": "Fusion Réussie",
+      "failed": "Fusion Échouée",
+      "conflictingFiles": "Fichiers en conflit:"
+    },
+    "delete": {
+      "title": "Supprimer l'Arborescence de travail?",
+      "description": "Cela supprimera définitivement l'arborescence de travail et toutes les modifications non validées.",
+      "warning": "Cette action ne peut pas être annulée.",
+      "deleting": "Suppression en cours...",
+      "deleteButton": "Supprimer"
+    },
+    "deleteTerminal": {
+      "title": "Supprimer l'Arborescence de travail du Terminal?",
+      "description": "Cela supprimera définitivement l'arborescence de travail et sa branche. Tous les modifications non validées seront perdues."
+    },
+    "errors": {
+      "loadTaskWorktrees": "Échec du chargement des arborescences de travail des tâches",
+      "loadWorktrees": "Échec du chargement des arborescences de travail",
+      "taskNotFound": "Tâche introuvable pour cette arborescence de travail",
+      "mergeFailed": "Échec de la fusion",
+      "deleteFailed": "Échec de la suppression de l'arborescence de travail",
+      "deleteTerminalFailed": "Échec de la suppression de l'arborescence de travail du terminal",
+      "error": "Erreur"
+    }
   }
 }

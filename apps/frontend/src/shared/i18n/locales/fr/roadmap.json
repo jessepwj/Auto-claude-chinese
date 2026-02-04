@@ -1,0 +1,16 @@
+{
+  "time": {
+    "justNow": "à l'instant",
+    "secondsAgo": "il y a {{count}}s",
+    "minutesAgo": "il y a {{count}}m",
+    "hoursAgo": "il y a {{count}}h",
+    "daysAgo": "il y a {{count}}j"
+  },
+  "kanban": {
+    "dropHere": "Déposer ici",
+    "noFeatures": "Aucune fonctionnalité",
+    "dragFeaturesHere": "Glisser les fonctionnalités ici",
+    "unknownStatus": "Statut Inconnu"
+  },
+  "unknownStatus": "Statut Inconnu"
+}

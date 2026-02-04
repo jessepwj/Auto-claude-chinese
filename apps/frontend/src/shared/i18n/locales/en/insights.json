@@ -1,4 +1,48 @@
 {
+  "header": {
+    "title": "Insights",
+    "description": "Ask questions about your codebase",
+    "hideSidebar": "Hide sidebar",
+    "showSidebar": "Show sidebar",
+    "newChat": "New Chat"
+  },
+  "emptyState": {
+    "title": "Start a Conversation",
+    "description": "Ask questions about your codebase, get suggestions for improvements, or discuss features you'd like to implement.",
+    "suggestions": {
+      "architecture": "What is the architecture of this project?",
+      "improvements": "Suggest improvements for code quality",
+      "features": "What features could I add next?",
+      "security": "Are there any security concerns?"
+    }
+  },
+  "messages": {
+    "assistant": "Assistant",
+    "you": "You",
+    "thinking": "Thinking..."
+  },
+  "taskSuggestion": {
+    "title": "Suggested Task",
+    "creating": "Creating...",
+    "created": "Task Created",
+    "create": "Create Task"
+  },
+  "tools": {
+    "toolUsed": "tool used",
+    "toolsUsed": "tools used",
+    "readingFile": "Reading file",
+    "searchingFiles": "Searching files",
+    "searchingCode": "Searching code"
+  },
+  "input": {
+    "helpText": "Press Enter to send, Shift+Enter for new line"
+  },
+  "modelSelector": {
+    "title": "Model: {{model}}",
+    "agentProfile": "Agent Profile",
+    "custom": "Custom...",
+    "customDescription": "Choose model & thinking level"
+  },
   "placeholders": {
     "ask": "Ask about your codebase..."
   }

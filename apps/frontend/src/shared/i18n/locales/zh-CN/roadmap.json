@@ -1,0 +1,16 @@
+{
+  "time": {
+    "justNow": "刚刚",
+    "secondsAgo": "{{count}}秒前",
+    "minutesAgo": "{{count}}分钟前",
+    "hoursAgo": "{{count}}小时前",
+    "daysAgo": "{{count}}天前"
+  },
+  "kanban": {
+    "dropHere": "拖放到这里",
+    "noFeatures": "无功能",
+    "dragFeaturesHere": "拖放功能到这里",
+    "unknownStatus": "未知状态"
+  },
+  "unknownStatus": "未知状态"
+}

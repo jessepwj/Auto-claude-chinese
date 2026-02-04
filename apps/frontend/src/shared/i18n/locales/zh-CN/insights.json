@@ -1,5 +1,49 @@
 {
+  "header": {
+    "title": "洞察",
+    "description": "提出关于您的代码库的问题",
+    "hideSidebar": "隐藏侧边栏",
+    "showSidebar": "显示侧边栏",
+    "newChat": "新聊天"
+  },
+  "emptyState": {
+    "title": "开始对话",
+    "description": "提出关于您的代码库的问题、获取代码质量改进建议或讨论您想要实现的功能。",
+    "suggestions": {
+      "architecture": "这个项目的架构是什么？",
+      "improvements": "建议提高代码质量的改进",
+      "features": "接下来我可以添加哪些功能？",
+      "security": "有任何安全隐患吗？"
+    }
+  },
+  "messages": {
+    "assistant": "助手",
+    "you": "您",
+    "thinking": "思考中..."
+  },
+  "taskSuggestion": {
+    "title": "建议的任务",
+    "creating": "创建中...",
+    "created": "任务已创建",
+    "create": "创建任务"
+  },
+  "tools": {
+    "toolUsed": "个工具",
+    "toolsUsed": "已使用",
+    "readingFile": "正在读取文件",
+    "searchingFiles": "正在搜索文件",
+    "searchingCode": "正在搜索代码"
+  },
+  "input": {
+    "helpText": "按Enter发送，Shift+Enter换行"
+  },
+  "modelSelector": {
+    "title": "模型：{{model}}",
+    "agentProfile": "代理配置文件",
+    "custom": "自定义...",
+    "customDescription": "选择模型和思考级别"
+  },
   "placeholders": {
-    "ask": "询问您的代码库..."
+    "ask": "提问您的代码库..."
   }
 }

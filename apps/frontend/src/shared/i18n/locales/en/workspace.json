@@ -4,6 +4,62 @@
     "description": "Workspace description"
   },
   "messages": {
-    "noProjects": "No projects available"
+    "noProjects": "No projects available",
+    "selectProject": "Select a project to view worktrees"
+  },
+  "worktrees": {
+    "title": "Worktrees",
+    "subtitle": "Manage isolated workspaces for your Auto Claude tasks",
+    "emptyState": {
+      "title": "No Worktrees",
+      "description": "Worktrees are created automatically when Auto Claude builds features. You can also create terminal worktrees from the Agent Terminals tab."
+    },
+    "sections": {
+      "taskWorktrees": "Task Worktrees",
+      "terminalWorktrees": "Terminal Worktrees"
+    },
+    "stats": {
+      "filesChanged": "files changed",
+      "commitsAhead": "commits ahead"
+    },
+    "actions": {
+      "mergeToBase": "Merge to {{branch}}",
+      "copyPath": "Copy Path",
+      "delete": "Delete",
+      "created": "Created"
+    },
+    "merge": {
+      "title": "Merge Worktree",
+      "description": "Merge changes from this worktree into the base branch.",
+      "sourceBranch": "Source Branch",
+      "targetBranch": "Target Branch",
+      "changes": "Changes",
+      "commits": "commits, {{filesChanged}} files",
+      "merging": "Merging...",
+      "merge": "Merge",
+      "success": "Merge Successful",
+      "failed": "Merge Failed",
+      "conflictingFiles": "Conflicting files:"
+    },
+    "delete": {
+      "title": "Delete Worktree?",
+      "description": "This will permanently delete the worktree and all uncommitted changes.",
+      "warning": "This action cannot be undone.",
+      "deleting": "Deleting...",
+      "deleteButton": "Delete"
+    },
+    "deleteTerminal": {
+      "title": "Delete Terminal Worktree?",
+      "description": "This will permanently delete the worktree and its branch. Any uncommitted changes will be lost."
+    },
+    "errors": {
+      "loadTaskWorktrees": "Failed to load task worktrees",
+      "loadWorktrees": "Failed to load worktrees",
+      "taskNotFound": "Task not found for this worktree",
+      "mergeFailed": "Merge failed",
+      "deleteFailed": "Failed to delete worktree",
+      "deleteTerminalFailed": "Failed to delete terminal worktree",
+      "error": "Error"
+    }
   }
 }

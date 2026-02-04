@@ -42,10 +42,36 @@
     "deleteDescription": "This will permanently delete the worktree and its branch. Any uncommitted changes will be lost.",
     "detached": "(detached)"
   },
+  "grid": {
+    "agentTerminals": "Agent Terminals",
+    "emptyStateDescription": "Spawn multiple terminals to run Claude agents in parallel. Use {{shortcut}} to create a new terminal.",
+    "newTerminal": "New Terminal",
+    "terminalsUnit": "terminals",
+    "history": "History",
+    "restoreSessionsFrom": "Restore sessions from...",
+    "sessionCount": "{{count}} session",
+    "sessionCount_plural": "{{count}} sessions",
+    "invokeClaudeAll": "Invoke Claude All",
+    "files": "Files"
+  },
   "titles": {
-    "claude": "Claude"
+    "claude": "Claude",
+    "terminal": "Terminal"
+  },
+  "title": {
+    "doubleClickToRename": "Double-click to rename"
   },
   "messages": {
+    "error": "Error: {{error}}",
+    "processExited": "Process exited with code {{exitCode}}",
+    "taskContext": "I'm working on: {{title}}\n\nDescription:\n{{description}}\n\nPlease confirm you're ready by saying: I'm ready to work on {{title}} - Context is loaded.",
     "noTasks": "No tasks available"
+  },
+  "fileDrop": {
+    "dropToInsertPath": "Drop to insert path"
+  },
+  "errors": {
+    "failedToOpenIDE": "Failed to open IDE",
+    "couldNotLaunchIDE": "Could not launch IDE"
   }
 }

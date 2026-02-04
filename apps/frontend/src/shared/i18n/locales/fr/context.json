@@ -1,20 +1,24 @@
 {
+  "tabs": {
+    "projectIndex": "Index du Projet",
+    "memories": "Souvenirs"
+  },
   "memories": {
     "placeholders": {
-      "search": "Rechercher des modèles, des aperçus, des pièges..."
+      "search": "Rechercher des modèles, aperçus, pièges..."
     }
   },
   "memory": {
     "titles": {
-      "whatWorked": "Ce qui a fonctionné",
-      "whatFailed": "Ce qui a échoué",
+      "whatWorked": "Ce qui a Fonctionné",
+      "whatFailed": "Ce qui a Échoué",
       "approach": "Approche",
       "recommendations": "Recommandations",
       "patterns": "Modèles",
       "gotchas": "Pièges",
-      "changedFiles": "Fichiers modifiés",
-      "fileInsights": "Aperçus de fichiers",
-      "subtasksCompleted": "Sous-tâches terminées"
+      "changedFiles": "Fichiers Modifiés",
+      "fileInsights": "Aperçus des Fichiers",
+      "subtasksCompleted": "Sous-tâches Complétées"
     }
   }
 }

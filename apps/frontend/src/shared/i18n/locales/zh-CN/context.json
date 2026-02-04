@@ -1,20 +1,24 @@
 {
+  "tabs": {
+    "projectIndex": "项目索引",
+    "memories": "记忆"
+  },
   "memories": {
     "placeholders": {
-      "search": "搜索模式、见解、陷阱..."
+      "search": "搜索模式、洞察、陷阱..."
     }
   },
   "memory": {
     "titles": {
-      "whatWorked": "成功经验",
-      "whatFailed": "失败经验",
+      "whatWorked": "有效的方法",
+      "whatFailed": "失败的方法",
       "approach": "方法",
       "recommendations": "建议",
       "patterns": "模式",
-      "gotchas": "注意事项",
-      "changedFiles": "已更改文件",
-      "fileInsights": "文件见解",
-      "subtasksCompleted": "已完成子任务"
+      "gotchas": "陷阱",
+      "changedFiles": "更改的文件",
+      "fileInsights": "文件洞察",
+      "subtasksCompleted": "已完成的子任务"
     }
   }
 }

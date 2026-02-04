@@ -20,6 +20,7 @@ import enWorkspace from './locales/en/workspace.json';
 import enContext from './locales/en/context.json';
 import enInsights from './locales/en/insights.json';
 import enIdeation from './locales/en/ideation.json';
+import enRoadmap from './locales/en/roadmap.json';
 
 // Import French translation resources
 import frCommon from './locales/fr/common.json';
@@ -40,6 +41,7 @@ import frWorkspace from './locales/fr/workspace.json';
 import frContext from './locales/fr/context.json';
 import frInsights from './locales/fr/insights.json';
 import frIdeation from './locales/fr/ideation.json';
+import frRoadmap from './locales/fr/roadmap.json';
 
 // Import Chinese translation resources
 import zhCNCommon from './locales/zh-CN/common.json';
@@ -60,6 +62,7 @@ import zhCNWorkspace from './locales/zh-CN/workspace.json';
 import zhCNContext from './locales/zh-CN/context.json';
 import zhCNInsights from './locales/zh-CN/insights.json';
 import zhCNIdeation from './locales/zh-CN/ideation.json';
+import zhCNRoadmap from './locales/zh-CN/roadmap.json';
 
 export const defaultNS = 'common';
 
@@ -82,7 +85,8 @@ export const resources = {
     workspace: enWorkspace,
     context: enContext,
     insights: enInsights,
-    ideation: enIdeation
+    ideation: enIdeation,
+    roadmap: enRoadmap
   },
   fr: {
     common: frCommon,
@@ -102,7 +106,8 @@ export const resources = {
     workspace: frWorkspace,
     context: frContext,
     insights: frInsights,
-    ideation: frIdeation
+    ideation: frIdeation,
+    roadmap: frRoadmap
   },
   'zh-CN': {
     common: zhCNCommon,
@@ -122,7 +127,8 @@ export const resources = {
     workspace: zhCNWorkspace,
     context: zhCNContext,
     insights: zhCNInsights,
-    ideation: zhCNIdeation
+    ideation: zhCNIdeation,
+    roadmap: zhCNRoadmap
   }
 } as const;
 
@@ -133,7 +139,7 @@ i18n
     lng: 'zh-CN', // Default language: Simplified Chinese (will be overridden by settings)
     fallbackLng: 'en', // Fallback to English if translation missing
     defaultNS,
-    ns: ['common', 'navigation', 'settings', 'tasks', 'welcome', 'onboarding', 'dialogs', 'gitlab', 'taskReview', 'terminal', 'errors', 'changelog', 'github', 'linear', 'workspace', 'context', 'insights', 'ideation'],
+    ns: ['common', 'navigation', 'settings', 'tasks', 'welcome', 'onboarding', 'dialogs', 'gitlab', 'taskReview', 'terminal', 'errors', 'changelog', 'github', 'linear', 'workspace', 'context', 'insights', 'ideation', 'roadmap'],
     interpolation: {
       escapeValue: false // React already escapes values
     },
