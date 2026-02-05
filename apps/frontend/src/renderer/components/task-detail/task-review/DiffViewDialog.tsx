@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Eye, FileCode } from 'lucide-react';
 import {
   AlertDialog,
@@ -26,6 +27,8 @@ export function DiffViewDialog({
   worktreeDiff,
   onOpenChange
 }: DiffViewDialogProps) {
+  const { t } = useTranslation(['taskReview']);
+
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className="max-w-2xl max-h-[80vh] overflow-hidden flex flex-col">
@@ -35,7 +38,7 @@ export function DiffViewDialog({
             Changed Files
           </AlertDialogTitle>
           <AlertDialogDescription>
-            {worktreeDiff?.summary || 'No changes found'}
+            {worktreeDiff?.summary || t('taskReview:messages.noChanges')}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div className="flex-1 overflow-auto min-h-0 -mx-6 px-6">
@@ -77,7 +80,7 @@ export function DiffViewDialog({
             </div>
           ) : (
             <div className="text-center py-8 text-muted-foreground">
-              No changed files found
+              {t('taskReview:messages.noChanges')}
             </div>
           )}
         </div>

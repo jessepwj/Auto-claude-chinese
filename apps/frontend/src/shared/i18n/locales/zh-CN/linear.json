@@ -1,0 +1,10 @@
+{
+  "placeholders": {
+    "loading": "加载中...",
+    "selectTeam": "选择团队",
+    "allProjects": "所有项目"
+  },
+  "messages": {
+    "noIssues": "未找到议题"
+  }
+}

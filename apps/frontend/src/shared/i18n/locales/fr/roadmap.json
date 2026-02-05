@@ -1,0 +1,75 @@
+{
+  "time": {
+    "justNow": "à l'instant",
+    "secondsAgo": "il y a {{count}}s",
+    "minutesAgo": "il y a {{count}}m",
+    "hoursAgo": "il y a {{count}}h",
+    "daysAgo": "il y a {{count}}j"
+  },
+  "kanban": {
+    "dropHere": "Déposer ici",
+    "noFeatures": "Aucune fonctionnalité",
+    "dragFeaturesHere": "Glisser les fonctionnalités ici",
+    "unknownStatus": "Statut Inconnu"
+  },
+  "unknownStatus": "Statut Inconnu",
+  "emptyState": {
+    "title": "Aucune Feuille de Route Encore",
+    "description": "Générez une feuille de route alimentée par l'IA qui comprend l'audience cible de votre projet et crée un plan stratégique de fonctionnalités.",
+    "generateButton": "Générer une Feuille de Route"
+  },
+  "header": {
+    "competitorAnalysisBadge": "Analyse Concurrentielle",
+    "competitorAnalysisTooltipTitle": "Cliquez pour voir l'analyse détaillée",
+    "competitorAnalysisTooltipDescription": "{{count}} concurrents analysés avec {{painPoints}} points douloureux identifiés",
+    "addFeatureButton": "Ajouter une Fonctionnalité",
+    "addFeatureTooltip": "Ajouter une nouvelle fonctionnalité à la feuille de route",
+    "regenerateTooltip": "Régénérer la Feuille de Route",
+    "targetLabel": "Cible :",
+    "morePersonas": "+{{count}} autres personas",
+    "secondaryPersonasTitle": "Personas Secondaires :",
+    "featuresLabel": " fonctionnalités",
+    "phasesLabel": " phases"
+  },
+  "tabs": {
+    "kanban": "Kanban",
+    "phases": "Phases",
+    "allFeatures": "Toutes les Fonctionnalités",
+    "byPriority": "Par Priorité",
+    "featuresCount": " fonctionnalités",
+    "impactLabel": " impact",
+    "insightBadge": "Aperçu"
+  },
+  "featureCard": {
+    "impactLabel": " impact",
+    "competitorInsightBadge": "Aperçu Concurrentiel",
+    "competitorInsightTooltip": "Cette fonctionnalité résout les points douloureux des concurrents",
+    "goToTaskButton": "Aller à la Tâche",
+    "buildButton": "Construire"
+  },
+  "featureDetail": {
+    "descriptionTitle": "Description",
+    "rationaleTitle": "Justification",
+    "complexityLabel": "Complexité",
+    "impactLabel": "Impact",
+    "dependenciesLabel": "Dépendances",
+    "userStoriesTitle": "Histoires Utilisateur",
+    "acceptanceCriteriaTitle": "Critères d'Acceptation",
+    "dependenciesTitle": "Dépendances",
+    "competitorInsightsTitle": "Résout les Points Douloureux des Concurrents",
+    "severityLabel": " gravité",
+    "goToTaskButton": "Aller à la Tâche",
+    "convertToSpecButton": "Convertir en Tâche de Génération Automatique",
+    "deleteConfirmTitle": "Supprimer la Fonctionnalité ?",
+    "deleteConfirmMessage": "Cela supprimera définitivement \"{{title}}\" de votre feuille de route."
+  },
+  "phaseCard": {
+    "progressLabel": "Progression",
+    "featuresProgress": "{{completed}}/{{total}} fonctionnalités",
+    "milestonesTitle": "Jalons",
+    "featuresTitle": "Fonctionnalités ({{count}})",
+    "viewTaskButton": "Voir la Tâche",
+    "buildButton": "Construire",
+    "moreFeaturesLabel": "+{{count}} autres fonctionnalités"
+  }
+}

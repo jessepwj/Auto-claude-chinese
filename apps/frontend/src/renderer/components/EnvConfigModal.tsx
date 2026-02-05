@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   AlertCircle,
   Key,
@@ -50,6 +51,7 @@ export function EnvConfigModal({
   description = 'A Claude Code OAuth token is required to use AI features like Ideation and Roadmap generation.',
   projectId
 }: EnvConfigModalProps) {
+  const { t } = useTranslation(['settings', 'common']);
   const [token, setToken] = useState('');
   const [showToken, setShowToken] = useState(false);
   const [showManualEntry, setShowManualEntry] = useState(false);
@@ -187,7 +189,7 @@ export function EnvConfigModal({
 
   const handleAuthenticateWithBrowser = async () => {
     if (!projectId) {
-      setError('No project selected. Please select a project first.');
+      setError(t('settings:env.errors.noProject'));
       return;
     }
 
@@ -520,7 +522,7 @@ export function EnvConfigModal({
                         type={showToken ? 'text' : 'password'}
                         value={token}
                         onChange={(e) => setToken(e.target.value)}
-                        placeholder="Enter your token..."
+                        placeholder={t('settings:env.placeholders.token')}
                         className="pr-10 font-mono text-sm"
                         disabled={isSaving || isAuthenticating}
                       />

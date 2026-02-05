@@ -1,0 +1,75 @@
+{
+  "time": {
+    "justNow": "just now",
+    "secondsAgo": "{{count}}s ago",
+    "minutesAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "daysAgo": "{{count}}d ago"
+  },
+  "kanban": {
+    "dropHere": "Drop here",
+    "noFeatures": "No features",
+    "dragFeaturesHere": "Drag features here",
+    "unknownStatus": "Unknown Status"
+  },
+  "unknownStatus": "Unknown Status",
+  "emptyState": {
+    "title": "No Roadmap Yet",
+    "description": "Generate an AI-powered roadmap that understands your project's target audience and creates a strategic feature plan.",
+    "generateButton": "Generate Roadmap"
+  },
+  "header": {
+    "competitorAnalysisBadge": "Competitor Analysis",
+    "competitorAnalysisTooltipTitle": "Click to view detailed analysis",
+    "competitorAnalysisTooltipDescription": "Analyzed {{count}} competitors with {{painPoints}} pain points identified",
+    "addFeatureButton": "Add Feature",
+    "addFeatureTooltip": "Add a new feature to the roadmap",
+    "regenerateTooltip": "Regenerate Roadmap",
+    "targetLabel": "Target:",
+    "morePersonas": "+{{count}} more personas",
+    "secondaryPersonasTitle": "Secondary Personas:",
+    "featuresLabel": " features",
+    "phasesLabel": " phases"
+  },
+  "tabs": {
+    "kanban": "Kanban",
+    "phases": "Phases",
+    "allFeatures": "All Features",
+    "byPriority": "By Priority",
+    "featuresCount": " features",
+    "impactLabel": " impact",
+    "insightBadge": "Insight"
+  },
+  "featureCard": {
+    "impactLabel": " impact",
+    "competitorInsightBadge": "Competitor Insight",
+    "competitorInsightTooltip": "This feature addresses competitor pain points",
+    "goToTaskButton": "Go to Task",
+    "buildButton": "Build"
+  },
+  "featureDetail": {
+    "descriptionTitle": "Description",
+    "rationaleTitle": "Rationale",
+    "complexityLabel": "Complexity",
+    "impactLabel": "Impact",
+    "dependenciesLabel": "Dependencies",
+    "userStoriesTitle": "User Stories",
+    "acceptanceCriteriaTitle": "Acceptance Criteria",
+    "dependenciesTitle": "Dependencies",
+    "competitorInsightsTitle": "Addresses Competitor Pain Points",
+    "severityLabel": " severity",
+    "goToTaskButton": "Go to Task",
+    "convertToSpecButton": "Convert to Auto-Build Task",
+    "deleteConfirmTitle": "Delete Feature?",
+    "deleteConfirmMessage": "This will permanently remove \"{{title}}\" from your roadmap."
+  },
+  "phaseCard": {
+    "progressLabel": "Progress",
+    "featuresProgress": "{{completed}}/{{total}} features",
+    "milestonesTitle": "Milestones",
+    "featuresTitle": "Features ({{count}})",
+    "viewTaskButton": "View Task",
+    "buildButton": "Build",
+    "moreFeaturesLabel": "+{{count}} more features"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "header": {
+    "title": "Aperçus",
+    "description": "Posez des questions sur votre base de code",
+    "hideSidebar": "Masquer la barre latérale",
+    "showSidebar": "Afficher la barre latérale",
+    "newChat": "Nouvelle Conversation"
+  },
+  "emptyState": {
+    "title": "Commencer une Conversation",
+    "description": "Posez des questions sur votre base de code, obtenez des suggestions d'amélioration ou discutez des fonctionnalités que vous aimeriez implémenter.",
+    "suggestions": {
+      "architecture": "Quelle est l'architecture de ce projet?",
+      "improvements": "Suggérer des améliorations pour la qualité du code",
+      "features": "Quelles fonctionnalités pourrais-je ajouter ensuite?",
+      "security": "Y a-t-il des préoccupations de sécurité?"
+    }
+  },
+  "messages": {
+    "assistant": "Assistant",
+    "you": "Vous",
+    "thinking": "Réflexion..."
+  },
+  "taskSuggestion": {
+    "title": "Tâche Suggérée",
+    "creating": "Création...",
+    "created": "Tâche Créée",
+    "create": "Créer une Tâche"
+  },
+  "tools": {
+    "toolUsed": "outil utilisé",
+    "toolsUsed": "outils utilisés",
+    "readingFile": "Lecture du fichier",
+    "searchingFiles": "Recherche des fichiers",
+    "searchingCode": "Recherche du code"
+  },
+  "input": {
+    "helpText": "Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne"
+  },
+  "modelSelector": {
+    "title": "Modèle: {{model}}",
+    "agentProfile": "Profil de l'Agent",
+    "custom": "Personnalisé...",
+    "customDescription": "Choisir le modèle et le niveau de réflexion"
+  },
+  "placeholders": {
+    "ask": "Posez une question sur votre base de code..."
+  }
+}

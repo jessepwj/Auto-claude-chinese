@@ -1,0 +1,65 @@
+{
+  "issues": {
+    "title": "GitHub Issues",
+    "placeholders": {
+      "search": "Search issues..."
+    },
+    "filters": {
+      "open": "Open",
+      "closed": "Closed",
+      "all": "All"
+    },
+    "badges": {
+      "open": "{count} open"
+    },
+    "actions": {
+      "analyzeGroup": "Analyze & Group Issues"
+    },
+    "tooltips": {
+      "analyzeGroup": "Analyze up to 200 open issues, group similar ones, and review proposed batches before creating tasks.",
+      "autoFix": "Automatically fix new issues as they come in."
+    },
+    "labels": {
+      "autoFixNew": "Auto-Fix New"
+    },
+    "status": {
+      "processing": "Processing {n} issue(s)..."
+    },
+    "messages": {
+      "noIssues": "No issues found"
+    }
+  },
+  "prs": {
+    "title": "GitHub Pull Requests",
+    "messages": {
+      "noLogs": "No logs available",
+      "noLogsDetails": "Run a review to generate logs",
+      "waitingForLogs": "Waiting for logs...",
+      "reviewStarting": "Review is starting"
+    },
+    "logs": {
+      "agentActivity": "Agent Activity",
+      "showMore": "Show {count} more",
+      "hideMore": "Hide {count} more"
+    }
+  },
+  "setup": {
+    "title": "GitHub Setup",
+    "connectTitle": "Connect GitHub",
+    "connectDescription": "Connect your GitHub account to enable repository operations and issue tracking.",
+    "claudeTitle": "Authenticate Claude",
+    "claudeDescription": "Authenticate with Claude to enable AI-powered features.",
+    "repoDescription": "Tasks will be created as git branches based on this repository.",
+    "createRepoAriaLabel": "Create new repository",
+    "linkRepoAriaLabel": "Link existing repository",
+    "goBackAriaLabel": "Go back to repository selection",
+    "selectOwnerAriaLabel": "Select repository owner {owner}",
+    "selectOrgAriaLabel": "Select organization {org}",
+    "selectVisibilityAriaLabel": "Select repository visibility: {visibility}",
+    "placeholders": {
+      "projectName": "my-project",
+      "repository": "username/repository",
+      "selectBranch": "Select a branch"
+    }
+  }
+}

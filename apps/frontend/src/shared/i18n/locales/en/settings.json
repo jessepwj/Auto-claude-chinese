@@ -652,34 +652,66 @@
     "restore": "Restore",
     "noMcpServers": "No MCP servers",
     "cannotRemove": "Cannot remove (required)",
+    "placeholders": {
+      "command": "npx",
+      "args": "-y @myorg/my-mcp-server",
+      "url": "https://mcp.example.com/mcp"
+    },
+    "titles": {
+      "testConnection": "Test Connection"
+    },
+    "errors": {
+      "noProject": "No project selected. Please select a project first."
+    },
     "servers": {
       "context7": {
         "name": "Context7",
-        "description": "Documentation lookup for libraries"
+        "description": "Documentation lookup for libraries",
+        "fullDescription": "Provides semantic search and documentation lookup for popular libraries and frameworks to enhance agent context"
       },
       "graphiti": {
         "name": "Graphiti Memory",
         "description": "Knowledge graph for cross-session context",
+        "fullDescription": "Semantic memory system using knowledge graphs to retain insights and context across multiple sessions",
         "notConfigured": "Requires memory configuration (see Memory settings)"
       },
       "linear": {
         "name": "Linear",
         "description": "Project management integration",
+        "fullDescription": "Integrates with Linear for issue tracking, sprint management, and task synchronization",
         "notConfigured": "Requires Linear integration (see Linear settings)"
       },
       "electron": {
         "name": "Electron",
-        "description": "Desktop app automation via Chrome DevTools"
+        "description": "Desktop app automation via Chrome DevTools",
+        "fullDescription": "Enables QA agents to automate and test desktop applications using Chrome DevTools Protocol"
       },
       "puppeteer": {
         "name": "Puppeteer",
-        "description": "Web browser automation for testing"
+        "description": "Web browser automation for testing",
+        "fullDescription": "Provides browser automation capabilities for testing web applications and validating user flows"
       },
       "autoClaude": {
         "name": "Auto-Claude Tools",
-        "description": "Build progress tracking"
+        "description": "Build progress tracking",
+        "fullDescription": "Tracks build progress, manages worktrees, and provides build status information"
       }
     },
+    "categories": {
+      "spec": "Specification",
+      "build": "Build",
+      "qa": "Quality Assurance",
+      "utility": "Utility",
+      "ideation": "Discovery & Ideation"
+    },
+    "mcpLabel": "MCP",
+    "mcpServersLabel": "MCP Servers",
+    "availableTools": "Available Tools",
+    "textOnly": "Text-only (no tools)",
+    "agentsCount": "{{count}} agents",
+    "test": "Test",
+    "forProject": "for {{project}}",
+    "idLabel": "Server ID",
     "customServers": "Custom Servers",
     "addCustomServer": "Add Custom Server",
     "editCustomServer": "Edit Custom Server",
@@ -863,9 +895,153 @@
     }
   },
   "agents": {
+    "spec_gatherer": {
+      "label": "Spec Gatherer",
+      "description": "Collects initial requirements from user"
+    },
+    "spec_researcher": {
+      "label": "Spec Researcher",
+      "description": "Validates external integrations and APIs"
+    },
+    "spec_writer": {
+      "label": "Spec Writer",
+      "description": "Creates the spec.md document"
+    },
+    "spec_critic": {
+      "label": "Spec Critic",
+      "description": "Self-critique using deep analysis"
+    },
+    "spec_discovery": {
+      "label": "Spec Discovery",
+      "description": "Initial project discovery and analysis"
+    },
+    "spec_context": {
+      "label": "Spec Context",
+      "description": "Builds context from existing codebase"
+    },
+    "spec_validation": {
+      "label": "Spec Validation",
+      "description": "Validates spec completeness and quality"
+    },
+    "planner": {
+      "label": "Planner",
+      "description": "Creates implementation plan with subtasks"
+    },
+    "coder": {
+      "label": "Coder",
+      "description": "Implements individual subtasks"
+    },
+    "qa_reviewer": {
+      "label": "QA Reviewer",
+      "description": "Validates acceptance criteria. Uses Electron or Puppeteer based on project type."
+    },
+    "qa_fixer": {
+      "label": "QA Fixer",
+      "description": "Fixes QA-reported issues. Uses Electron or Puppeteer based on project type."
+    },
+    "pr_reviewer": {
+      "label": "PR Reviewer",
+      "description": "Reviews GitHub pull requests"
+    },
+    "commit_message": {
+      "label": "Commit Message",
+      "description": "Generates commit messages"
+    },
+    "merge_resolver": {
+      "label": "Merge Resolver",
+      "description": "Resolves merge conflicts"
+    },
+    "insights": {
+      "label": "Insights",
+      "description": "Extracts code insights"
+    },
+    "analysis": {
+      "label": "Analysis",
+      "description": "Codebase analysis with context lookup"
+    },
+    "batch_analysis": {
+      "label": "Batch Analysis",
+      "description": "Batch processing of issues or items"
+    },
+    "ideation": {
+      "label": "Ideation",
+      "description": "Generates feature ideas"
+    },
+    "roadmap_discovery": {
+      "label": "Roadmap Discovery",
+      "description": "Discovers roadmap items"
+    },
     "pr_template_filler": {
       "label": "PR Template Filler",
-      "description": "AI-fills GitHub PR templates from code changes"
+      "description": "Generates AI-powered PR descriptions from templates"
+    }
+  },
+  "categories": {
+    "spec": "Spec Creation",
+    "build": "Build",
+    "qa": "QA",
+    "utility": "Utility",
+    "ideation": "Ideation"
+  },
+  "env": {
+    "placeholders": {
+      "token": "Enter your token..."
+    },
+    "errors": {
+      "noProject": "No project selected. Please select a project first."
+    }
+  },
+  "github": {
+    "placeholders": {
+      "token": "ghp_xxxxxxxx or github_pat_xxxxxxxx",
+      "repository": "owner/repository"
+    },
+    "messages": {
+      "noMatchingRepositories": "No matching repositories",
+      "noRepositories": "No repositories found",
+      "noMatchingBranches": "No matching branches",
+      "noBranches": "No branches found"
+    }
+  },
+  "linear": {
+    "placeholders": {
+      "apiKey": "lin_api_xxxxxxxx"
+    }
+  },
+  "devTools": {
+    "placeholders": {
+      "idePath": "/path/to/your/ide",
+      "terminalPath": "/path/to/your/terminal"
+    }
+  },
+  "display": {
+    "titles": {
+      "displayScale": "Display Scale"
+    }
+  },
+  "theme": {
+    "titles": {
+      "color": "Color",
+      "appearance": "Appearance"
+    }
+  },
+  "accounts": {
+    "placeholders": {
+      "accountName": "Account name (e.g., Work, Personal)"
+    }
+  },
+  "titles": {
+    "claudeAuth": "Claude Authentication",
+    "testConnection": "Test Connection",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "common": {
+    "emptyProjectState": {
+      "title": "Select a project to view and edit its settings"
+    },
+    "initializationGuard": {
+      "message": "Initialize Auto-Build first to configure {{title}}"
     }
   }
 }

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Zap, Loader2 } from 'lucide-react';
 import { Progress } from '../ui/progress';
 import { cn, calculateProgress } from '../../lib/utils';
@@ -13,6 +14,7 @@ interface TaskProgressProps {
 }
 
 export function TaskProgress({ task, isRunning, hasActiveExecution, executionPhase, isStuck }: TaskProgressProps) {
+  const { t } = useTranslation(['tasks']);
   const progress = calculateProgress(task.subtasks);
 
   return (
@@ -92,7 +94,7 @@ export function TaskProgress({ task, isRunning, hasActiveExecution, executionPha
               executionPhase === 'planning' ? 'bg-amber-500' : 'bg-amber-500/30'
             )}
             style={{ width: '20%' }}
-            title="Planning (0-20%)"
+            title={t('tasks:progress.phases.planning')}
           />
           <div
             className={cn(
@@ -100,7 +102,7 @@ export function TaskProgress({ task, isRunning, hasActiveExecution, executionPha
               executionPhase === 'coding' ? 'bg-info' : 'bg-info/30'
             )}
             style={{ width: '60%' }}
-            title="Coding (20-80%)"
+            title={t('tasks:progress.phases.coding')}
           />
           <div
             className={cn(
@@ -108,12 +110,12 @@ export function TaskProgress({ task, isRunning, hasActiveExecution, executionPha
               (executionPhase === 'qa_review' || executionPhase === 'qa_fixing') ? 'bg-purple-500' : 'bg-purple-500/30'
             )}
             style={{ width: '15%' }}
-            title="AI Review (80-95%)"
+            title={t('tasks:progress.phases.aiReview')}
           />
           <div
             className="transition-all duration-300 bg-success/30"
             style={{ width: '5%' }}
-            title="Complete (95-100%)"
+            title={t('tasks:progress.phases.complete')}
           />
         </div>
       )}

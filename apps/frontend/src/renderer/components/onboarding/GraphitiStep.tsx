@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Brain,
   Database,
@@ -109,6 +110,7 @@ interface ValidationStatus {
  * Allows users to configure Graphiti memory backend with multiple provider options.
  */
 export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
+  const { t } = useTranslation('onboarding');
   const { settings, updateSettings } = useSettingsStore();
   const [config, setConfig] = useState<GraphitiConfig>({
     enabled: true,  // Enabled by default for better first-time experience
@@ -406,7 +408,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                   setConfig(prev => ({ ...prev, openaiApiKey: e.target.value }));
                   setValidationStatus(prev => ({ ...prev, provider: null }));
                 }}
-                placeholder="sk-..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -439,7 +441,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type={showApiKey['anthropic'] ? 'text' : 'password'}
                 value={config.anthropicApiKey}
                 onChange={(e) => setConfig(prev => ({ ...prev, anthropicApiKey: e.target.value }))}
-                placeholder="sk-ant-..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -472,7 +474,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                   type={showApiKey['azure'] ? 'text' : 'password'}
                   value={config.azureOpenaiApiKey}
                   onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiApiKey: e.target.value }))}
-                  placeholder="Azure API key"
+                  placeholder={t('graphiti.placeholders.apiKey')}
                   className="pr-10 font-mono text-sm"
                   disabled={isSaving || isValidating}
                 />
@@ -492,7 +494,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type="text"
                 value={config.azureOpenaiBaseUrl}
                 onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiBaseUrl: e.target.value }))}
-                placeholder="https://your-resource.openai.azure.com"
+                placeholder={t('graphiti.placeholders.apiUrl')}
                 className="font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -505,7 +507,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                   type="text"
                   value={config.azureOpenaiLlmDeployment}
                   onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiLlmDeployment: e.target.value }))}
-                  placeholder="gpt-4"
+                  placeholder={t('graphiti.placeholders.azureDeployment')}
                   className="font-mono text-sm"
                   disabled={isSaving || isValidating}
                 />
@@ -519,7 +521,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                   type="text"
                   value={config.azureOpenaiEmbeddingDeployment}
                   onChange={(e) => setConfig(prev => ({ ...prev, azureOpenaiEmbeddingDeployment: e.target.value }))}
-                  placeholder="text-embedding-ada-002"
+                  placeholder={t('graphiti.placeholders.azureDeployment')}
                   className="font-mono text-sm"
                   disabled={isSaving || isValidating}
                 />
@@ -540,7 +542,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type={showApiKey['voyage'] ? 'text' : 'password'}
                 value={config.voyageApiKey}
                 onChange={(e) => setConfig(prev => ({ ...prev, voyageApiKey: e.target.value }))}
-                placeholder="pa-..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -573,7 +575,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type={showApiKey['google'] ? 'text' : 'password'}
                 value={config.googleApiKey}
                 onChange={(e) => setConfig(prev => ({ ...prev, googleApiKey: e.target.value }))}
-                placeholder="AIza..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -606,7 +608,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type={showApiKey['groq'] ? 'text' : 'password'}
                 value={config.groqApiKey}
                 onChange={(e) => setConfig(prev => ({ ...prev, groqApiKey: e.target.value }))}
-                placeholder="gsk_..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -639,7 +641,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type={showApiKey['openrouter'] ? 'text' : 'password'}
                 value={config.openrouterApiKey}
                 onChange={(e) => setConfig(prev => ({ ...prev, openrouterApiKey: e.target.value }))}
-                placeholder="sk-or-..."
+                placeholder={t('graphiti.placeholders.apiKey')}
                 className="pr-10 font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -671,7 +673,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                 type="text"
                 value={config.ollamaBaseUrl}
                 onChange={(e) => setConfig(prev => ({ ...prev, ollamaBaseUrl: e.target.value }))}
-                placeholder="http://localhost:11434"
+                placeholder={t('graphiti.placeholders.ollamaBaseUrl')}
                 className="font-mono text-sm"
                 disabled={isSaving || isValidating}
               />
@@ -684,7 +686,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                   type="text"
                   value={config.ollamaLlmModel}
                   onChange={(e) => setConfig(prev => ({ ...prev, ollamaLlmModel: e.target.value }))}
-                  placeholder="llama3.2, deepseek-r1:7b, etc."
+                  placeholder={t('graphiti.placeholders.ollamaModel')}
                   className="font-mono text-sm"
                   disabled={isSaving || isValidating}
                 />
@@ -699,7 +701,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                     type="text"
                     value={config.ollamaEmbeddingModel}
                     onChange={(e) => setConfig(prev => ({ ...prev, ollamaEmbeddingModel: e.target.value }))}
-                    placeholder="nomic-embed-text"
+                    placeholder={t('graphiti.placeholders.ollamaModel')}
                     className="font-mono text-sm"
                     disabled={isSaving || isValidating}
                   />
@@ -711,7 +713,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                     type="number"
                     value={config.ollamaEmbeddingDim}
                     onChange={(e) => setConfig(prev => ({ ...prev, ollamaEmbeddingDim: e.target.value }))}
-                    placeholder="768"
+                    placeholder={t('graphiti.placeholders.embeddingDim')}
                     className="font-mono text-sm"
                     disabled={isSaving || isValidating}
                   />
@@ -914,7 +916,7 @@ export function GraphitiStep({ onNext, onBack, onSkip }: GraphitiStepProps) {
                           setConfig(prev => ({ ...prev, database: e.target.value }));
                           setValidationStatus(prev => ({ ...prev, database: null }));
                         }}
-                        placeholder="auto_claude_memory"
+                        placeholder={t('graphiti.placeholders.databaseName')}
                         className="font-mono text-sm"
                         disabled={isSaving || isValidating}
                       />

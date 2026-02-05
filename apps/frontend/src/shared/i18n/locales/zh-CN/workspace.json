@@ -1,0 +1,65 @@
+{
+  "placeholders": {
+    "name": "工作空间名称",
+    "description": "工作空间描述"
+  },
+  "messages": {
+    "noProjects": "无可用项目",
+    "selectProject": "选择一个项目以查看工作树"
+  },
+  "worktrees": {
+    "title": "工作树",
+    "subtitle": "管理Auto Claude任务的隔离工作空间",
+    "emptyState": {
+      "title": "无工作树",
+      "description": "Auto Claude构建功能时会自动创建工作树。您也可以从\"AI代理终端\"选项卡创建终端工作树。"
+    },
+    "sections": {
+      "taskWorktrees": "任务工作树",
+      "terminalWorktrees": "终端工作树"
+    },
+    "stats": {
+      "filesChanged": "个文件已更改",
+      "commitsAhead": "领先提交数"
+    },
+    "actions": {
+      "mergeToBase": "合并到{{branch}}",
+      "copyPath": "复制路径",
+      "delete": "删除",
+      "created": "已创建"
+    },
+    "merge": {
+      "title": "合并工作树",
+      "description": "将此工作树中的更改合并到基础分支中。",
+      "sourceBranch": "源分支",
+      "targetBranch": "目标分支",
+      "changes": "更改",
+      "commits": "个提交，{{filesChanged}}个文件",
+      "merging": "合并中...",
+      "merge": "合并",
+      "success": "合并成功",
+      "failed": "合并失败",
+      "conflictingFiles": "冲突文件："
+    },
+    "delete": {
+      "title": "删除工作树？",
+      "description": "这将永久删除工作树和所有未提交的更改。",
+      "warning": "此操作无法撤销。",
+      "deleting": "删除中...",
+      "deleteButton": "删除"
+    },
+    "deleteTerminal": {
+      "title": "删除终端工作树？",
+      "description": "这将永久删除工作树及其分支。任何未提交的更改将丢失。"
+    },
+    "errors": {
+      "loadTaskWorktrees": "加载任务工作树失败",
+      "loadWorktrees": "加载工作树失败",
+      "taskNotFound": "未找到此工作树的任务",
+      "mergeFailed": "合并失败",
+      "deleteFailed": "删除工作树失败",
+      "deleteTerminalFailed": "删除终端工作树失败",
+      "error": "错误"
+    }
+  }
+}

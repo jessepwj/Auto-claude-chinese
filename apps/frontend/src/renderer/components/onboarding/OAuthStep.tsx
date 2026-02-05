@@ -119,7 +119,7 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
 
       // Validate that sanitized slug is not empty (e.g., "!!!" becomes "")
       if (!profileSlug) {
-        setError('Profile name must contain at least one letter or number');
+        setError(t('oauth.errors.invalidProfileName'));
         setIsAddingProfile(false);
         return;
       }
@@ -596,7 +596,7 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
                               <div className="relative">
                                 <Input
                                   type={showManualToken ? 'text' : 'password'}
-                                  placeholder="sk-ant-oat01-..."
+                                  placeholder={t('common:oauth.tokenPlaceholder')}
                                   value={manualToken}
                                   onChange={(e) => setManualToken(e.target.value)}
                                   className="pr-10 font-mono text-xs h-8"

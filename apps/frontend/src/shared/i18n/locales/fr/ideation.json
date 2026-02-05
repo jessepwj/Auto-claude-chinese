@@ -1,0 +1,132 @@
+{
+  "header": {
+    "title": "Idéation",
+    "ideasCount": "{{count}} idées",
+    "description": "Générez des idées pour les améliorations de code, les améliorations UI/UX, la documentation, les optimisations de performance et les corrections de sécurité",
+    "selectedCount": "{{count}} sélectionnées",
+    "delete": "Supprimer les sélectionnées",
+    "hide": "Masquer les idées",
+    "show": "Afficher les idées",
+    "logs": "Afficher les journaux",
+    "addMore": "Générer plus d'idées"
+  },
+  "filters": {
+    "all": "Toutes les idées",
+    "code": "Améliorations de code",
+    "uiux": "UI/UX",
+    "docs": "Documentation",
+    "security": "Sécurité",
+    "performance": "Performance"
+  },
+  "emptyState": {
+    "title": "Aucune idée générée pour le moment",
+    "description": "Générez des informations alimentées par l'IA pour votre base de code",
+    "enabledTypes": "Sélectionnez les types d'idées à générer",
+    "generateButton": "Générer des idées",
+    "tokenWarning": "Cette action consommera des tokens API"
+  },
+  "card": {
+    "impact": "Impact : {{level}}"
+  },
+  "generation": {
+    "title": "Génération d'idées en cours...",
+    "completeCount": "{{count}}/{{total}} terminées",
+    "hide": "Masquer la progression",
+    "show": "Afficher la progression",
+    "logs": "Afficher les journaux",
+    "stopping": "Arrêt en cours...",
+    "stop": "Arrêter la génération",
+    "stopTooltip": "Arrêter le processus de génération en cours",
+    "ideasCount": "{{count}} idées générées",
+    "waitingToStart": "En attente de démarrage...",
+    "failed": "Échec de la génération",
+    "noIdeas": "Aucune idée générée"
+  },
+  "status": {
+    "reviewed": "Examinée",
+    "pending": "En attente d'examen",
+    "accepted": "Acceptée",
+    "rejected": "Rejetée",
+    "implemented": "Implémentée",
+    "archived": "Archivée"
+  },
+  "details": {
+    "common": {
+      "effort": "Effort : {{level}}",
+      "files": "Fichiers : {{count}}",
+      "severity": "Sévérité : {{level}}",
+      "category": "Catégorie : {{type}}",
+      "currentState": "État actuel",
+      "proposedChange": "Modification proposée",
+      "codeExample": "Exemple de code",
+      "metrics": "Métriques",
+      "affectedFiles": "Fichiers affectés",
+      "priority": "Priorité : {{level}}",
+      "impact": "Impact : {{level}}"
+    },
+    "codeImprovement": {
+      "buildsUpon": "Basé sur",
+      "implementationApproach": "Approche de mise en œuvre",
+      "patternsToFollow": "Modèles à suivre"
+    },
+    "codeQuality": {
+      "breakingChange": "Changement incompatible",
+      "breakingChangeWarning": "Ceci est un changement incompatible",
+      "lines": "Lignes : {{count}}",
+      "complexity": "Complexité : {{level}}",
+      "duplicateLines": "Lignes en double : {{count}}",
+      "testCoverage": "Couverture de test : {{percentage}}%",
+      "bestPractice": "Bonne pratique",
+      "prerequisites": "Conditions préalables"
+    },
+    "documentation": {
+      "targetAudience": "Public cible",
+      "currentDocumentation": "Documentation actuelle",
+      "proposedContent": "Contenu proposé",
+      "affectedAreas": "Zones affectées"
+    },
+    "performance": {
+      "expectedImprovement": "Amélioration attendue : {{percentage}}%",
+      "implementation": "Détails de mise en œuvre",
+      "affectedAreas": "Zones affectées",
+      "tradeoffs": "Compromis"
+    },
+    "security": {
+      "vulnerability": "Vulnérabilité",
+      "currentRisk": "Risque actuel : {{level}}",
+      "remediation": "Remédiation",
+      "references": "Références",
+      "compliance": "Conformité"
+    },
+    "uiux": {
+      "userBenefit": "Avantage utilisateur",
+      "affectedComponents": "Composants affectés"
+    }
+  },
+  "dialogs": {
+    "authRequired": {
+      "title": "Authentification Claude requise",
+      "description": "Un jeton OAuth Claude Code est nécessaire pour générer des idées de fonctionnalités assistées par l'IA."
+    },
+    "config": {
+      "title": "Configurer les paramètres d'idéation",
+      "description": "Sélectionnez les types d'idées que vous souhaitez générer",
+      "ideaTypes": "Types d'idées",
+      "codeImprovements": "Améliorations de code",
+      "codeQuality": "Problèmes de qualité du code",
+      "documentation": "Améliorations de la documentation",
+      "performance": "Optimisations de performance",
+      "security": "Vulnérabilités de sécurité",
+      "uiux": "Améliorations UI/UX",
+      "cancel": "Annuler",
+      "generate": "Générer"
+    },
+    "addMore": {
+      "title": "Générer plus d'idées",
+      "description": "Continuez à générer plus d'idées pour votre base de code",
+      "tokenWarning": "Cela consommera des tokens API supplémentaires",
+      "cancel": "Annuler",
+      "generate": "Générer plus"
+    }
+  }
+}

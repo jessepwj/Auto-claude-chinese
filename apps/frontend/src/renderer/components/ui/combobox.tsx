@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Check, ChevronDown, Search } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { Popover, PopoverContent, PopoverTrigger } from './popover';
@@ -39,19 +40,23 @@ const Combobox = React.forwardRef<HTMLButtonElement, ComboboxProps>(
       options,
       placeholder = 'Select...',
       searchPlaceholder = 'Search...',
-      emptyMessage = 'No results found',
+      emptyMessage,
       disabled = false,
       className,
       id,
     },
     ref
   ) => {
+    const { t } = useTranslation('common');
     const [open, setOpen] = React.useState(false);
     const [search, setSearch] = React.useState('');
     const [focusedIndex, setFocusedIndex] = React.useState(-1);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const optionRefs = React.useRef<Map<number, HTMLButtonElement>>(new Map());
     const listboxId = React.useId();
+
+    // Use translation with fallback
+    const emptyMessageText = emptyMessage || t('messages.noResults');
 
     // Find the selected option's label
     const selectedOption = options.find((opt) => opt.value === value);
@@ -214,7 +219,7 @@ const Combobox = React.forwardRef<HTMLButtonElement, ComboboxProps>(
             <div id={listboxId} role="listbox" aria-label={searchPlaceholder || placeholder} className="p-1">
               {filteredOptions.length === 0 ? (
                 <div className="py-6 text-center text-sm text-muted-foreground">
-                  {emptyMessage}
+                  {emptyMessageText}
                 </div>
               ) : (
                 filteredOptions.map((option, index) => (

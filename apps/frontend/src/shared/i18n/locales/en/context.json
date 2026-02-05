@@ -1,0 +1,152 @@
+{
+  "tabs": {
+    "projectIndex": "Project Index",
+    "memories": "Memories"
+  },
+  "projectIndex": {
+    "heading": "Project Structure",
+    "description": "AI-discovered knowledge about your codebase",
+    "buttons": {
+      "refresh": "Refresh",
+      "analyzeProject": "Analyze Project"
+    },
+    "tooltips": {
+      "refresh": "Re-analyze project structure"
+    },
+    "errors": {
+      "loadFailed": "Failed to load project index",
+      "heading": "Failed to load project index"
+    },
+    "emptyState": {
+      "heading": "No Project Index Found",
+      "description": "Click the Refresh button to analyze your project structure and create an index."
+    },
+    "sections": {
+      "overview": "Overview",
+      "services": "Services",
+      "infrastructure": "Infrastructure",
+      "conventions": "Conventions"
+    },
+    "labels": {
+      "service": "service",
+      "services": "services",
+      "dockerCompose": "Docker Compose",
+      "cicd": "CI/CD",
+      "deployment": "Deployment",
+      "dockerServices": "Docker Services",
+      "pythonLinting": "Python Linting",
+      "jsLinting": "JS Linting",
+      "formatting": "Formatting",
+      "gitHooks": "Git Hooks",
+      "typescript": "TypeScript",
+      "enabled": "Enabled"
+    }
+  },
+  "memories": {
+    "placeholders": {
+      "search": "Search for patterns, insights, gotchas..."
+    },
+    "graphStatus": {
+      "title": "Graph Memory Status",
+      "connected": "Connected",
+      "notAvailable": "Not Available",
+      "database": "Database",
+      "path": "Path",
+      "notConfigured": "Graphiti memory is not configured",
+      "enableInstructions": "To enable graph memory, set GRAPHITI_ENABLED=true in project settings."
+    },
+    "stats": {
+      "total": "Total",
+      "prReviews": "PR Reviews",
+      "sessions": "Sessions",
+      "codebase": "Codebase",
+      "patterns": "Patterns",
+      "gotchas": "Gotchas"
+    },
+    "sections": {
+      "search": "Search Memories",
+      "browser": "Memory Browser"
+    },
+    "search": {
+      "resultsFound": "result found",
+      "resultsFoundPlural": "results found",
+      "score": "Score"
+    },
+    "browser": {
+      "memoriesCount": "memories",
+      "of": "of"
+    },
+    "emptyStates": {
+      "noMemories": "No memories recorded yet. Memories are created during AI agent sessions and PR reviews.",
+      "noFilterMatch": "No memories match the selected filter."
+    },
+    "buttons": {
+      "showAll": "Show all memories"
+    }
+  },
+  "memory": {
+    "titles": {
+      "whatWorked": "What Worked",
+      "whatFailed": "What Failed",
+      "approach": "Approach",
+      "recommendations": "Recommendations",
+      "patterns": "Patterns",
+      "gotchas": "Gotchas",
+      "changedFiles": "Changed Files",
+      "fileInsights": "File Insights",
+      "subtasksCompleted": "Subtasks Completed"
+    },
+    "labels": {
+      "sessionNumber": "Session"
+    },
+    "buttons": {
+      "collapse": "Collapse",
+      "expand": "Expand"
+    }
+  },
+  "service": {
+    "labels": {
+      "unknown": "Unknown",
+      "testing": "Testing",
+      "orm": "ORM",
+      "port": "Port",
+      "styling": "Styling",
+      "state": "State"
+    },
+    "sections": {
+      "appleFrameworks": "Apple Frameworks",
+      "spmDependencies": "SPM Dependencies",
+      "keyDirectories": "Key Directories"
+    }
+  },
+  "prReview": {
+    "verdicts": {
+      "approved": "Approved",
+      "changesRequested": "Changes Requested",
+      "commented": "Commented"
+    },
+    "severity": {
+      "critical": "critical",
+      "high": "high",
+      "medium": "medium",
+      "low": "low"
+    },
+    "labels": {
+      "prReview": "PR Review",
+      "followUp": "Follow-up",
+      "finding": "finding",
+      "findings": "findings",
+      "moreFindings": "more findings"
+    },
+    "buttons": {
+      "collapse": "Collapse",
+      "details": "Details",
+      "viewOnGitHub": "View PR on GitHub"
+    },
+    "sections": {
+      "keyFindings": "Key Findings",
+      "gotchasDiscovered": "Gotchas Discovered",
+      "patternsIdentified": "Patterns Identified"
+    }
+  }
+}

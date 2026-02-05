@@ -1,0 +1,46 @@
+{
+  "issues": {
+    "title": "GitHub 议题",
+    "placeholders": {
+      "search": "搜索议题..."
+    },
+    "filters": {
+      "open": "打开",
+      "closed": "已关闭",
+      "all": "全部"
+    },
+    "badges": {
+      "open": "{count} 打开"
+    },
+    "actions": {
+      "analyzeGroup": "分析并分组议题"
+    },
+    "tooltips": {
+      "analyzeGroup": "分析多达 200 个打开的议题，将相似的议题分组，并在创建任务之前审查提议的批次。",
+      "autoFix": "自动修复新出现的议题。"
+    },
+    "labels": {
+      "autoFixNew": "自动修复新议题"
+    },
+    "status": {
+      "processing": "正在处理 {n} 个议题..."
+    },
+    "messages": {
+      "noIssues": "未找到议题"
+    }
+  },
+  "prs": {
+    "title": "GitHub 拉取请求",
+    "messages": {
+      "noLogs": "无可用日志"
+    }
+  },
+  "setup": {
+    "title": "GitHub 设置",
+    "placeholders": {
+      "projectName": "我的项目",
+      "repository": "用户名/仓库",
+      "selectBranch": "选择分支"
+    }
+  }
+}

@@ -32,7 +32,7 @@ Auto Claude is a desktop application (+ CLI) where users describe a goal and AI 
 
 **Claude Agent SDK only** — All AI interactions use `claude-agent-sdk`. NEVER use `anthropic.Anthropic()` directly. Always use `create_client()` from `core.client`.
 
-**i18n required** — All frontend user-facing text MUST use `react-i18next` translation keys. Never hardcode strings in JSX/TSX. Add keys to both `en/*.json` and `fr/*.json`.
+**i18n required** — All frontend user-facing text MUST use `react-i18next` translation keys. Never hardcode strings in JSX/TSX. Add keys to ALL language files: `en/*.json`, `fr/*.json`, and `zh-CN/*.json`.
 
 **Platform abstraction** — Never use `process.platform` directly. Import from `apps/frontend/src/main/platform/` or `apps/backend/core/platform/`. CI tests all three platforms.
 
@@ -80,7 +80,7 @@ autonomous-coding/
 │           │   ├── styles/      # CSS / Tailwind styles
 │           │   └── App.tsx      # Root component
 │           ├── shared/          # Shared types, i18n, constants, utils
-│           │   ├── i18n/locales/# en/*.json, fr/*.json
+│           │   ├── i18n/locales/# en/*.json, fr/*.json, zh-CN/*.json
 │           │   ├── constants/   # themes.ts, etc.
 │           │   ├── types/       # 19+ type definition files
 │           │   └── utils/       # ANSI sanitizer, shell escape, provider detection
@@ -357,9 +357,14 @@ Pre-commit runs:
 
 ## i18n Guidelines
 
-All frontend UI text uses `react-i18next`. Translation files: `apps/frontend/src/shared/i18n/locales/{en,fr}/*.json`
+All frontend UI text uses `react-i18next`. Translation files: `apps/frontend/src/shared/i18n/locales/{en,fr,zh-CN}/*.json`
 
-**Namespaces:** `common`, `navigation`, `settings`, `dialogs`, `tasks`, `errors`, `onboarding`, `welcome`
+**Supported languages:**
+- **English (en)** — Default language
+- **Français (fr)** — French
+- **简体中文 (zh-CN)** — Simplified Chinese
+
+**Namespaces:** `common`, `navigation`, `settings`, `dialogs`, `tasks`, `errors`, `onboarding`, `welcome`, `gitlab`, `taskReview`, `terminal`
 
 ```tsx
 import { useTranslation } from 'react-i18next';
@@ -372,7 +377,7 @@ const { t } = useTranslation(['navigation', 'common']);
 <span>{t('errors:task.parseError', { error })}</span>
 ```
 
-When adding new UI text: add keys to ALL language files, use `namespace:section.key` format.
+When adding new UI text: add keys to ALL language files (en, fr, zh-CN), use `namespace:section.key` format.
 
 ## Cross-Platform
 

@@ -158,6 +158,17 @@
       "qa": "QA"
     }
   },
+  "progress": {
+    "phases": {
+      "planning": "Planification (0-20%)",
+      "coding": "Codage (20-80%)",
+      "aiReview": "Révision IA (80-95%)",
+      "complete": "Terminé (95-100%)"
+    },
+    "titles": {
+      "progress": "Progression"
+    }
+  },
   "files": {
     "title": "Fichiers",
     "tab": "Fichiers",

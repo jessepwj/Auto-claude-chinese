@@ -1,0 +1,132 @@
+{
+  "header": {
+    "title": "创意",
+    "ideasCount": "{{count}} 个想法",
+    "description": "为代码改进、UI/UX 增强、文档、性能优化和安全修复生成想法",
+    "selectedCount": "已选择 {{count}} 个",
+    "delete": "删除选中项",
+    "hide": "隐藏想法",
+    "show": "显示想法",
+    "logs": "查看日志",
+    "addMore": "生成更多想法"
+  },
+  "filters": {
+    "all": "所有想法",
+    "code": "代码改进",
+    "uiux": "UI/UX",
+    "docs": "文档",
+    "security": "安全性",
+    "performance": "性能"
+  },
+  "emptyState": {
+    "title": "还没有生成想法",
+    "description": "为您的代码库生成 AI 驱动的见解",
+    "enabledTypes": "选择要生成的想法类型",
+    "generateButton": "生成想法",
+    "tokenWarning": "此操作将消耗 API 令牌"
+  },
+  "card": {
+    "impact": "影响：{{level}}"
+  },
+  "generation": {
+    "title": "正在生成想法...",
+    "completeCount": "{{count}}/{{total}} 已完成",
+    "hide": "隐藏进度",
+    "show": "显示进度",
+    "logs": "查看日志",
+    "stopping": "正在停止...",
+    "stop": "停止生成",
+    "stopTooltip": "停止当前生成过程",
+    "ideasCount": "已生成 {{count}} 个想法",
+    "waitingToStart": "等待开始...",
+    "failed": "生成失败",
+    "noIdeas": "未生成想法"
+  },
+  "status": {
+    "reviewed": "已审核",
+    "pending": "待审核",
+    "accepted": "已接受",
+    "rejected": "已拒绝",
+    "implemented": "已实现",
+    "archived": "已存档"
+  },
+  "details": {
+    "common": {
+      "effort": "工作量：{{level}}",
+      "files": "文件：{{count}}",
+      "severity": "严重程度：{{level}}",
+      "category": "类别：{{type}}",
+      "currentState": "当前状态",
+      "proposedChange": "建议的更改",
+      "codeExample": "代码示例",
+      "metrics": "指标",
+      "affectedFiles": "受影响的文件",
+      "priority": "优先级：{{level}}",
+      "impact": "影响：{{level}}"
+    },
+    "codeImprovement": {
+      "buildsUpon": "基于",
+      "implementationApproach": "实现方法",
+      "patternsToFollow": "要遵循的模式"
+    },
+    "codeQuality": {
+      "breakingChange": "破坏性更改",
+      "breakingChangeWarning": "这是一个破坏性更改",
+      "lines": "行数：{{count}}",
+      "complexity": "复杂性：{{level}}",
+      "duplicateLines": "重复行数：{{count}}",
+      "testCoverage": "测试覆盖率：{{percentage}}%",
+      "bestPractice": "最佳实践",
+      "prerequisites": "前置条件"
+    },
+    "documentation": {
+      "targetAudience": "目标受众",
+      "currentDocumentation": "当前文档",
+      "proposedContent": "建议的内容",
+      "affectedAreas": "受影响的区域"
+    },
+    "performance": {
+      "expectedImprovement": "预期改进：{{percentage}}%",
+      "implementation": "实现详情",
+      "affectedAreas": "受影响的区域",
+      "tradeoffs": "权衡"
+    },
+    "security": {
+      "vulnerability": "漏洞",
+      "currentRisk": "当前风险：{{level}}",
+      "remediation": "修复方案",
+      "references": "参考资料",
+      "compliance": "合规性"
+    },
+    "uiux": {
+      "userBenefit": "用户益处",
+      "affectedComponents": "受影响的组件"
+    }
+  },
+  "dialogs": {
+    "authRequired": {
+      "title": "需要 Claude 身份验证",
+      "description": "需要 Claude Code OAuth 令牌才能生成 AI 驱动的功能想法。"
+    },
+    "config": {
+      "title": "配置创意生成设置",
+      "description": "选择您想要生成的想法类型",
+      "ideaTypes": "想法类型",
+      "codeImprovements": "代码改进",
+      "codeQuality": "代码质量问题",
+      "documentation": "文档改进",
+      "performance": "性能优化",
+      "security": "安全漏洞",
+      "uiux": "UI/UX 增强",
+      "cancel": "取消",
+      "generate": "生成"
+    },
+    "addMore": {
+      "title": "生成更多想法",
+      "description": "继续为您的代码库生成更多想法",
+      "tokenWarning": "这将消耗额外的 API 令牌",
+      "cancel": "取消",
+      "generate": "生成更多"
+    }
+  }
+}

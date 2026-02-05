@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Code, Terminal, Loader2, Check, RefreshCw, Info } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
@@ -86,6 +87,7 @@ const TERMINAL_NAMES: Partial<Record<SupportedTerminal, string>> = {
  * their preferred tools for opening worktrees.
  */
 export function DevToolsStep({ onNext, onBack }: DevToolsStepProps) {
+  const { t } = useTranslation('onboarding');
   const { settings, updateSettings } = useSettingsStore();
   const [preferredIDE, setPreferredIDE] = useState<SupportedIDE>(settings.preferredIDE || 'vscode');
   const [preferredTerminal, setPreferredTerminal] = useState<SupportedTerminal>(settings.preferredTerminal || 'system');
@@ -304,7 +306,7 @@ export function DevToolsStep({ onNext, onBack }: DevToolsStepProps) {
                 disabled={isSaving}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select IDE..." />
+                  <SelectValue placeholder={t('devtools.placeholders.selectIde')} />
                 </SelectTrigger>
                 <SelectContent>
                   {ideOptions.map((option) => (
@@ -333,7 +335,7 @@ export function DevToolsStep({ onNext, onBack }: DevToolsStepProps) {
                     id="custom-ide-path"
                     value={customIDEPath}
                     onChange={(e) => setCustomIDEPath(e.target.value)}
-                    placeholder="/path/to/your/ide"
+                    placeholder={t('devtools.placeholders.idePath')}
                     className="mt-1"
                     disabled={isSaving}
                   />
@@ -353,7 +355,7 @@ export function DevToolsStep({ onNext, onBack }: DevToolsStepProps) {
                 disabled={isSaving}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select terminal..." />
+                  <SelectValue placeholder={t('devtools.placeholders.selectTerminal')} />
                 </SelectTrigger>
                 <SelectContent>
                   {terminalOptions.map((option) => (
@@ -382,7 +384,7 @@ export function DevToolsStep({ onNext, onBack }: DevToolsStepProps) {
                     id="custom-terminal-path"
                     value={customTerminalPath}
                     onChange={(e) => setCustomTerminalPath(e.target.value)}
-                    placeholder="/path/to/your/terminal"
+                    placeholder={t('devtools.placeholders.terminalPath')}
                     className="mt-1"
                     disabled={isSaving}
                   />

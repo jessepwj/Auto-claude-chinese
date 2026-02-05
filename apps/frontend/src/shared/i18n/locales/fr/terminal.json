@@ -1,45 +1,77 @@
 {
   "expand": {
-    "expand": "Agrandir le terminal",
-    "collapse": "Reduire le terminal"
+    "expand": "Développer le terminal",
+    "collapse": "Réduire le terminal"
   },
   "resume": {
-    "pending": "Reprise disponible",
+    "pending": "Reprise Disponible",
     "pendingTooltip": "Cliquez pour reprendre la session Claude précédente"
   },
   "auth": {
     "terminalTitle": "Auth: {{profileName}}",
-    "maxTerminalsReached": "Impossible d'ouvrir le terminal d'auth: nombre maximum de terminaux atteint. Fermez un terminal d'abord."
+    "maxTerminalsReached": "Impossible d'ouvrir le terminal d'authentification: nombre maximum de terminaux atteint. Fermez d'abord un terminal."
   },
   "worktree": {
-    "create": "Worktree",
-    "createNew": "Nouveau Worktree",
-    "existing": "Worktrees Terminal",
-    "taskWorktrees": "Worktrees de Taches",
+    "create": "Arborescence de travail",
+    "createNew": "Nouvelle Arborescence de travail",
+    "existing": "Arborescences de travail du Terminal",
+    "taskWorktrees": "Arborescences de travail des Tâches",
     "otherWorktrees": "Autres",
-    "createTitle": "Creer un Worktree Terminal",
-    "createDescription": "Creer un espace de travail isole pour ce terminal. Tout le travail se fera dans le repertoire du worktree.",
-    "name": "Nom du Worktree",
+    "createTitle": "Créer une Arborescence de travail du Terminal",
+    "createDescription": "Créer un espace de travail isolé pour ce terminal. Tout le travail se fera dans le répertoire de l'arborescence.",
+    "name": "Nom de l'Arborescence de travail",
     "namePlaceholder": "ma-fonctionnalite",
-    "nameRequired": "Le nom du worktree est requis",
+    "nameRequired": "Le nom de l'arborescence de travail est obligatoire",
     "nameInvalid": "Le nom doit commencer et se terminer par une lettre ou un chiffre",
-    "nameHelp": "Lettres minuscules, chiffres, tirets et underscores (les espaces deviennent des tirets)",
-    "associateTask": "Lier a une Tache",
-    "selectTask": "Selectionner une tache...",
-    "noTask": "Pas de tache (worktree autonome)",
-    "createBranch": "Creer une Branche Git",
-    "branchHelp": "Cree la branche: {{branch}}",
-    "baseBranch": "Branche de Base",
-    "selectBaseBranch": "Selectionner la branche de base...",
+    "nameHelp": "Lettres minuscules, chiffres, tirets et traits de soulignement (les espaces deviennent des tirets)",
+    "associateTask": "Lier à une Tâche",
+    "selectTask": "Sélectionnez une tâche...",
+    "noTask": "Pas de tâche (arborescence de travail autonome)",
+    "createBranch": "Créer une Branche Git",
+    "branchHelp": "Crée la branche: {{branch}}",
+    "baseBranch": "Branche de base",
+    "selectBaseBranch": "Sélectionnez une branche de base...",
     "searchBranch": "Rechercher des branches...",
-    "noBranchFound": "Aucune branche trouvee",
-    "useProjectDefault": "Utiliser la valeur par defaut du projet ({{branch}})",
-    "baseBranchHelp": "La branche a partir de laquelle creer le worktree",
-    "openInIDE": "Ouvrir dans IDE",
-    "maxReached": "Maximum de 12 worktrees terminal atteint",
-    "alreadyExists": "Un worktree avec ce nom existe deja",
-    "deleteTitle": "Supprimer le Worktree?",
-    "deleteDescription": "Ceci supprimera definitivement le worktree et sa branche. Les modifications non committées seront perdues.",
+    "noBranchFound": "Aucune branche trouvée",
+    "useProjectDefault": "Utiliser le projet par défaut ({{branch}})",
+    "baseBranchHelp": "La branche à partir de laquelle créer l'arborescence de travail",
+    "openInIDE": "Ouvrir dans l'IDE",
+    "maxReached": "Maximum de 12 arborescences de travail du terminal atteint",
+    "alreadyExists": "Une arborescence de travail avec ce nom existe déjà",
+    "deleteTitle": "Supprimer l'Arborescence de travail?",
+    "deleteDescription": "Cela supprimera définitivement l'arborescence de travail et sa branche. Tous les modifications non validées seront perdues.",
     "detached": "(détaché)"
+  },
+  "grid": {
+    "agentTerminals": "Terminaux des Agents",
+    "emptyStateDescription": "Générez plusieurs terminaux pour exécuter les agents Claude en parallèle. Utilisez {{shortcut}} pour créer un nouveau terminal.",
+    "newTerminal": "Nouveau Terminal",
+    "terminalsUnit": "terminaux",
+    "history": "Historique",
+    "restoreSessionsFrom": "Restaurer les sessions à partir de...",
+    "sessionCount": "{{count}} session",
+    "sessionCount_plural": "{{count}} sessions",
+    "invokeClaudeAll": "Invoquer Claude Tous",
+    "files": "Fichiers"
+  },
+  "titles": {
+    "claude": "Claude",
+    "terminal": "Terminal"
+  },
+  "title": {
+    "doubleClickToRename": "Double-cliquez pour renommer"
+  },
+  "messages": {
+    "error": "Erreur: {{error}}",
+    "processExited": "Le processus s'est terminé avec le code {{exitCode}}",
+    "taskContext": "Je travaille sur: {{title}}\n\nDescription:\n{{description}}\n\nVeuillez confirmer que vous êtes prêt en disant: Je suis prêt à travailler sur {{title}} - Le contexte est chargé.",
+    "noTasks": "Aucune tâche disponible"
+  },
+  "fileDrop": {
+    "dropToInsertPath": "Déposer pour insérer le chemin"
+  },
+  "errors": {
+    "failedToOpenIDE": "Échec de l'ouverture de l'IDE",
+    "couldNotLaunchIDE": "Impossible de lancer l'IDE"
   }
 }

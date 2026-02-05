@@ -79,6 +79,15 @@
       "profileCreatedAuthFailed": "Profile created but failed to prepare authentication: {{error}}",
       "authPrepareFailed": "Failed to prepare authentication: {{error}}",
       "authStartFailedMessage": "Failed to start authentication. Please try again."
+    },
+    "errors": {
+      "invalidProfileName": "Profile name must contain at least one letter or number"
+    }
+  },
+  "auth": {
+    "titles": {
+      "signInAnthropic": "Sign in with Anthropic",
+      "customApiKey": "Use Custom API Key"
     }
   },
   "memory": {
@@ -128,7 +137,32 @@
     "embeddingModel": "Embedding Model",
     "embeddingDim": "Embedding Dimension",
     "embeddingDimDescription": "Required for Ollama embeddings (e.g., 768 for nomic-embed-text)",
-    "modelRecommendation": "Recommended: qwen3-embedding:4b (balanced), :8b (quality), :0.6b (fast)"
+    "modelRecommendation": "Recommended: qwen3-embedding:4b (balanced), :8b (quality), :0.6b (fast)",
+    "placeholders": {
+      "mcpUrl": "http://localhost:8000/mcp/",
+      "openaiKey": "sk-...",
+      "voyageKey": "pa-...",
+      "voyageModel": "voyage-3",
+      "geminiKey": "AIza...",
+      "azureApiKey": "Azure API Key",
+      "azureBaseUrl": "https://your-resource.openai.azure.com",
+      "azureDeployment": "text-embedding-ada-002",
+      "ollamaBaseUrl": "http://localhost:11434"
+    }
+  },
+  "graphiti": {
+    "placeholders": {
+      "apiKey": "API key",
+      "apiUrl": "API URL",
+      "neo4jUri": "neo4j://localhost:7687",
+      "neo4jUser": "neo4j",
+      "neo4jPassword": "password",
+      "azureDeployment": "Deployment name",
+      "ollamaBaseUrl": "http://localhost:11434",
+      "ollamaModel": "Model name",
+      "embeddingDim": "Dimension (e.g., 768)",
+      "databaseName": "Database name"
+    }
   },
   "completion": {
     "title": "You're All Set!",
@@ -230,7 +264,13 @@
     "detectedSummary": "Detected on your system:",
     "noToolsDetected": "No additional tools detected (VS Code and system terminal will be used)",
     "custom": "Custom...",
-    "saveAndContinue": "Save & Continue"
+    "saveAndContinue": "Save & Continue",
+    "placeholders": {
+      "selectIde": "Select IDE...",
+      "idePath": "/path/to/your/ide",
+      "selectTerminal": "Select terminal...",
+      "terminalPath": "/path/to/your/terminal"
+    }
   },
   "ollama": {
     "notInstalled": {

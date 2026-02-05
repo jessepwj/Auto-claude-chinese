@@ -1,0 +1,138 @@
+{
+  "steps": {
+    "select": "选择",
+    "generate": "生成",
+    "release": "发布"
+  },
+  "filters": {
+    "labels": {
+      "source": "变更日志来源",
+      "gitHistoryOptions": "Git 历史选项",
+      "historyType": "历史类型",
+      "commitCount": "提交数量",
+      "sinceDate": "起始日期",
+      "fromTag": "起始标签",
+      "toTag": "结束标签（可选）",
+      "lastVersion": "上一版本",
+      "branchComparison": "分支比较",
+      "baseBranch": "基础分支",
+      "compareBranch": "比较分支",
+      "includeMergeCommits": "包含合并提交"
+    },
+    "options": {
+      "sinceVersion": "自某版本起",
+      "recentCommits": "最近提交",
+      "sinceDate": "自某日期起",
+      "tagRange": "标签范围",
+      "headLatest": "HEAD（最新）"
+    },
+    "placeholders": {
+      "selectTag": "选择标签...",
+      "headLatest": "HEAD（最新）",
+      "selectVersion": "选择版本...",
+      "selectBaseBranch": "选择基础分支...",
+      "selectCompareBranch": "选择比较分支..."
+    },
+    "badges": {
+      "default": "默认",
+      "current": "当前"
+    },
+    "hints": {
+      "sinceVersion": "将包含自此版本以来的所有提交",
+      "baseBranch": "您要合并到的分支",
+      "compareBranch": "包含您更改的分支"
+    },
+    "errors": {
+      "sameBranch": "分支必须不同"
+    },
+    "actions": {
+      "loading": "加载中...",
+      "loadCommits": "加载提交"
+    }
+  },
+  "config": {
+    "actions": {
+      "backToSelection": "返回选择"
+    },
+    "summary": {
+      "including": "包含 {count} 个{label}"
+    },
+    "labels": {
+      "previousVersion": "上一版本：{version}",
+      "audience": "受众",
+      "emojis": "表情符号",
+      "advancedOptions": "高级选项",
+      "customInstructions": "自定义说明"
+    },
+    "placeholders": {
+      "version": "1.0.0",
+      "customInstructions": "为 AI 添加任何特殊说明..."
+    },
+    "hints": {
+      "customInstructions": "可选。指导 AI 使用的语气、要包含的特定细节等。"
+    }
+  },
+  "preview": {
+    "placeholders": {
+      "content": "生成的变更日志将在此处显示..."
+    }
+  },
+  "task": {
+    "hasSpecsBadge": "有规范"
+  },
+  "commit": {
+    "file": "个文件",
+    "files": "个文件",
+    "filesChanged": "{{count}} {{text}}"
+  },
+  "summary": {
+    "task": "任务",
+    "commit": "提交",
+    "item": "项目"
+  },
+  "selection": {
+    "of": "个",
+    "tasksSelected": "个任务已选中",
+    "selectAll": "全选",
+    "clear": "清除",
+    "countStatus": "已选中 {{selected}} 个，共 {{total}} 个任务"
+  },
+  "empty": {
+    "noCompletedTasks": "没有已完成的任务",
+    "noTasksDescription": "在看板中完成任务并将其标记为\"已完成\"以包含在您的变更日志中。",
+    "noCommitsFound": "未找到提交",
+    "noCommitsGitHistory": "配置历史选项并点击\"加载提交\"进行预览。",
+    "noCommitsBranchDiff": "选择两个分支并点击\"加载提交\"以查看更改。",
+    "noProjectTitle": "未选择项目",
+    "noProjectDescription": "从侧边栏选择一个项目以生成变更日志。"
+  },
+  "commits": {
+    "found": "找到 {{count}} 个提交{{plural}}",
+    "loading": "正在加载提交..."
+  },
+  "actions": {
+    "continue": "继续",
+    "done": "完成"
+  },
+  "github": {
+    "title": "创建 GitHub 发布",
+    "description": "在 GitHub 上创建新的 {{tag}} 发布，使用变更日志作为发布说明。",
+    "createRelease": "创建发布 {{tag}}",
+    "creatingRelease": "正在创建发布...",
+    "releaseCreated": "发布创建成功！",
+    "viewRelease": "在 GitHub 上查看发布",
+    "createReleaseFailed": "创建发布失败"
+  },
+  "success": {
+    "title": "变更日志已保存！",
+    "description": "版本 {{tag}} 已添加到 CHANGELOG.md"
+  },
+  "archive": {
+    "title": "归档已完成的任务",
+    "description": "归档 {{count}} 个任务{{plural}}以清理您的看板。已归档的任务可以使用\"显示归档\"切换按钮查看。",
+    "archiveTasks": "归档 {{count}} 个任务{{plural}}",
+    "archiving": "正在归档...",
+    "archived": "{{count}} 个任务{{plural}}已归档！",
+    "archiveFailed": "任务归档失败"
+  }
+}

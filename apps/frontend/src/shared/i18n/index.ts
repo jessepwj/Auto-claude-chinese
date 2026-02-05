@@ -13,6 +13,14 @@ import enGitlab from './locales/en/gitlab.json';
 import enTaskReview from './locales/en/taskReview.json';
 import enTerminal from './locales/en/terminal.json';
 import enErrors from './locales/en/errors.json';
+import enChangelog from './locales/en/changelog.json';
+import enGithub from './locales/en/github.json';
+import enLinear from './locales/en/linear.json';
+import enWorkspace from './locales/en/workspace.json';
+import enContext from './locales/en/context.json';
+import enInsights from './locales/en/insights.json';
+import enIdeation from './locales/en/ideation.json';
+import enRoadmap from './locales/en/roadmap.json';
 
 // Import French translation resources
 import frCommon from './locales/fr/common.json';
@@ -26,6 +34,35 @@ import frGitlab from './locales/fr/gitlab.json';
 import frTaskReview from './locales/fr/taskReview.json';
 import frTerminal from './locales/fr/terminal.json';
 import frErrors from './locales/fr/errors.json';
+import frChangelog from './locales/fr/changelog.json';
+import frGithub from './locales/fr/github.json';
+import frLinear from './locales/fr/linear.json';
+import frWorkspace from './locales/fr/workspace.json';
+import frContext from './locales/fr/context.json';
+import frInsights from './locales/fr/insights.json';
+import frIdeation from './locales/fr/ideation.json';
+import frRoadmap from './locales/fr/roadmap.json';
+
+// Import Chinese translation resources
+import zhCNCommon from './locales/zh-CN/common.json';
+import zhCNNavigation from './locales/zh-CN/navigation.json';
+import zhCNSettings from './locales/zh-CN/settings.json';
+import zhCNTasks from './locales/zh-CN/tasks.json';
+import zhCNWelcome from './locales/zh-CN/welcome.json';
+import zhCNOnboarding from './locales/zh-CN/onboarding.json';
+import zhCNDialogs from './locales/zh-CN/dialogs.json';
+import zhCNGitlab from './locales/zh-CN/gitlab.json';
+import zhCNTaskReview from './locales/zh-CN/taskReview.json';
+import zhCNTerminal from './locales/zh-CN/terminal.json';
+import zhCNErrors from './locales/zh-CN/errors.json';
+import zhCNChangelog from './locales/zh-CN/changelog.json';
+import zhCNGithub from './locales/zh-CN/github.json';
+import zhCNLinear from './locales/zh-CN/linear.json';
+import zhCNWorkspace from './locales/zh-CN/workspace.json';
+import zhCNContext from './locales/zh-CN/context.json';
+import zhCNInsights from './locales/zh-CN/insights.json';
+import zhCNIdeation from './locales/zh-CN/ideation.json';
+import zhCNRoadmap from './locales/zh-CN/roadmap.json';
 
 export const defaultNS = 'common';
 
@@ -41,7 +78,15 @@ export const resources = {
     gitlab: enGitlab,
     taskReview: enTaskReview,
     terminal: enTerminal,
-    errors: enErrors
+    errors: enErrors,
+    changelog: enChangelog,
+    github: enGithub,
+    linear: enLinear,
+    workspace: enWorkspace,
+    context: enContext,
+    insights: enInsights,
+    ideation: enIdeation,
+    roadmap: enRoadmap
   },
   fr: {
     common: frCommon,
@@ -54,7 +99,36 @@ export const resources = {
     gitlab: frGitlab,
     taskReview: frTaskReview,
     terminal: frTerminal,
-    errors: frErrors
+    errors: frErrors,
+    changelog: frChangelog,
+    github: frGithub,
+    linear: frLinear,
+    workspace: frWorkspace,
+    context: frContext,
+    insights: frInsights,
+    ideation: frIdeation,
+    roadmap: frRoadmap
+  },
+  'zh-CN': {
+    common: zhCNCommon,
+    navigation: zhCNNavigation,
+    settings: zhCNSettings,
+    tasks: zhCNTasks,
+    welcome: zhCNWelcome,
+    onboarding: zhCNOnboarding,
+    dialogs: zhCNDialogs,
+    gitlab: zhCNGitlab,
+    taskReview: zhCNTaskReview,
+    terminal: zhCNTerminal,
+    errors: zhCNErrors,
+    changelog: zhCNChangelog,
+    github: zhCNGithub,
+    linear: zhCNLinear,
+    workspace: zhCNWorkspace,
+    context: zhCNContext,
+    insights: zhCNInsights,
+    ideation: zhCNIdeation,
+    roadmap: zhCNRoadmap
   }
 } as const;
 
@@ -62,10 +136,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // Default language (will be overridden by settings)
-    fallbackLng: 'en',
+    lng: 'zh-CN', // Default language: Simplified Chinese (will be overridden by settings)
+    fallbackLng: 'en', // Fallback to English if translation missing
     defaultNS,
-    ns: ['common', 'navigation', 'settings', 'tasks', 'welcome', 'onboarding', 'dialogs', 'gitlab', 'taskReview', 'terminal', 'errors'],
+    ns: ['common', 'navigation', 'settings', 'tasks', 'welcome', 'onboarding', 'dialogs', 'gitlab', 'taskReview', 'terminal', 'errors', 'changelog', 'github', 'linear', 'workspace', 'context', 'insights', 'ideation', 'roadmap'],
     interpolation: {
       escapeValue: false // React already escapes values
     },

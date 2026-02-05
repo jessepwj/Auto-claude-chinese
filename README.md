@@ -2,12 +2,19 @@
 
 **Autonomous multi-agent coding framework that plans, builds, and validates software for you.**
 
+> **📖 语言 / Languages:** [English](README.md) | [简体中文](README_ZH-CN.md)
+
 ![Auto Claude Kanban Board](.github/assets/Auto-Claude-Kanban.png)
 
 [![License](https://img.shields.io/badge/license-AGPL--3.0-green?style=flat-square)](./agpl-3.0.txt)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/KCXaPBr4Dj)
 [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@AndreMikalsen)
 [![CI](https://img.shields.io/github/actions/workflow/status/AndyMik90/Auto-Claude/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/AndyMik90/Auto-Claude/actions)
+[![中文文档](https://img.shields.io/badge/docs-简体中文-blue?style=flat-square)](README_ZH-CN.md)
+
+> **🌏 Chinese Localization Available**
+> This project now includes a complete Simplified Chinese interface and documentation.
+> See [README_ZH-CN.md](README_ZH-CN.md) for details.
 
 ---
 
