@@ -267,7 +267,7 @@ const getAgentConfigs = (t: (key: string) => string): Record<string, AgentConfig
     mcp_servers: [],
     settingsSource: { type: 'feature', feature: 'utility' },
   },
-};
+});
 
 // MCP Server descriptions - accurate per backend models.py
 const MCP_SERVERS: Record<string, { name: string; description: string; icon: React.ElementType; tools?: string[] }> = {
