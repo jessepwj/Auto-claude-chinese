@@ -71,5 +71,18 @@
     "viewTaskButton": "Voir la Tâche",
     "buildButton": "Construire",
     "moreFeaturesLabel": "+{{count}} autres fonctionnalités"
+  },
+  "competitorAnalysisDialog": {
+    "title": "Activer l'Analyse Concurrentielle ?",
+    "description": "Améliorez votre feuille de route avec des insights sur les produits concurrents",
+    "whatItDoes": "Ce que fait l'analyse concurrentielle :",
+    "feature1": "Identifie 3-5 concurrents principaux en fonction de votre type de projet",
+    "feature2": "Recherche dans les app stores, forums et réseaux sociaux les retours utilisateurs et points douloureux",
+    "feature3": "Suggère des fonctionnalités qui comblent les lacunes des produits concurrents",
+    "privacyTitle": "Des recherches web seront effectuées",
+    "privacyDescription": "Cette fonctionnalité effectuera des recherches web pour collecter des informations sur les concurrents. Le nom et le type de votre projet seront utilisés dans les requêtes de recherche. Aucun code ou données sensibles ne sera partagé.",
+    "optionalInfo": "Vous pouvez générer une feuille de route sans analyse concurrentielle si vous préférez. La feuille de route sera toujours basée sur la structure de votre projet et les meilleures pratiques.",
+    "declineButton": "Non, Ignorer l'Analyse",
+    "acceptButton": "Oui, Activer l'Analyse"
   }
 }

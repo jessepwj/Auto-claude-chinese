@@ -71,5 +71,18 @@
     "viewTaskButton": "查看任务",
     "buildButton": "构建",
     "moreFeaturesLabel": "+{{count}}个更多功能"
+  },
+  "competitorAnalysisDialog": {
+    "title": "启用竞品分析？",
+    "description": "通过竞品洞察增强您的路线图",
+    "whatItDoes": "竞品分析的功能：",
+    "feature1": "根据您的项目类型识别 3-5 个主要竞争对手",
+    "feature2": "搜索应用商店、论坛和社交媒体，了解用户反馈和痛点",
+    "feature3": "建议能够填补竞品空白的功能",
+    "privacyTitle": "将执行网络搜索",
+    "privacyDescription": "此功能将执行网络搜索以收集竞品信息。您的项目名称和类型将用于搜索查询。不会分享任何代码或敏感数据。",
+    "optionalInfo": "如果您愿意，也可以在不进行竞品分析的情况下生成路线图。路线图仍将基于您的项目结构和最佳实践。",
+    "declineButton": "否，跳过分析",
+    "acceptButton": "是，启用分析"
   }
 }
