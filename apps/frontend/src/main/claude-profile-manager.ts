@@ -14,6 +14,7 @@
 import { app } from 'electron';
 import { join } from 'path';
 import { mkdir } from 'fs/promises';
+import { readFileSync, existsSync } from 'fs';
 import { homedir } from 'os';
 import type {
   ClaudeProfile,
@@ -682,6 +683,23 @@ export class ClaudeProfileManager {
    * @returns true if the profile can authenticate, false otherwise
    */
   hasValidAuth(profileId?: string): boolean {
+    // Check 0: If an API profile is active, authentication is handled by the API key
+    // API profiles don't need OAuth — they use endpoint + API key directly
+    try {
+      const profilesPath = join(app.getPath('userData'), 'auto-claude', 'profiles.json');
+      if (existsSync(profilesPath)) {
+        const data = JSON.parse(readFileSync(profilesPath, 'utf-8'));
+        if (data && data.activeProfileId && Array.isArray(data.profiles)) {
+          const activeProfile = data.profiles.find((p: { id: string }) => p.id === data.activeProfileId);
+          if (activeProfile && activeProfile.baseUrl && activeProfile.apiKey) {
+            return true;
+          }
+        }
+      }
+    } catch {
+      // Ignore errors reading profiles file, fall through to OAuth checks
+    }
+
     const profile = profileId ? this.getProfile(profileId) : this.getActiveProfile();
     if (!profile) {
       return false;

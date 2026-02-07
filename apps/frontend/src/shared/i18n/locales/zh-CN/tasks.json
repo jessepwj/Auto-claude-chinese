@@ -13,6 +13,7 @@
   "actions": {
     "start": "开始",
     "stop": "停止",
+    "stopping": "正在停止...",
     "recover": "恢复",
     "resume": "继续",
     "archive": "归档",

@@ -240,7 +240,11 @@
     "dark": "深色",
     "system": "系统",
     "colorTheme": "颜色主题",
-    "colorThemeDescription": "选择您喜欢的颜色调色板"
+    "colorThemeDescription": "选择您喜欢的颜色调色板",
+    "titles": {
+      "color": "颜色",
+      "appearance": "外观"
+    }
   },
   "devtools": {
     "title": "开发工具",
@@ -602,6 +606,9 @@
       "profileCreatedAuthFailed": "配置文件已创建，但准备认证失败：{{error}}",
       "authPrepareFailed": "准备认证失败：{{error}}",
       "authStartFailedMessage": "启动认证失败。请重试。"
+    },
+    "placeholders": {
+      "accountName": "账户名称（例如：工作、个人）"
     }
   },
   "debug": {
@@ -1010,17 +1017,6 @@
   "display": {
     "titles": {
       "displayScale": "显示缩放"
-    }
-  },
-  "theme": {
-    "titles": {
-      "color": "颜色",
-      "appearance": "外观"
-    }
-  },
-  "accounts": {
-    "placeholders": {
-      "accountName": "账户名称（例如：工作、个人）"
     }
   },
   "titles": {

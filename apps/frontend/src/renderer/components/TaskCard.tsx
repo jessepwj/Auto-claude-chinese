@@ -134,6 +134,7 @@ export const TaskCard = memo(function TaskCard({
   const { t } = useTranslation(['tasks', 'errors']);
   const [isStuck, setIsStuck] = useState(false);
   const [isRecovering, setIsRecovering] = useState(false);
+  const [isStopping, setIsStopping] = useState(false);
   const stuckIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const isRunning = task.status === 'in_progress';
@@ -188,6 +189,13 @@ export const TaskCard = memo(function TaskCard({
   // Catastrophic stuck detection — last-resort safety net.
   // XState handles all normal transitions via PROCESS_EXITED events.
   // This only fires if XState somehow fails to transition after 60s with no activity.
+  // Reset isStopping when task is no longer running
+  useEffect(() => {
+    if (!isRunning) {
+      setIsStopping(false);
+    }
+  }, [isRunning]);
+
   useEffect(() => {
     if (!isRunning) {
       setIsStuck(false);
@@ -226,6 +234,7 @@ export const TaskCard = memo(function TaskCard({
   const handleStartStop = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isRunning && !isStuck) {
+      setIsStopping(true);
       stopTask(task.id);
     } else {
       startTask(task.id);
@@ -578,8 +587,14 @@ export const TaskCard = memo(function TaskCard({
                 size="sm"
                 className="h-7 px-2.5"
                 onClick={handleStartStop}
+                disabled={isStopping}
               >
-                {isRunning ? (
+                {isStopping ? (
+                  <>
+                    <Loader2 className="mr-1.5 h-3 w-3 animate-spin" />
+                    {t('actions.stopping')}
+                  </>
+                ) : isRunning ? (
                   <>
                     <Square className="mr-1.5 h-3 w-3" />
                     {t('actions.stop')}

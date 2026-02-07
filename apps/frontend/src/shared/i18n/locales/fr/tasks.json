@@ -12,6 +12,7 @@
   "actions": {
     "start": "Démarrer",
     "stop": "Arrêter",
+    "stopping": "Arrêt en cours...",
     "recover": "Récupérer",
     "resume": "Reprendre",
     "archive": "Archiver",
